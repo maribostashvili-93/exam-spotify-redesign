@@ -1,0 +1,148 @@
+@use "sass:map";
+
+$dark: (
+  bg-primary: #111111,
+  bg-secondary: #202020,
+  bg-panel: #060606,
+  bg-sidebar: #060606,
+  fg-primary: #e0e0e0,
+  fg-secondary: #898989,
+  border-soft: rgba(255, 255, 255, 0.08),
+  border-strong: rgba(255, 255, 255, 0.16),
+  hover-bg: rgba(255, 255, 255, 0.08),
+  scrim: rgba(0, 0, 0, 0.6),
+  search-bg: #111111,
+  sidebar-gradient: linear-gradient(180deg, rgba(17, 17, 17, 0.85) 0%, #111111 42.62%)
+);
+
+$light: (
+  bg-primary: #f5f5f5,
+  bg-secondary: #e8e8e8,
+  bg-panel: #ffffff,
+  bg-sidebar: #f6f6f6,
+  fg-primary: #1a1a1a,
+  fg-secondary: #5d5d5d,
+  border-soft: rgba(0, 0, 0, 0.08),
+  border-strong: rgba(0, 0, 0, 0.16),
+  hover-bg: rgba(0, 0, 0, 0.08),
+  scrim: rgba(0, 0, 0, 0.45),
+  search-bg: #f0f0f0,
+  sidebar-gradient: linear-gradient(180deg, rgba(240, 240, 240, 0.85) 0%, #f0f0f0 42.62%)
+);
+
+@mixin theme($mode: dark) {
+  $tokens: $dark;
+
+  @if $mode == light {
+    $tokens: $light;
+  }
+
+  --bg-primary: #{map.get($tokens, bg-primary)};
+  --bg-secondary: #{map.get($tokens, bg-secondary)};
+  --bg-panel: #{map.get($tokens, bg-panel)};
+  --bg-sidebar: #{map.get($tokens, bg-sidebar)};
+  --fg-primary: #{map.get($tokens, fg-primary)};
+  --fg-secondary: #{map.get($tokens, fg-secondary)};
+  --border-soft: #{map.get($tokens, border-soft)};
+  --border-strong: #{map.get($tokens, border-strong)};
+  --hover-bg: #{map.get($tokens, hover-bg)};
+  --overlay-scrim: #{map.get($tokens, scrim)};
+  --search-bg: #{map.get($tokens, search-bg)};
+  --sidebar-gradient: #{map.get($tokens, sidebar-gradient)};
+}
+
+.app {
+  @include theme(dark);
+}
+
+#theme-toggle:checked ~ .app {
+  @include theme(light);
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--fg-primary);
+}
+
+.app {
+  background: var(--bg-primary);
+  color: var(--fg-primary);
+}
+
+a,
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+}
+
+.mobile-header,
+.top-header,
+.mobile-burger-menu {
+  background: var(--bg-secondary);
+  color: var(--fg-primary);
+}
+
+.sidebar {
+  background: var(--bg-sidebar);
+  color: var(--fg-primary);
+}
+
+.main {
+  background: var(--bg-panel);
+}
+
+.mobile-sidebar {
+  background: var(--sidebar-gradient);
+  color: var(--fg-primary);
+}
+
+.mobile-burger-logo span,
+.mobile-burger-search span,
+.mobile-header-logo span {
+  color: var(--fg-primary);
+}
+
+.mobile-burger-link span,
+.mobile-burger-sublink span,
+.sidebar-text,
+.mobile-nav-text {
+  color: var(--fg-secondary);
+}
+
+.mobile-nav-item-active .mobile-nav-text {
+  color: var(--fg-primary);
+}
+
+.mobile-header-theme {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  color: var(--fg-primary);
+}
+
+.icon-sun {
+  display: none;
+}
+
+.icon-moon {
+  display: inline-block;
+}
+
+#theme-toggle:checked ~ .app .icon-sun {
+  display: inline-block;
+}
+
+#theme-toggle:checked ~ .app .icon-moon {
+  display: none;
+}
