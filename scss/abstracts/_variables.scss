@@ -1,0 +1,143 @@
+
+// COLORS (DARK BASE)
+
+$color-bg-primary: #111111;
+$color-bg-secondary: #202020;
+
+$color-text-primary: #E0E0E0;
+$color-text-secondary: #898989;
+
+// ACCENT COLORS
+$color-accent-green: #85C585;
+$color-accent-blue: #6F86FF;
+$color-accent-teal: #27856B;
+$color-accent-purple: #9BF0E2;
+
+
+// OVERLAYS
+
+$overlay-dark-85: rgba(17, 17, 17, 0.85);
+$overlay-dark-60: rgba(0, 0, 0, 0.6);
+$overlay-dark-30: rgba(17, 17, 17, 0.3);
+$overlay-dark-15: rgba(17, 17, 17, 0.15);
+
+
+// GRADIENTS
+
+$bg-sidebar-gradient: linear-gradient(
+  180deg,
+  $overlay-dark-85 0%,
+  $color-bg-primary 42.62%
+);
+
+
+// TYPOGRAPHY (MOBILE)
+
+$font-family-primary: "Satoshi", sans-serif;
+
+$font-size-label-small: 1.2rem;   // 12px
+$font-size-body-small: 1.4rem;    // 14px
+$font-size-heading-section: 2rem; // 20px
+$font-size-caption: 1.16rem;      // 11.6px
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$letter-spacing-small: 0.036rem;   // 0.36px
+$letter-spacing-medium: 0.042rem;  // 0.42px
+$letter-spacing-heading: 0.06rem;  // 0.6px
+$letter-spacing-caption: 0.035rem; // 0.349px
+
+
+// LAYOUT
+$container-max-width: 1771px;
+$container-min-width: 390px;
+
+$container-padding-desktop: 1rem; // 10px
+$container-padding-mobile: 1.5rem; // 15px
+
+
+// BREAKPOINTS
+
+$bp-mobile: 39rem;        // 390px
+$bp-tablet: 76.8rem;      // 768px
+$bp-desktop: 102.4rem;    // 1024px
+$bp-wide: 117.1rem;       // 1171px
+
+
+// MOBILE BOTTOM SIDEBAR 
+$mobile-nav-height: 9.5rem;        // 95px
+$mobile-nav-padding: 1.0rem;       // 10px
+$mobile-nav-gap: 3.1rem;           // 31px
+$mobile-nav-icon-w: 3rem;     // 30px
+$mobile-nav-icon-h: 3rem;     // 30px
+
+$mobile-header-action-size: 4rem;   // 40px
+$mobile-header-icon-size: 3rem;     // 30px
+$mobile-theme-icon-size: 2.1rem;    // 21px
+$mobile-logo-width: 10rem;          // 100px
+
+// BOTTOM PLAYER
+$player-mobile-width: 37.5rem; // 375
+$player-mobile-height: 6.1rem; // 61 (figma mini)
+$player-mobile-radius: 1rem;
+$player-mobile-cover: 4.3rem;  // 43
+$player-mobile-icon: 2rem;     // 20
+$player-mobile-action: 4.0411rem; // ~40.41
+$player-mobile-gap: 1.2rem;
+$player-mobile-bottom-gap: 0.8rem;
+
+// PLAYER (DESKTOP)
+$player-bg: #333842; // figma desktop bar bg
+$player-track-height: 0.4rem; // 4px
+
+$player-desktop-target-width: 149.1rem; // 1491px
+$player-desktop-height: 6.8rem; // tighter desktop dock
+$player-desktop-radius: 1.2rem;
+$player-desktop-bottom: 0rem; // 10px
+
+$player-desktop-cover: 5rem;  // 51
+$player-desktop-icon-btn: 3rem;
+$player-desktop-play: 3.8rem; // 38px
+$player-desktop-padding-x: 2rem;
+$player-desktop-gap: 1.6rem;
+$player-desktop-controls-gap: 1.2rem;
+$player-desktop-progress-gap: 0.8rem;
+$player-desktop-left-max: 26rem;
+$player-desktop-divider: rgba(137, 137, 137, 0.27);
+$player-desktop-status-blue: #6d9ed7;
+$player-desktop-status-green: #1ed760;
+
+$sidebar-desktop-width: 24.8rem; // 248px
+$layout-desktop-gap: 1.1rem; // 11px
+
+// DESKTOP SIDEBAR ITEMS
+$sidebar-item-icon-size: 1.9196rem; // 19.196px
+$sidebar-item-font-size: 1.4rem; // 14px
+$sidebar-item-font-weight: 400;
+$sidebar-item-letter-spacing: 0.042rem; // 0.42px
+$sidebar-item-chevron-size: 1.9196rem; // 19.196px
+
+// DESKTOP HOME LAYOUT
+$home-desktop-header-height: 5.2rem;
+$home-desktop-sidebar-width: 24.8rem; // 248px
+$home-desktop-page-gap: 1.1rem; // 11px
+$home-desktop-main-radius: 1rem; // 10px
+$home-desktop-main-border: #202020;
+$home-desktop-main-bg: #060606;
+$home-desktop-main-padding-x: clamp(1.2rem, 1.6vw, 2.4rem);
+$home-desktop-main-padding-y: clamp(0.8rem, 1vw, 1.2rem);
+
+// DESKTOP HOME FILTERS
+$home-chip-height: 3.2rem;
+$home-chip-radius: 0.8rem;
+$home-chip-font-size: 1.4rem;
+$home-chip-padding-x: 1.4rem;
+
+// DESKTOP HOME CARDS
+$home-card-min-width: 15.2rem;
+$home-card-cover-height: 13.2rem;
+$home-card-gap: 1rem;
+$home-section-title-size: 4.2rem;
+$home-section-sub-size: 1.4rem;
