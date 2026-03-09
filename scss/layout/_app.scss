@@ -1,0 +1,35 @@
+
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+body {
+  background: #111111;
+}
+
+.app {
+  min-height: 100dvh;
+  display: block;
+}
+
+@include respond(desktop) {
+  .app {
+    display: grid;
+    grid-template-columns: #{$home-desktop-sidebar-width} minmax(0, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "sidebar header";
+    column-gap: $home-desktop-page-gap;
+    row-gap: 0;
+    padding-right: $home-desktop-page-gap;
+    align-items: start;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+  }
+
+  #header {
+    grid-area: header;
+    min-width: 0;
+  }
+}
