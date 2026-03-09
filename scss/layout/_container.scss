@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/breakpoints" as *;
+
+.container {
+  @include container;
+
+}
+
+@include respond(desktop) {
+  .container {
+    max-width: none;
+    padding-inline: 0;
+  }
+}

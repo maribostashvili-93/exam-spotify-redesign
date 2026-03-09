@@ -8,3 +8,18 @@ margin-inline: auto;
 
 padding-inline: clamp($container-padding-mobile, 0.8rem + 1vw,  $container-padding-desktop);
 }
+
+@mixin checkbox-toggle($checkbox, $target) {
+  #{$target} {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+
+  #{$checkbox}:checked ~ #{$target} {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}

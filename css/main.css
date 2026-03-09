@@ -9,7 +9,8 @@
 html {
   font-size: 62.5%; /* 1rem = 10px */
   -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+       text-size-adjust: 100%;
 }
 
 body {
@@ -69,6 +70,19 @@ video {
   max-width: 100%;
 }
 
+.container {
+  width: 100%;
+  max-width: 1771px;
+  margin-inline: auto;
+  padding-inline: clamp(1.5rem, 0.8rem + 1vw, 1rem);
+}
+
+@media (min-width: 64rem) {
+  .container {
+    max-width: none;
+    padding-inline: 0;
+  }
+}
 .app {
   background: var(--bg-primary);
 }
@@ -680,5 +694,3 @@ h6 {
 #theme-toggle:checked ~ .app .icon-moon {
   display: none;
 }
-
-/*# sourceMappingURL=main.css.map */
