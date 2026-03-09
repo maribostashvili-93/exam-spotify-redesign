@@ -1,40 +1,79 @@
 # exam-spotify-redesign
 
-Mobile-first Spotify Web Player UI clone built with semantic HTML, SCSS architecture, and responsive layout.
+Mobile-first Spotify Web Player UI clone built with semantic HTML, modular partials, and SCSS architecture.
 
-## Current Progress
+## Overview
 
-The project currently includes:
+This project focuses on building a responsive Spotify-style interface with:
 
-- Base HTML entry file in `index.html`
-- SCSS architecture with `abstracts`, `base`, `layout`, `components`, `pages`, and `themes`
-- Global design tokens in `scss/abstracts/_variables.scss`
-- Reusable mixins and breakpoint utilities in `scss/abstracts/`
-- Reset styles and font setup in `scss/base/`
-- Header partial structure in `partials/header.html`
-- Dynamic header injection with `js/header-load.js`
-- Responsive header styling in `scss/layout/_header.scss`
-- Theme variables and theme toggle foundation in `scss/themes/_theme-switcher.scss`
-- Compiled stylesheet output in `css/main.css`
-- Static assets for icons, images, fonts, and audio in `assets/`
+- semantic HTML
+- reusable SCSS structure
+- modular UI sections
+- responsive header behavior
+- light/dark theme switching
+
+## Current Features
+
+### Base App Shell
+
+- `index.html` is the main entry point
+- the app uses a shared shell layout
+- the header is injected dynamically into the page
+
+### SCSS Architecture
+
+The stylesheet structure is organized into:
+
+- `scss/abstracts` for variables, mixins, and breakpoints
+- `scss/base` for reset styles and fonts
+- `scss/layout` for app-level layout sections
+- `scss/components` for reusable interface parts
+- `scss/pages` for page-specific styling
+- `scss/themes` for theme logic and tokens
+
+### Reusable Header
+
+- header markup lives in `partials/header.html`
+- `js/header-load.js` loads the partial into `#header`
+- `scss/layout/_header.scss` contains responsive desktop and mobile header styles
+
+### Theme Switcher
+
+- theme tokens are defined in `scss/themes/_theme-switcher.scss`
+- both mobile and desktop headers use the same `#theme-toggle` logic
+- the app supports dark and light theme variable switching
+
+### Icon States
+
+- header icons support default and filled versions
+- filled icons appear on pressed state where matching assets exist
+
+### Assets
+
+All static resources are stored in `assets/`, including:
+
+- icons
+- images
+- fonts
+- audio
 
 ## Project Structure
 
 ```text
 .
-├── assets/
-├── css/
-├── js/
-├── partials/
-├── scss/
-│   ├── abstracts/
-│   ├── base/
-│   ├── components/
-│   ├── layout/
-│   ├── pages/
-│   └── themes/
-├── index.html
-└── README.md
+|-- assets/
+|-- css/
+|-- js/
+|-- partials/
+|-- scss/
+|   |-- abstracts/
+|   |-- base/
+|   |-- components/
+|   |-- layout/
+|   |-- pages/
+|   `-- themes/
+|-- index.html
+`-- README.md
 ```
 
 ## Sass Workflow
@@ -51,49 +90,40 @@ Watch for changes:
 sass.cmd --watch scss/main.scss css/main.css
 ```
 
-Important:
+Guidelines:
 
-- Use one Sass watcher only
-- Keep `index.html` linked to `css/main.css`
-- If PowerShell blocks `sass`, use `sass.cmd`
+- use only one Sass watcher at a time
+- keep `index.html` linked to `css/main.css`
+- if PowerShell blocks `sass`, use `sass.cmd`
+- avoid using `css/style.css` as a second compiled target unless intentionally needed
 
-## Header Setup
+## Local Development
 
-The header is loaded as a reusable partial:
+Because the project loads `partials/header.html` through `fetch()`, run it on a local server.
 
-- `partials/header.html` contains header markup
-- `js/header-load.js` injects the partial into `#header`
-- `index.html` acts as the app shell and mount point
+Using `file://` directly may prevent partial loading in the browser.
 
-For local development, run the project through a local server because `fetch()` may fail on `file://`.
+## Git Workflow
 
-## Theme Branch Workflow
-
-If you want to move theme-related work into a separate branch, use:
+Create a feature branch:
 
 ```powershell
 git switch -c feature/theme-switcher
 ```
 
-If you already have uncommitted changes and want to keep them in that new branch, switch now before committing.
-
-Recommended flow:
+Example commit flow for theme work:
 
 ```powershell
-git switch -c feature/theme-switcher
-git add scss/themes/_theme-switcher.scss scss/layout/_header.scss scss/abstracts/_breakpoints.scss css/main.css css/main.css.map
-git commit -m "feat: add theme switcher foundation"
+git add scss/abstracts/_breakpoints.scss
+git add scss/layout/_header.scss
+git add scss/themes/_theme-switcher.scss
+git add partials/header.html
+git add index.html
+git add css/main.css css/main.css.map
+git commit -m "feat: add responsive header theme switcher"
 ```
 
-If you want only theme changes in that branch and other edits should stay on `main`, first stash everything, then restore only the files you want:
-
-```powershell
-git stash
-git switch -c feature/theme-switcher
-git stash pop
-```
-
-After finishing the branch:
+Merge back into main:
 
 ```powershell
 git switch main
@@ -102,6 +132,6 @@ git merge feature/theme-switcher
 
 ## Notes
 
-- `css/style.css` and `css/style.css.map` may change if a second Sass watcher is running
-- Prefer `css/main.css` as the single compiled output
-- Some page-level partials are still scaffolds and can be implemented incrementally
+- some page-level SCSS files are still scaffolds
+- several icons do not yet have a filled asset pair
+- `css/style.css` changes usually mean a second Sass watcher is running
