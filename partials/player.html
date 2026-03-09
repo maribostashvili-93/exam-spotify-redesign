@@ -1,0 +1,87 @@
+<footer class="player" aria-label="Playback controls">
+  <div class="player__left">
+    <img
+      id="player-cover"
+      class="player__cover"
+      src="./assets/img/thumbnail/playlist.png"
+      alt="Current track cover"
+    />
+    <div class="player__meta" aria-live="polite">
+      <p id="player-title" class="player__title">-</p>
+      <p id="player-artist" class="player__sub">-</p>
+      <p id="player-album" class="player__album">-</p>
+    </div>
+  </div>
+
+  <div class="player__center">
+    <div class="player__controls">
+      <button id="player-prev" class="player__icon" aria-label="Previous">
+        <img class="player__icon-img" src="./assets/icons/Name=Prev, Filled=No.svg" alt="" />
+      </button>
+
+      <button id="player-play" class="player__play" aria-label="Play/Pause">
+        <i id="player-play-icon" class="fa-solid fa-play"></i>
+      </button>
+
+      <button id="player-next" class="player__icon" aria-label="Next">
+        <img class="player__icon-img" src="./assets/icons/Name=Next, Filled=No.svg" alt="" />
+      </button>
+
+      <button id="player-shuffle" class="player__icon" aria-label="Shuffle">
+        <img class="player__icon-img" src="./assets/icons/Name=Shuffle, Filled=No.svg" alt="" />
+      </button>
+
+      <button class="player__icon" aria-label="Mini player">
+        <img class="player__icon-img" src="./assets/icons/Name=Miniplayer, Filled=No.svg" alt="" />
+      </button>
+    </div>
+
+    <div class="player__progress">
+      <span id="player-current-time" class="player__time">-</span>
+      <label class="player__sr-only" for="player-track">Track progress</label>
+      <input id="player-track" class="player__track" type="range" min="0" max="100" value="0" />
+      <span id="player-duration" class="player__time">-</span>
+      <button class="player__icon player__icon-desktop player__volume-desktop" aria-label="Volume">
+        <img class="player__icon-img" src="./assets/icons/Name=Volume, Filled=No.svg" alt="" />
+      </button>
+    </div>
+  </div>
+
+  <div class="player__right">
+    <button class="player__icon player__icon-mobile" aria-label="Add to playlist">
+      <img class="player__icon-img" src="./assets/icons/Name=Add to Playlist, Filled=No.svg" alt="" />
+    </button>
+    <button id="player-play-mobile" class="player__icon player__icon-mobile" aria-label="Play">
+      <img
+        id="player-play-mobile-icon"
+        class="player__icon-img"
+        src="./assets/icons/Name=Play Simple, Filled=No.svg"
+        alt=""
+      />
+    </button>
+    <div class="player__right-desktop">
+      <button class="player__icon player__icon-desktop" aria-label="Like">
+        <img class="player__icon-img" src="./assets/icons/Name=Like, Filled=No.svg" alt="" />
+      </button>
+      <button class="player__icon player__icon-desktop" aria-label="Add to playlist">
+        <img class="player__icon-img" src="./assets/icons/Name=Add to Playlist, Filled=No.svg" alt="" />
+      </button>
+      <button class="player__icon player__icon-desktop" aria-label="Queue">
+        <img class="player__icon-img" src="./assets/icons/Name=Queue, Filled=No.svg" alt="" />
+      </button>
+      <button class="player__icon player__icon-desktop" aria-label="Device">
+        <img class="player__icon-img" src="./assets/icons/Name=Device, Filled=No.svg" alt="" />
+      </button>
+      <button class="player__icon player__icon-desktop" aria-label="More">
+        <img class="player__icon-img" src="./assets/icons/Name=More, Filled=No.svg" alt="" />
+      </button>
+      <span class="player__divider" aria-hidden="true"></span>
+      <button class="player__status" aria-label="Active device">
+        <span class="player__status-dot"></span>
+      </button>
+      <button class="player__icon player__icon-desktop" aria-label="Playlist">
+        <img class="player__icon-img" src="./assets/icons/Name=List, Filled=No.svg" alt="" />
+      </button>
+    </div>
+  </div>
+</footer>
