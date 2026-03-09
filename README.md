@@ -1,190 +1,156 @@
+# Spotify Web Player Redesign
 
+A mobile-first Spotify Web Player UI redesign built with semantic HTML, modular SCSS, and vanilla JavaScript. The project focuses on reusable partial-based layout composition, responsive navigation patterns, and a scalable front-end structure suitable for continued feature development.
 
-# 🎧 Spotify Web Player — UI Redesign (Exam Project)
+## Overview
 
-A **mobile-first Spotify Web Player UI clone** built using **semantic HTML**, **modular SCSS architecture**, and **responsive layout techniques**.
+This project recreates key parts of the Spotify Web Player experience with a component-oriented front-end architecture. The current implementation includes a responsive header, desktop and mobile sidebar navigation, theme switching support, reusable HTML partials, and a bottom playback bar powered by JSON-driven track data.
 
-This project focuses on creating a scalable front-end structure that follows modern **component-based styling**, **clean architecture**, and **responsive design principles**.
+## Tech Stack
 
----
+- HTML5
+- SCSS / Sass
+- CSS3
+- Vanilla JavaScript (ES6)
+- Git / GitHub
 
-# 📌 Project Overview
+## Implemented Features
 
-The goal of this project is to recreate the **Spotify Web Player interface** while implementing a well-structured front-end workflow.
+### Application Shell
 
-Key development principles used:
+- `index.html` acts as the main application shell
+- reusable UI sections are mounted into the shell through partial loading
+- layout supports both mobile and desktop navigation patterns
 
-* **Mobile-first responsive design**
-* **Semantic HTML structure**
-* **Modular SCSS architecture**
-* **Reusable layout components**
-* **Dynamic partial loading**
-* **Clean and scalable project structure**
+### Header System
 
----
+- reusable header markup stored in `partials/header.html`
+- dynamically injected with `js/header-load.js`
+- responsive desktop and mobile header layouts
+- theme toggle support for both mobile and desktop header actions
+- hover and active icon state handling with filled icon variants
 
-# 🧱 Technology Stack
+### Sidebar Navigation
 
-* **HTML5**
-* **SCSS (Sass architecture)**
-* **CSS3**
-* **JavaScript (ES6)**
-* **Git / GitHub workflow**
+- desktop library sidebar
+- mobile bottom navigation sidebar
+- responsive visibility switching by breakpoint
+- active and hover states for supported icons
+- fallback visual hover treatment for items without filled icon assets
 
----
+### Bottom Player
 
-# ⚙️ Implemented Features
-
-### Responsive Layout
-
-* Mobile-first layout approach
-* Flexible grid and responsive breakpoints
+- reusable player markup stored in `partials/player.html`
+- dynamically injected with `js/player-load.js`
+- JSON-driven player data from `data/music-cover.json`
+- track title, artist, cover, and playlist-based album fallback
+- play, pause, previous, next, progress, and time update behavior
+- responsive compact mobile player and expanded desktop player layout
 
 ### SCSS Architecture
 
-The project uses a structured **Sass architecture** that separates styles into logical layers.
+The styling layer is organized into clear Sass modules:
 
-Folders include:
+- `abstracts` for variables, mixins, and breakpoints
+- `base` for reset rules and typography
+- `layout` for app shell, header, sidebar, and layout primitives
+- `components` for reusable UI sections such as cards and bottom player
+- `pages` for page-level styling
+- `themes` for theme tokens and switching logic
 
-* `abstracts` → variables, mixins, breakpoints
-* `base` → reset styles and typography
-* `layout` → main layout components
-* `components` → reusable UI elements
-* `pages` → page-specific styles
-* `themes` → theme switching logic
-
----
-
-### Header Component System
-
-The header is implemented as a **reusable partial component**.
-
-* `partials/header.html` — header markup
-* `js/header-load.js` — dynamically injects the header
-* `index.html` — acts as the application shell
-
-This structure allows the header to be reused across multiple pages.
-
----
-
-### Theme System (Foundation)
-
-The project includes the initial structure for a **theme switcher system**.
-
-Theme variables are stored in:
-
-```
-scss/themes/_theme-switcher.scss
-```
-
-This provides a base for future **dark/light theme functionality**.
-
----
-
-# 📂 Project Structure
+## Project Structure
 
 ```text
 .
-├── assets/           # icons, images, fonts, audio
-├── css/              # compiled stylesheets
-├── js/               # JavaScript logic
-├── partials/         # reusable HTML components
+├── assets/        # icons, images, fonts, audio
+├── css/           # compiled CSS output
+├── data/          # JSON data sources
+├── js/            # partial loaders and interaction logic
+├── pages/         # page entry files
+├── partials/      # reusable HTML fragments
 ├── scss/
-│   ├── abstracts/    # variables, mixins, breakpoints
-│   ├── base/         # reset and typography
-│   ├── components/   # UI components
-│   ├── layout/       # layout structure
-│   ├── pages/        # page-specific styles
-│   └── themes/       # theme logic
+│   ├── abstracts/
+│   ├── base/
+│   ├── components/
+│   ├── layout/
+│   ├── pages/
+│   └── themes/
 ├── index.html
 └── README.md
 ```
 
----
+## Sass Workflow
 
-# 🧩 Sass Development Workflow
+Compile once:
 
-### Compile SCSS once
-
-```bash
+```powershell
 sass.cmd scss/main.scss css/main.css
 ```
 
-### Watch for changes
+Watch for changes:
 
-```bash
+```powershell
 sass.cmd --watch scss/main.scss css/main.css
 ```
 
-Important notes:
+Notes:
 
-* Only **one Sass watcher** should run
-* `index.html` must link to `css/main.css`
-* If PowerShell blocks the command, use `sass.cmd`
+- run only one Sass watcher at a time
+- keep `index.html` linked to `css/main.css`
+- avoid committing duplicate watcher output such as `css/style.css` unless intentionally used
 
----
+## Local Development
 
-# 🌐 Local Development
-
-Because the header component uses **fetch()** to load partial HTML files, the project should run on a **local development server**.
-
-Opening the project directly with `file://` may cause fetch errors.
+This project should be run on a local server because partials are loaded with `fetch()`.
 
 Recommended options:
 
-* VS Code Live Server
-* Localhost development server
+- VS Code Live Server
+- any local static development server
 
----
+Direct `file://` execution may prevent partial and JSON loading.
 
-# 🌿 Git Workflow
+## Git Workflow
 
-Feature development is managed using **feature branches**.
+Feature work is handled through dedicated branches.
 
-Example workflow for theme development:
+Example:
 
-```bash
-git switch -c feature/theme-switcher
+```powershell
+git switch -c feature/player
 ```
 
-Commit changes:
+Typical commit style:
 
-```bash
-git add .
-git commit -m "feat: add theme switcher foundation"
+```text
+feat: add bottom player layout and styles
+feat: add player data and loading logic
+build: compile player styles
 ```
 
-Merge into main branch after completion:
+Merge back into `main` after the feature is complete:
 
-```bash
+```powershell
 git switch main
-git merge feature/theme-switcher
+git merge feature/player
 ```
 
----
-
-# 🚧 Current Development Status
+## Current Status
 
 The project currently includes:
 
-* Base HTML structure
-* Modular SCSS architecture
-* Responsive header layout
-* Dynamic header loading
-* Theme system foundation
-* Static assets integration
+- responsive header system
+- desktop and mobile sidebar navigation
+- theme-aware interface styling
+- bottom playback player with JSON-backed content
+- modular Sass architecture
+- partial-based UI composition
 
-Additional UI components and pages will be implemented incrementally.
+The next stage is extending page content and connecting more UI sections to shared data and interactions.
 
----
+## Author
 
-# 👩‍💻 Author
+Mariam Bostashvili  
+Front-End Student
 
-**Mariam Bostashvili**
-Graphic Designer & Front-End Student
-
-GitHub:
-[https://github.com/maribostashvili-93](https://github.com/maribostashvili-93)
-
-
-
+GitHub: [maribostashvili-93](https://github.com/maribostashvili-93)
