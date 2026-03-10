@@ -197,7 +197,7 @@
   .player {
     left: $container-padding-desktop;
     right: $container-padding-desktop;
-    bottom: $player-desktop-bottom;
+    bottom: 1rem;
     transform: none;
     width: auto;
     max-width: none;
@@ -376,6 +376,7 @@
     );
     max-width: calc(100vw - #{$sidebar-desktop-width} - (2 * #{$layout-desktop-gap}));
     min-height: $player-desktop-height;
+    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.28);
   }
 
   .player__left {
