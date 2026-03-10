@@ -270,12 +270,94 @@
         </nav>
       </aside>
 
+       <!-- MAIN CONTENT -->
+      <main class="main" aria-label="Main Content">
+        <!--Filter chips-->
+        <nav class="filters" aria-label="Content filters">
+          <button class="chip chip--active" type="button">All</button>
+          <button class="chip" type="button">Music</button>
+          <button class="chip" type="button">Podcasts</button>
+          <button class="chip" type="button">Audiobooks</button>
+          <button
+            class="filters-icon-btn"
+            type="button"
+            aria-label="Open filters"
+          >
+            <img src="./assets/icons/filter icon.svg" alt="Filter icon" />
+          </button>
+        </nav>
+
+        <!-- SECTION: Quick Mixes -->
+        <section id="quick-mixes" class="mix-grid" aria-label="Quick mixes"></section>
+
+        <!-- SECTION: Made For You -->
+        <section class="section-wrapper" aria-label="Made For You">
+          <header class="section-head">
+            <h2 class="section-title">Made For You</h2>
+            <div class="section-controls" aria-label="Section controls">
+              <button class="section-control-btn" type="button" aria-label="Previous">
+                <img src="./assets/icons/Name=Arrow-Left, Filled=No.svg" alt="" />
+              </button>
+              <button class="section-control-btn" type="button" aria-label="Next">
+                <img src="./assets/icons/Name=Arrow-Right, Filled=No.svg" alt="" />
+              </button>
+              <button class="section-control-btn" type="button" aria-label="More options">
+                <img src="./assets/icons/Name=More, Filled=No.svg" alt="" />
+              </button>
+            </div>
+          </header>
+
+          <div id="made-for-you-cards" class="cards-row" aria-label="Made For You cards"></div>
+        </section>
+
+           <!-- SECTION: Your top mixes -->
+        <section class="section-wrapper" aria-label="Your top mixes">
+          <header class="section-head">
+            <h2 class="section-title">Your top mixes</h2>
+            <div class="section-controls" aria-label="Section controls">
+              <button class="section-control-btn" type="button" aria-label="Previous">
+                <img src="./assets/icons/Name=Arrow-Left, Filled=No.svg" alt="" />
+              </button>
+              <button class="section-control-btn" type="button" aria-label="Next">
+                <img src="./assets/icons/Name=Arrow-Right, Filled=No.svg" alt="" />
+              </button>
+              <button class="section-control-btn" type="button" aria-label="More options">
+                <img src="./assets/icons/Name=More, Filled=No.svg" alt="" />
+              </button>
+            </div>
+          </header>
+
+          <div id="top-mixes-cards" class="cards-row" aria-label="Your top mixes cards"></div>
+        </section>
+
+        <!-- SECTION: Your favorite artists -->
+        <section class="section-wrapper section-wrapper--artists" aria-label="Your favorite artists">
+          <header class="section-head">
+            <h2 class="section-title">Your favorite artists</h2>
+            <div class="section-controls" aria-label="Section controls">
+              <button class="section-control-btn" type="button" aria-label="Previous">
+                <img src="./assets/icons/Name=Arrow-Left, Filled=No.svg" alt="" />
+              </button>
+              <button class="section-control-btn" type="button" aria-label="Next">
+                <img src="./assets/icons/Name=Arrow-Right, Filled=No.svg" alt="" />
+              </button>
+              <button class="section-control-btn" type="button" aria-label="More options">
+                <img src="./assets/icons/Name=More, Filled=No.svg" alt="" />
+              </button>
+            </div>
+          </header>
+
+          <div id="favorite-artists-row" class="artists-row" aria-label="Favorite artists"></div>
+        </section>
+      </main>
+
       <div id="player"></div>
     </div>
 
 
 
     <script src="./js/header-load.js"></script>
+    <script src="./js/home-load.js"></script>
     <script src="./js/player-load.js"></script>
 
 </body>
