@@ -12,12 +12,19 @@ body {
   display: block;
 }
 
+.main {
+  min-width: 0;
+  padding: 0 0 3rem;
+}
+
 @include respond(desktop) {
   .app {
     display: grid;
     grid-template-columns: #{$home-desktop-sidebar-width} minmax(0, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas: "sidebar header";
+    grid-template-rows: auto minmax(0, 1fr);
+    grid-template-areas:
+      "sidebar header"
+      "sidebar main";
     column-gap: $home-desktop-page-gap;
     row-gap: 0;
     padding-right: $home-desktop-page-gap;
@@ -31,5 +38,14 @@ body {
   #header {
     grid-area: header;
     min-width: 0;
+  }
+
+  .main {
+    grid-area: main;
+    min-width: 0;
+    padding: 1.6rem clamp(1.8rem, 2vw, 3rem) 10.4rem;
+    border: 1px solid $home-desktop-main-border;
+    border-radius: $home-desktop-main-radius;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
   }
 }
