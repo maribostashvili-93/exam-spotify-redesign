@@ -1,0 +1,152 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/breakpoints" as *;
+
+.cards-row {
+  display: flex;
+  flex-direction: row;
+  gap: $container-padding-mobile;
+  overflow-x: auto;
+  padding: 1.8rem 0 0.8rem;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.card {
+  min-width: 0;
+  flex: 0 0 clamp(10.2rem, calc((100vw - 4.8rem) / 3), 12.4rem);
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.card-cover-wrap {
+  position: relative;
+  width: 100%;
+  height: clamp(10.2rem, calc((100vw - 4.8rem) / 3), 12.4rem);
+  border-radius: 0.8rem;
+  isolation: isolate;
+  overflow: visible;
+  --stack-rgb: 149, 230, 211;
+}
+
+.card-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.card-cover-wrap::before,
+.card-cover-wrap::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 6.016px 6.016px 0 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.card-cover-wrap::before {
+  top: -1.4rem;
+  width: 84%;
+  height: 0.7rem;
+  background: rgba(var(--stack-rgb), 0.15);
+}
+
+.card-cover-wrap::after {
+  top: -0.7rem;
+  width: 90%;
+  height: 1.3rem;
+  background: rgba(var(--stack-rgb), 0.3);
+}
+
+.card-body {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.card-title {
+  color: $color-text-primary;
+  font-family: $font-family-primary;
+  font-size: $font-size-body-small;
+  font-weight: $font-weight-medium;
+  letter-spacing: $letter-spacing-medium;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-sub {
+  color: $color-text-secondary;
+  font-family: $font-family-primary;
+  font-size: $home-section-sub-size;
+  font-weight: $font-weight-regular;
+  letter-spacing: $letter-spacing-small;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+
+.card {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-0.2rem);
+}
+
+@include respond(tablet) {
+  .cards-row {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.2rem;
+    overflow: visible;
+    padding: 1.8rem 0 0;
+  }
+
+  .card {
+    min-width: 0;
+    flex: initial;
+  }
+
+  .card-cover-wrap {
+    height: 17rem;
+  }
+}
+
+@include respond(desktop) {
+  .cards-row {
+    grid-template-columns: repeat(8, 17rem);
+    gap: 1.2rem;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 2rem 0 0.4rem;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .card {
+    width: 17rem;
+  }
+
+  .card-cover-wrap {
+    width: 17rem;
+    height: 17rem;
+  }
+
+  .card-body {
+    gap: 0.6rem;
+  }
+}
