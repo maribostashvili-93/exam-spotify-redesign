@@ -1,0 +1,85 @@
+
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/breakpoints" as bq;
+
+
+
+.mix-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $container-padding-mobile; // 15px
+}
+
+//card
+.mix-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem; // 10px
+
+  padding: 0.8rem 0 0.7rem 0.6rem; // 8px 0 7px 6px
+  border-radius: 1rem; // 10px
+  background: $color-bg-secondary;
+
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: $overlay-dark-15;
+  }
+}
+
+//
+.mix-cover {
+  width: 4.3rem;  // 43px
+  height: 4.3rem;
+  border-radius: 1rem;
+  object-fit: cover;
+ 
+}
+
+//text
+.mix-text {
+  min-width: 0; // აუცილებელია ellipsis-ისთვის
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+//title
+.mix-title {
+  color: $color-text-primary;
+  font-family: $font-family-primary;
+  font-size: $font-size-body-small; // 14px
+  font-weight: $font-weight-regular;
+  letter-spacing: $letter-spacing-medium;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+//sub
+.mix-sub {
+  color: $color-text-secondary;
+  font-family: $font-family-primary;
+  font-size: $font-size-body-small;
+  font-weight: $font-weight-regular;
+  letter-spacing: $letter-spacing-medium;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@include bq.respond(tablet) {
+  .mix-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@include bq.respond(desktop) {
+  .mix-grid {
+    display: none;
+  }
+}
