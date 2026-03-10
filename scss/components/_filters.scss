@@ -1,0 +1,116 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/breakpoints" as *;
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  overflow-x: auto;
+  padding: 0.8rem 0;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.chip {
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  height: auto;
+  padding: $container-padding-mobile;
+  border-radius: 0.8rem;
+  background: rgba(255, 255, 255, 0.06);
+
+  color: $color-text-primary;
+  font-family: $font-family-primary;
+  font-size: $font-size-label-small;
+  font-weight: $font-weight-regular;
+  letter-spacing: $letter-spacing-small;
+  line-height: normal;
+  white-space: nowrap;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+}
+
+.chip--active {
+  background: rgba(255, 255, 255, 0.16);
+  color: $color-text-primary;
+  display: none;
+}
+
+.filters-icon-btn {
+  margin-left: auto;
+  width: 5rem;
+  height: 5rem;
+  border: 0;
+  border-radius: $home-chip-radius;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+
+  img {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@include respond(tablet) {
+  .chip {
+    font-size: $font-size-body-small;
+    letter-spacing: $letter-spacing-medium;
+    padding: 1rem 1.6rem;
+  }
+
+  .chip--active {
+    display: inline-flex;
+  }
+
+  .filters-icon-btn {
+    width: auto;
+    height: auto;
+
+    img {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
+
+@include respond(desktop) {
+  .filters {
+    display: flex;
+    gap: 1rem;
+    padding: 0 0 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .chip {
+    height: $home-chip-height;
+    padding: 0 1.6rem;
+    border-radius: $home-chip-radius;
+    font-size: $home-chip-font-size;
+  }
+
+  .chip--active {
+    background: rgba(255, 255, 255, 0.88);
+    color: #111;
+  }
+
+  .filters-icon-btn {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 0.8rem;
+    background: rgba(255, 255, 255, 0.04);
+
+    img {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+}
