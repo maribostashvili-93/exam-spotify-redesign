@@ -1,403 +1,492 @@
 {
+  "home": {
+    "quickMixes": [
+      {
+        "playlistId": "pl-12",
+        "title": "Discover Weekly",
+        "subtitle": "Your weekly mixtape"
+      },
+      {
+        "playlistId": "pl-01",
+        "title": "Daily Mix 1",
+        "subtitle": "Linkin Park"
+      },
+      {
+        "playlistId": "pl-02",
+        "title": "Daily Mix 2",
+        "subtitle": "Avril Lavigne"
+      },
+      {
+        "playlistId": "pl-16",
+        "title": "Daft Punk Mix",
+        "subtitle": "Daft Punk"
+      },
+      {
+        "playlistId": "pl-18",
+        "title": "Nirvana Radio",
+        "subtitle": "Nirvana"
+      },
+      {
+        "playlistId": "pl-04",
+        "title": "Rock Mix",
+        "subtitle": "Red Hot Chili Peppers"
+      }
+    ],
+    "madeForYou": [
+      "pl-12",
+      "pl-01",
+      "pl-02",
+      "pl-03",
+      "pl-04b",
+      "pl-06b",
+      "pl-18",
+      "pl-20"
+    ],
+    "topMixes": [
+      "pl-04",
+      "pl-05",
+      "pl-06",
+      "pl-16",
+      "pl-14",
+      "pl-15",
+      "pl-17b",
+      "pl-13"
+    ],
+    "favoriteArtists": [
+      {
+        "name": "Frank Sinatra",
+        "image": "./assets/img/thumbnail/image 18.png"
+      },
+      {
+        "name": "Chuck Berry",
+        "image": "./assets/img/thumbnail/image 17.png"
+      },
+      {
+        "name": "David Bowie",
+        "image": "./assets/img/thumbnail/image 6.png"
+      },
+      {
+        "name": "Rihanna",
+        "image": "./assets/img/thumbnail/image 17-1.png"
+      },
+      {
+        "name": "Daft Punk",
+        "image": "./assets/img/thumbnail/image 7.png"
+      },
+      {
+        "name": "Frank Sinatra",
+        "image": "./assets/img/thumbnail/image 18.png"
+      },
+      {
+        "name": "Chuck Berry",
+        "image": "./assets/img/thumbnail/image 17.png"
+      },
+      {
+        "name": "David Bowie",
+        "image": "./assets/img/thumbnail/image 6.png"
+      }
+    ]
+  },
   "playlists": [
     {
       "id": "pl-01",
       "title": "Daily Mix 1",
       "category": "Made For You",
       "cover": "./assets/img/thumbnail/image 10.png",
+      "description": "Linkin Park, System Of A Down, Coal Chamber and more",
+      "mixSubtitle": "Linkin Park",
+      "stackColor": "#95E6D3",
       "tracks": [
         {
           "title": "Get Lucky",
           "artist": "Daft Punk",
+          "album": "Random Access Memories",
           "cover": "./assets/img/thumbnail/image 10.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
           "title": "Numb",
           "artist": "Linkin Park",
+          "album": "Meteora",
           "cover": "./assets/img/thumbnail/image 10.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
-      ],
-      "stackColor": "#95E6D3"
+      ]
     },
     {
       "id": "pl-02",
       "title": "Daily Mix 2",
       "category": "Made For You",
-      "cover": "./assets/img/thumbnail/image 11.png",
+      "cover": "./assets/img/thumbnail/image 18.png",
+      "description": "Avril Lavigne, Lorde, Charli XCX and more",
+      "mixSubtitle": "Avril Lavigne",
+      "stackColor": "#F19BA1",
       "tracks": [
         {
-          "title": "Blinding Lights",
-          "artist": "The Weeknd",
-          "cover": "./assets/img/thumbnail/image 11.png",
+          "title": "Complicated",
+          "artist": "Avril Lavigne",
+          "album": "Let Go",
+          "cover": "./assets/img/thumbnail/image 18.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
-          "title": "Rolling in the Deep",
-          "artist": "Adele",
-          "cover": "./assets/img/thumbnail/image 11.png",
+          "title": "Royals",
+          "artist": "Lorde",
+          "album": "Pure Heroine",
+          "cover": "./assets/img/thumbnail/image 18.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
-      ],
-      "stackColor": "#DD138B"
+      ]
     },
     {
       "id": "pl-03",
       "title": "Daily Mix 3",
       "category": "Made For You",
       "cover": "./assets/img/thumbnail/image 12.png",
+      "description": "The Strokes, Martin Garrix, MGMT and more",
+      "mixSubtitle": "The Strokes",
+      "stackColor": "#A9DEC8",
       "tracks": [
         {
-          "title": "Do I Wanna Know?",
-          "artist": "Arctic Monkeys",
+          "title": "Reptilia",
+          "artist": "The Strokes",
+          "album": "Room on Fire",
           "cover": "./assets/img/thumbnail/image 12.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
-          "title": "Enter Sandman",
-          "artist": "Metallica",
-          "cover": "./assets/img/thumbnail/image 12.png",
-          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
-        }
-      ],
-      "stackColor": "#F37FA6"
-    },
-    {
-      "id": "pl-04",
-      "title": "Rock Mix",
-      "category": "Rock",
-      "cover": "./assets/img/thumbnail/image 13.png",
-      "tracks": [
-        {
-          "title": "Smells Like Teen Spirit",
-          "artist": "Nirvana",
-          "cover": "./assets/img/thumbnail/image 13.png",
-          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
-        },
-        {
-          "title": "Californication",
-          "artist": "Red Hot Chili Peppers",
-          "cover": "./assets/img/thumbnail/image 13.png",
-          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
-        }
-      ],
-      "stackColor": "#8DC3B5"
-    },
-    {
-      "id": "pl-05",
-      "title": "Chill Mix",
-      "category": "Chill",
-      "cover": "./assets/img/thumbnail/image 14.png",
-      "tracks": [
-        {
-          "title": "Sunset Lover",
-          "artist": "Petit Biscuit",
-          "cover": "./assets/img/thumbnail/image 14.png",
-          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
-        },
-        {
-          "title": "Intro",
-          "artist": "The xx",
-          "cover": "./assets/img/thumbnail/image 14.png",
-          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
-        }
-      ],
-      "stackColor": "#F4B8BD"
-    },
-    {
-      "id": "pl-06",
-      "title": "Pop Mix",
-      "category": "Pop",
-      "cover": "./assets/img/thumbnail/image 15.png",
-      "tracks": [
-        {
-          "title": "Levitating",
-          "artist": "Dua Lipa",
-          "cover": "./assets/img/thumbnail/image 15.png",
-          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
-        },
-        {
-          "title": "As It Was",
-          "artist": "Harry Styles",
-          "cover": "./assets/img/thumbnail/image 15.png",
-          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
-        }
-      ],
-      "stackColor": "#A0BEC8"
-    },
-    {
-      "id": "pl-07",
-      "title": "Hip-Hop Mix",
-      "category": "Hip-Hop",
-      "cover": "./assets/img/thumbnail/image 16.png",
-      "tracks": [
-        {
-          "title": "SICKO MODE",
-          "artist": "Travis Scott",
-          "cover": "./assets/img/thumbnail/image 16.png",
-          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
-        },
-        {
-          "title": "HUMBLE.",
-          "artist": "Kendrick Lamar",
-          "cover": "./assets/img/thumbnail/image 16.png",
-          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
-        }
-      ],
-      "stackColor": "#F9E72C"
-    },
-    {
-      "id": "pl-08",
-      "title": "Metal Mix",
-      "category": "Metal",
-      "cover": "./assets/img/thumbnail/image 16-1.png",
-      "tracks": [
-        {
-          "title": "Master of Puppets",
-          "artist": "Metallica",
-          "cover": "./assets/img/thumbnail/image 16-1.png",
-          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
-        },
-        {
-          "title": "Duality",
-          "artist": "Slipknot",
-          "cover": "./assets/img/thumbnail/image 16-1.png",
-          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
-        }
-      ],
-      "stackColor": "#FDD87D"
-    },
-    {
-      "id": "pl-09",
-      "title": "Indie Mix",
-      "category": "Indie",
-      "cover": "./assets/img/thumbnail/image 17.png",
-      "tracks": [
-        {
-          "title": "505",
-          "artist": "Arctic Monkeys",
-          "cover": "./assets/img/thumbnail/image 17.png",
-          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
-        },
-        {
-          "title": "Somebody Else",
-          "artist": "The 1975",
-          "cover": "./assets/img/thumbnail/image 17.png",
-          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
-        }
-      ],
-      "stackColor": "#6278B1"
-    },
-    {
-      "id": "pl-10",
-      "title": "Punk Mix",
-      "category": "Punk",
-      "cover": "./assets/img/thumbnail/image 17-1.png",
-      "tracks": [
-        {
-          "title": "Basket Case",
-          "artist": "Green Day",
-          "cover": "./assets/img/thumbnail/image 17-1.png",
-          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
-        },
-        {
-          "title": "All The Small Things",
-          "artist": "Blink-182",
-          "cover": "./assets/img/thumbnail/image 17-1.png",
-          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
-        }
-      ],
-      "stackColor": "#DEB075"
-    },
-    {
-      "id": "pl-11",
-      "title": "Country Mix",
-      "category": "Country",
-      "cover": "./assets/img/thumbnail/image 18.png",
-      "tracks": [
-        {
-          "title": "Take Me Home, Country Roads",
-          "artist": "John Denver",
-          "cover": "./assets/img/thumbnail/image 18.png",
-          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
-        },
-        {
-          "title": "Wagon Wheel",
-          "artist": "Darius Rucker",
-          "cover": "./assets/img/thumbnail/image 18.png",
-          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
-        }
-      ],
-      "stackColor": "#333842"
-    },
-    {
-      "id": "pl-12",
-      "title": "Discover Weekly",
-      "category": "Discover",
-      "cover": "./assets/img/thumbnail/image 19.png",
-      "tracks": [
-        {
-          "title": "Heat Waves",
-          "artist": "Glass Animals",
-          "cover": "./assets/img/thumbnail/image 19.png",
-          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
-        },
-        {
-          "title": "Electric Feel",
+          "title": "Kids",
           "artist": "MGMT",
-          "cover": "./assets/img/thumbnail/image 19.png",
+          "album": "Oracular Spectacular",
+          "cover": "./assets/img/thumbnail/image 12.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
-      ],
-      "stackColor": "#FFCBD4"
+      ]
     },
     {
-      "id": "pl-13",
-      "title": "60s Mix",
-      "category": "Classics",
-      "cover": "./assets/img/thumbnail/image 3.png",
+      "id": "pl-04b",
+      "title": "Daily Mix 4",
+      "category": "Made For You",
+      "cover": "./assets/img/thumbnail/image 17.png",
+      "description": "Chuck Berry, Elvis Presley, Roy Orbison and more",
+      "mixSubtitle": "Chuck Berry",
+      "stackColor": "#F37FA6",
       "tracks": [
         {
           "title": "Johnny B. Goode",
           "artist": "Chuck Berry",
-          "cover": "./assets/img/thumbnail/image 3.png",
+          "album": "Chuck Berry Is On Top",
+          "cover": "./assets/img/thumbnail/image 17.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
-          "title": "Brown Eyed Girl",
-          "artist": "Van Morrison",
-          "cover": "./assets/img/thumbnail/image 3.png",
+          "title": "Oh, Pretty Woman",
+          "artist": "Roy Orbison",
+          "album": "Orbisongs",
+          "cover": "./assets/img/thumbnail/image 17.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
-      ],
-      "stackColor": "#FFC668"
+      ]
+    },
+    {
+      "id": "pl-06b",
+      "title": "Daily Mix 6",
+      "category": "Made For You",
+      "cover": "./assets/img/thumbnail/image 11.png",
+      "description": "Frank Sinatra, Gerhard Trede, Dean Martin and more",
+      "mixSubtitle": "Frank Sinatra",
+      "stackColor": "#C4D5DD",
+      "tracks": [
+        {
+          "title": "Fly Me To The Moon",
+          "artist": "Frank Sinatra",
+          "album": "It Might as Well Be Swing",
+          "cover": "./assets/img/thumbnail/image 11.png",
+          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
+        },
+        {
+          "title": "Sway",
+          "artist": "Dean Martin",
+          "album": "Dean Martin Hits Again",
+          "cover": "./assets/img/thumbnail/image 11.png",
+          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
+        }
+      ]
+    },
+    {
+      "id": "pl-04",
+      "title": "Rock Mix",
+      "category": "Top Mixes",
+      "cover": "./assets/img/thumbnail/image 13.png",
+      "description": "Red Hot Chili Peppers, R.E.M., Guns N' Roses and more",
+      "mixSubtitle": "Red Hot Chili Peppers",
+      "stackColor": "#B7D348",
+      "tracks": [
+        {
+          "title": "Californication",
+          "artist": "Red Hot Chili Peppers",
+          "album": "Californication",
+          "cover": "./assets/img/thumbnail/image 13.png",
+          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
+        },
+        {
+          "title": "Losing My Religion",
+          "artist": "R.E.M.",
+          "album": "Out of Time",
+          "cover": "./assets/img/thumbnail/image 13.png",
+          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
+        }
+      ]
+    },
+    {
+      "id": "pl-05",
+      "title": "Chill Mix",
+      "category": "Top Mixes",
+      "cover": "./assets/img/thumbnail/image 14.png",
+      "description": "MF DOOM, Daft Punk, The Chainsmokers and more",
+      "mixSubtitle": "MF DOOM",
+      "stackColor": "#B1A437",
+      "tracks": [
+        {
+          "title": "Doomsday",
+          "artist": "MF DOOM",
+          "album": "Operation: Doomsday",
+          "cover": "./assets/img/thumbnail/image 14.png",
+          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
+        },
+        {
+          "title": "Sunset Lover",
+          "artist": "Petit Biscuit",
+          "album": "Presence",
+          "cover": "./assets/img/thumbnail/image 14.png",
+          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
+        }
+      ]
+    },
+    {
+      "id": "pl-06",
+      "title": "Pop Mix",
+      "category": "Top Mixes",
+      "cover": "./assets/img/thumbnail/image 15.png",
+      "description": "Red Hot Chili Peppers, R.E.M., Guns N' Roses and more",
+      "mixSubtitle": "Red Hot Chili Peppers",
+      "stackColor": "#5ED3D6",
+      "tracks": [
+        {
+          "title": "As It Was",
+          "artist": "Harry Styles",
+          "album": "Harry's House",
+          "cover": "./assets/img/thumbnail/image 15.png",
+          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
+        },
+        {
+          "title": "Levitating",
+          "artist": "Dua Lipa",
+          "album": "Future Nostalgia",
+          "cover": "./assets/img/thumbnail/image 15.png",
+          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
+        }
+      ]
+    },
+    {
+      "id": "pl-16",
+      "title": "Daft Punk Mix",
+      "category": "Top Mixes",
+      "cover": "./assets/img/thumbnail/image 7.png",
+      "description": "Daft Punk, MGMT, Muse and more",
+      "mixSubtitle": "Daft Punk",
+      "stackColor": "#5319FF",
+      "tracks": [
+        {
+          "title": "One More Time",
+          "artist": "Daft Punk",
+          "album": "Discovery",
+          "cover": "./assets/img/thumbnail/image 7.png",
+          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
+        },
+        {
+          "title": "Around The World",
+          "artist": "Daft Punk",
+          "album": "Homework",
+          "cover": "./assets/img/thumbnail/image 7.png",
+          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
+        }
+      ]
     },
     {
       "id": "pl-14",
       "title": "Happy Mix",
-      "category": "Mood",
+      "category": "Top Mixes",
       "cover": "./assets/img/thumbnail/image 4.png",
+      "description": "The Turtles, Van Morrison, ABBA and more",
+      "mixSubtitle": "The Turtles",
+      "stackColor": "#E7C3C1",
       "tracks": [
         {
-          "title": "Walking on Sunshine",
-          "artist": "Katrina & The Waves",
+          "title": "Happy Together",
+          "artist": "The Turtles",
+          "album": "Happy Together",
           "cover": "./assets/img/thumbnail/image 4.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
-          "title": "Happy",
-          "artist": "Pharrell Williams",
+          "title": "Dancing Queen",
+          "artist": "ABBA",
+          "album": "Arrival",
           "cover": "./assets/img/thumbnail/image 4.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
-      ],
-      "stackColor": "#85C585"
+      ]
     },
     {
       "id": "pl-15",
       "title": "David Bowie Mix",
-      "category": "Artist Mix",
+      "category": "Top Mixes",
       "cover": "./assets/img/thumbnail/image 6.png",
+      "description": "Soft Cell, The Who and The Clash",
+      "mixSubtitle": "Soft Cell",
+      "stackColor": "#E3CFC2",
       "tracks": [
         {
           "title": "Heroes",
           "artist": "David Bowie",
+          "album": "Heroes",
           "cover": "./assets/img/thumbnail/image 6.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
           "title": "Let's Dance",
           "artist": "David Bowie",
+          "album": "Let's Dance",
           "cover": "./assets/img/thumbnail/image 6.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
-      ],
-      "stackColor": "#8DC3B5"
+      ]
     },
     {
-      "id": "pl-16",
-      "title": "Daft Punk Radio",
-      "category": "Radio",
-      "cover": "./assets/img/thumbnail/image 7.png",
+      "id": "pl-17b",
+      "title": "Upbeat Mix",
+      "category": "Top Mixes",
+      "cover": "./assets/img/thumbnail/image 17-1.png",
+      "description": "Kylie Minogue, Charli XCX, Cage The Elephant and more",
+      "mixSubtitle": "Kylie Minogue",
+      "stackColor": "#02C379",
       "tracks": [
         {
-          "title": "One More Time",
-          "artist": "Daft Punk",
-          "cover": "./assets/img/thumbnail/image 7.png",
+          "title": "Can't Get You Out of My Head",
+          "artist": "Kylie Minogue",
+          "album": "Fever",
+          "cover": "./assets/img/thumbnail/image 17-1.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
-          "title": "Harder Better Faster Stronger",
-          "artist": "Daft Punk",
-          "cover": "./assets/img/thumbnail/image 7.png",
+          "title": "Vroom Vroom",
+          "artist": "Charli XCX",
+          "album": "Vroom Vroom EP",
+          "cover": "./assets/img/thumbnail/image 17-1.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
-      ],
-      "stackColor": "#9BF0E2"
+      ]
     },
     {
-      "id": "pl-17",
-      "title": "ABBA Radio",
-      "category": "Radio",
-      "cover": "./assets/img/thumbnail/image 8.png",
+      "id": "pl-12",
+      "title": "Discover Weekly",
+      "category": "Made For You",
+      "cover": "./assets/img/thumbnail/image 19.png",
+      "description": "Your weekly mixtape of fresh music.",
+      "mixSubtitle": "Your weekly mixtape",
+      "stackColor": "#FFCBD4",
       "tracks": [
         {
-          "title": "Dancing Queen",
-          "artist": "ABBA",
-          "cover": "./assets/img/thumbnail/image 8.png",
+          "title": "Heat Waves",
+          "artist": "Glass Animals",
+          "album": "Dreamland",
+          "cover": "./assets/img/thumbnail/image 19.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
-          "title": "Mamma Mia",
-          "artist": "ABBA",
-          "cover": "./assets/img/thumbnail/image 8.png",
+          "title": "Electric Feel",
+          "artist": "MGMT",
+          "album": "Oracular Spectacular",
+          "cover": "./assets/img/thumbnail/image 19.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
-      ],
-      "stackColor": "#6F86FF"
+      ]
+    },
+    {
+      "id": "pl-13",
+      "title": "60s Mix",
+      "category": "Top Mixes",
+      "cover": "./assets/img/thumbnail/image 3.png",
+      "description": "Chuck Berry, Skeeter Davis, Van Morrison and more",
+      "mixSubtitle": "Chuck Berry",
+      "stackColor": "#FFC668",
+      "tracks": [
+        {
+          "title": "Johnny B. Goode",
+          "artist": "Chuck Berry",
+          "album": "Chuck Berry Is On Top",
+          "cover": "./assets/img/thumbnail/image 3.png",
+          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
+        },
+        {
+          "title": "Brown Eyed Girl",
+          "artist": "Van Morrison",
+          "album": "Blowin' Your Mind!",
+          "cover": "./assets/img/thumbnail/image 3.png",
+          "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
+        }
+      ]
     },
     {
       "id": "pl-18",
       "title": "Nirvana Radio",
       "category": "Radio",
       "cover": "./assets/img/thumbnail/image 9.png",
+      "description": "The Strokes, Martin Garrix, MGMT and more",
+      "mixSubtitle": "Nirvana",
+      "stackColor": "#F9E72C",
       "tracks": [
         {
           "title": "Come As You Are",
           "artist": "Nirvana",
+          "album": "Nevermind",
           "cover": "./assets/img/thumbnail/image 9.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
           "title": "Lithium",
           "artist": "Nirvana",
+          "album": "Nevermind",
           "cover": "./assets/img/thumbnail/image 9.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
-      ],
-      "stackColor": "#F9E72C"
+      ]
     },
     {
-      "id": "pl-19",
-      "title": "Adele Radio",
+      "id": "pl-20",
+      "title": "Fall Out Boy Radio",
       "category": "Radio",
       "cover": "./assets/img/thumbnail/playlist.png",
+      "description": "With Panic! At The Disco, The All-American Rejects and more",
+      "mixSubtitle": "Fall Out Boy",
+      "stackColor": "#DAB28D",
       "tracks": [
         {
-          "title": "Hello",
-          "artist": "Adele",
+          "title": "Sugar, We're Goin Down",
+          "artist": "Fall Out Boy",
+          "album": "From Under the Cork Tree",
           "cover": "./assets/img/thumbnail/playlist.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
-          "title": "Someone Like You",
-          "artist": "Adele",
+          "title": "Dance, Dance",
+          "artist": "Fall Out Boy",
+          "album": "From Under the Cork Tree",
           "cover": "./assets/img/thumbnail/playlist.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
-      ],
-      "stackColor": "#DBDBDB"
+      ]
     }
   ]
 }
