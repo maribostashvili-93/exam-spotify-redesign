@@ -4,15 +4,18 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (!playerMount) return;
 
   try {
-    const markupResponse = await fetch("./partials/player.html");
+    const isNestedPage = window.location.pathname.includes("/pages/");
+    const assetBase = isNestedPage ? "../" : "./";
+    const markupResponse = await fetch(`${assetBase}partials/player.html`);
 
     if (!markupResponse.ok) {
       throw new Error(`Failed to load player partial: ${markupResponse.status}`);
     }
 
     playerMount.innerHTML = await markupResponse.text();
+    normalizePlayerMarkup(playerMount, assetBase);
 
-    const dataResponse = await fetch("./data/music-cover.json");
+    const dataResponse = await fetch(`${assetBase}data/music-cover.json`);
 
     if (!dataResponse.ok) {
       throw new Error(`Failed to load player data: ${dataResponse.status}`);
@@ -31,7 +34,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       throw new Error("No playable tracks found in player data.");
     }
 
-    wirePlayer(playerMount, state);
+    wirePlayer(playerMount, state, assetBase);
   } catch (error) {
     console.error(error);
   }
@@ -54,7 +57,7 @@ function createPlayerState(playlists) {
   };
 }
 
-function wirePlayer(root, state) {
+function wirePlayer(root, state, assetBase) {
   const elements = {
     cover: root.querySelector("#player-cover"),
     title: root.querySelector("#player-title"),
@@ -77,11 +80,14 @@ function wirePlayer(root, state) {
 
     if (!state.currentTrack) return;
 
-    state.audio.src = state.currentTrack.audio;
+    state.audio.src = resolveAssetPath(state.currentTrack.audio, assetBase);
     state.audio.load();
 
     if (elements.cover) {
-      elements.cover.src = state.currentTrack.cover || state.currentPlaylist.cover;
+      elements.cover.src = resolveAssetPath(
+        state.currentTrack.cover || state.currentPlaylist.cover,
+        assetBase
+      );
       elements.cover.alt = `${state.currentTrack.title} cover`;
     }
 
@@ -111,7 +117,7 @@ function wirePlayer(root, state) {
       elements.track.max = "100";
     }
 
-    updatePlayButtons(elements, false);
+    updatePlayButtons(elements, false, assetBase);
   };
 
   const playCurrent = async () => {
@@ -160,11 +166,11 @@ function wirePlayer(root, state) {
   });
 
   state.audio.addEventListener("play", () => {
-    updatePlayButtons(elements, true);
+    updatePlayButtons(elements, true, assetBase);
   });
 
   state.audio.addEventListener("pause", () => {
-    updatePlayButtons(elements, false);
+    updatePlayButtons(elements, false, assetBase);
   });
 
   state.audio.addEventListener("loadedmetadata", () => {
@@ -192,15 +198,15 @@ function wirePlayer(root, state) {
   syncTrack();
 }
 
-function updatePlayButtons(elements, isPlaying) {
+function updatePlayButtons(elements, isPlaying, assetBase) {
   if (elements.playIcon) {
     elements.playIcon.className = isPlaying ? "fa-solid fa-pause" : "fa-solid fa-play";
   }
 
   if (elements.playMobileIcon) {
     elements.playMobileIcon.src = isPlaying
-      ? "./assets/icons/Name=Pause Simple, Filled=No.svg"
-      : "./assets/icons/Name=Play Simple, Filled=No.svg";
+      ? resolveAssetPath("./assets/icons/Name=Pause Simple, Filled=No.svg", assetBase)
+      : resolveAssetPath("./assets/icons/Name=Play Simple, Filled=No.svg", assetBase);
   }
 
   if (elements.play) {
@@ -219,4 +225,24 @@ function formatTime(seconds) {
   const remainder = Math.floor(seconds % 60);
 
   return `${minutes}:${String(remainder).padStart(2, "0")}`;
+}
+
+function normalizePlayerMarkup(root, assetBase) {
+  root.querySelectorAll("[src]").forEach((element) => {
+    const source = element.getAttribute("src");
+
+    if (!source) return;
+
+    element.setAttribute("src", resolveAssetPath(source, assetBase));
+  });
+}
+
+function resolveAssetPath(path, assetBase) {
+  if (typeof path !== "string") return path;
+
+  if (path.startsWith("./")) {
+    return `${assetBase}${path.slice(2)}`;
+  }
+
+  return path;
 }
