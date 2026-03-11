@@ -68,13 +68,16 @@ function normalizeHeaderLinks(root, isNestedPage) {
 
 function setActiveHeaderItem(root) {
   const isDiscoverPage = document.body.classList.contains("page-discover");
+  const isSearchPage = document.body.classList.contains("page-search");
   const topItems = root.querySelectorAll(".top-header-item");
 
   topItems.forEach((item) => item.classList.remove("top-header-item--active"));
 
   const activeSelector = isDiscoverPage
     ? '.top-header-item[href$="discover.html"]'
-    : '.top-header-item[href$="index.html"]';
+    : isSearchPage
+      ? '.top-header-item[href$="search.html"]'
+      : '.top-header-item[href$="index.html"]';
   const activeItem = root.querySelector(activeSelector);
 
   activeItem?.classList.add("top-header-item--active");

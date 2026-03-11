@@ -2282,6 +2282,207 @@ body {
     display: grid;
   }
 }
+.search-main .search-page {
+  padding: 0.4rem 0 2rem;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.search-main .search-page__top {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 0.8rem;
+  margin: 0 0 1.6rem;
+}
+.search-main .search-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 4.0411rem;
+  border-radius: 1.2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  padding-inline: 1.2rem 0.4rem;
+  gap: 0.8rem;
+}
+.search-main .search-input input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #E0E0E0;
+  font-family: "Satoshi", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.036rem;
+}
+.search-main .search-input input::placeholder {
+  color: rgba(224, 224, 224, 0.55);
+}
+.search-main .search-input button,
+.search-main .search-camera {
+  width: 4.0411rem;
+  height: 4.0411rem;
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 1rem;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #898989;
+}
+.search-main .search-input button img,
+.search-main .search-camera img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.search-main .search-page__title {
+  color: #E0E0E0;
+  font-family: "Satoshi", sans-serif;
+  font-size: clamp(2.8rem, 5.8vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: 0.04rem;
+  margin-bottom: 0.6rem;
+}
+.search-main .search-page__subtitle {
+  color: #E0E0E0;
+  font-family: "Satoshi", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.042rem;
+  margin-bottom: 1.6rem;
+}
+.search-main .search-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.8rem, 2.4vw, 1.2rem);
+  width: 100%;
+}
+.search-main .search-tile {
+  position: relative;
+  width: 100%;
+  min-height: clamp(10rem, 30vw, 11.5rem);
+  border-radius: 1.2rem;
+  overflow: hidden;
+  text-decoration: none;
+  padding: clamp(1.2rem, 3vw, 1.6rem) clamp(1.1rem, 3vw, 1.4rem);
+  display: block;
+  isolation: isolate;
+}
+.search-main .search-tile__title {
+  position: relative;
+  z-index: 3;
+  max-width: min(70%, 11rem);
+  color: #fff;
+  font-family: "Satoshi", sans-serif;
+  font-size: clamp(1.2rem, 3.8vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: 0.042rem;
+}
+.search-main .search-tile__art {
+  position: absolute;
+  right: clamp(-1.2rem, -2vw, -0.8rem);
+  bottom: clamp(-2rem, -4vw, -1.4rem);
+  width: clamp(7rem, 22vw, 8.4rem);
+  height: clamp(7rem, 22vw, 8.4rem);
+  object-fit: cover;
+  transform: rotate(-30deg);
+  border-radius: 0.8rem;
+  transition: all 0.28s ease;
+  z-index: 1;
+}
+.search-main .search-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, rgba(0, 0, 0, 0.22) 0%, rgba(0, 0, 0, 0) 60%);
+  z-index: 2;
+  pointer-events: none;
+}
+.search-main .search-tile:hover .search-tile__art {
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transform: none;
+  border-radius: inherit;
+  opacity: 0.95;
+}
+.search-main .search-tile--blue {
+  background: #243a79;
+}
+.search-main .search-tile--orange {
+  background: #c76b00;
+}
+.search-main .search-tile--purple {
+  background: #8f67b8;
+}
+.search-main .search-tile--pink {
+  background: #bd2aa6;
+}
+.search-main .search-tile--lilac {
+  background: #8d6cb0;
+}
+.search-main .search-tile--gray {
+  background: #8f8f8f;
+}
+
+@media (min-width: 48rem) {
+  .search-main .search-page {
+    max-width: 72rem;
+  }
+  .search-main .search-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .search-main .search-page {
+    max-width: none;
+    margin: 0;
+  }
+  .search-main .search-page__top {
+    margin-bottom: 2rem;
+  }
+  .search-main .search-page__title {
+    font-size: 3.8rem;
+    margin-bottom: 0.8rem;
+  }
+  .search-main .search-page__subtitle {
+    margin-bottom: 1.4rem;
+  }
+  .search-main .search-grid {
+    grid-template-columns: repeat(2, 17rem);
+    justify-content: start;
+    gap: 1.2rem 1rem;
+    width: auto;
+  }
+  .search-main .search-tile {
+    width: 17rem;
+    min-height: 10rem;
+    padding: 1.6rem;
+  }
+  .search-main .search-tile__title {
+    max-width: 10.5rem;
+    font-size: 2rem;
+    line-height: 1.05;
+  }
+  .search-main .search-tile__art {
+    right: -1.6rem;
+    bottom: -2.2rem;
+    width: 9.4rem;
+    height: 9.4rem;
+  }
+}
 .app {
   --bg-primary: #111111;
   --bg-secondary: #202020;
