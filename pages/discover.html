@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Discover</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body class="page-discover">
+    <input id="theme-toggle" type="checkbox" hidden />
+
+    <div class="app container">
+      <div id="header"></div>
+
+      <!-- desktop sidebar -->
+      <aside class="sidebar" aria-label="Sidebar">
+        <div class="sidebar-head">
+          <a class="sidebar-head-link" href="library.html">
+            <span class="icon-swap sidebar-icon">
+              <img
+                class="icon-default"
+                src="../assets/icons/Name=Library, Filled=No.svg"
+                alt="Library icon"
+              />
+              <img
+                class="icon-filled"
+                src="../assets/icons/Name=Library, Filled=Yes.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </span>
+            <span class="sidebar-text">My Library</span>
+          </a>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="My Library Navigation">
+          <ul class="sidebar-list">
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link--has-arrow" href="#">
+                <span class="icon-swap sidebar-icon">
+                  <img
+                    class="icon-default"
+                    src="../assets/icons/Name=Pin, Filled=No.svg"
+                    alt="Pins icon"
+                  />
+                  <img
+                    class="icon-filled"
+                    src="../assets/icons/Name=Pin, Filled=Yes.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </span>
+                <span class="sidebar-text">Pins</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link--has-arrow" href="#">
+                <img
+                  class="sidebar-icon"
+                  src="../assets/icons/Name=Playlist, Filled=No.svg"
+                  alt="Playlists icon"
+                />
+                <span class="sidebar-text">Playlists</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#">
+                <span class="icon-swap sidebar-icon">
+                  <img
+                    class="icon-default"
+                    src="../assets/icons/Name=Like, Filled=No.svg"
+                    alt="Liked songs icon"
+                  />
+                  <img
+                    class="icon-filled"
+                    src="../assets/icons/Name=Like, Filled=Yes.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </span>
+                <span class="sidebar-text">Liked songs</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#">
+                <span class="icon-swap sidebar-icon">
+                  <img
+                    class="icon-default"
+                    src="../assets/icons/Name=Save, Filled=No.svg"
+                    alt="Saves icon"
+                  />
+                  <img
+                    class="icon-filled"
+                    src="../assets/icons/Name=Save, Filled=Yes.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </span>
+                <span class="sidebar-text">Saves</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#">
+                <img
+                  class="sidebar-icon"
+                  src="../assets/icons/Name=Album, Filled=No.svg"
+                  alt="Albums icon"
+                />
+                <span class="sidebar-text">Albums</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#">
+                <img
+                  class="sidebar-icon"
+                  src="../assets/icons/Name=Folder, Filled=No.svg"
+                  alt="Folders icon"
+                />
+                <span class="sidebar-text">Folders</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#">
+                <img
+                  class="sidebar-icon"
+                  src="../assets/icons/Name=Podcast, Filled=No.svg"
+                  alt="Podcasts icon"
+                />
+                <span class="sidebar-text">Podcasts</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#">
+                <img
+                  class="sidebar-icon"
+                  src="../assets/icons/Name=Audiobook, Filled=No.svg"
+                  alt="Audiobooks icon"
+                />
+                <span class="sidebar-text">Audiobooks</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#">
+                <img
+                  class="sidebar-icon"
+                  src="../assets/icons/Name=Artist, Filled=No.svg"
+                  alt="Artists icon"
+                />
+                <span class="sidebar-text">Artists</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- mobile fixed sidebar -->
+      <aside class="mobile-sidebar" aria-label="Mobile menu">
+        <nav class="mobile-nav" aria-label="Primary Mobile Navigation">
+          <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="../index.html">
+                <span class="icon-swap mobile-nav-icon">
+                  <img
+                    class="icon-default"
+                    src="../assets/icons/Name=Home, Filled=No.svg"
+                    alt="Home icon"
+                  />
+                  <img
+                    class="icon-filled"
+                    src="../assets/icons/Name=Home, Filled=Yes.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </span>
+                <span class="mobile-nav-text">Home</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item mobile-nav-item-active">
+              <a class="mobile-nav-link" href="discover.html">
+                <span class="icon-swap mobile-nav-icon">
+                  <img
+                    class="icon-default"
+                    src="../assets/icons/Name=Discover, Filled=No.svg"
+                    alt="Discover icon"
+                  />
+                  <img
+                    class="icon-filled"
+                    src="../assets/icons/Name=Discover, Filled=Yes.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </span>
+                <span class="mobile-nav-text">Discover</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="search.html">
+                <span class="icon-swap mobile-nav-icon">
+                  <img
+                    class="icon-default"
+                    src="../assets/icons/Name=Search, Filled=No.svg"
+                    alt="Search icon"
+                  />
+                  <img
+                    class="icon-filled"
+                    src="../assets/icons/Name=Search, Filled=Yes.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </span>
+                <span class="mobile-nav-text">Search</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="library.html">
+                <span class="icon-swap mobile-nav-icon">
+                  <img
+                    class="icon-default"
+                    src="../assets/icons/Name=Library, Filled=No.svg"
+                    alt="Library icon"
+                  />
+                  <img
+                    class="icon-filled"
+                    src="../assets/icons/Name=Library, Filled=Yes.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </span>
+                <span class="mobile-nav-text">Library</span>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="profile.html">
+                <span class="icon-swap mobile-nav-icon">
+                  <img
+                    class="icon-default"
+                    src="../assets/icons/Name=User, Filled=No.svg"
+                    alt="Profile icon"
+                  />
+                  <img
+                    class="icon-filled"
+                    src="../assets/icons/Name=User, Filled=Yes.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </span>
+                <span class="mobile-nav-text">Me</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main discover-main" aria-label="Discover Content">
+        <section class="discover-page" aria-label="Discover Page">
+          <nav id="discover-tabs" class="discover-tabs" aria-label="Discover categories">
+            <button type="button" class="is-active">Music</button>
+            <button type="button">EDM</button>
+            <button type="button">Indie</button>
+            <button type="button">Pop</button>
+            <button type="button">Rock</button>
+            <button type="button">Alt Rock</button>
+            <button type="button">Country</button>
+            <button type="button">R&amp;B</button>
+            <button type="button">Hip-Hop</button>
+            <button type="button">Podcast</button>
+            <button type="button">Audiobooks</button>
+          </nav>
+          <div id="discover-feed" class="discover-feed" aria-label="Discover feed">
+            <article class="discover-reel" style="--discover-tint-rgb: 30, 78, 73;">
+              <div class="discover-reel__media" style="--discover-reel-image: url('../assets/img/reel-image.png');">
+                <div class="discover-reel__surface"></div>
+                <div class="discover-reel__frame"></div>
+                <img
+                  class="discover-reel__poster"
+                  src="../assets/img/reel-image.png"
+                  alt="Linkin Park Mix reel"
+                />
+                <div class="discover-reel__progress" aria-hidden="true">
+                  <span class="is-active"></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <div class="discover-reel__side">
+                <div class="discover-reel__track">
+                  <img src="../assets/img/thumbnail/image 10.png" alt="Linkin Park Mix" />
+                  <div class="discover-reel__content">
+                    <h3>Linkin Park Mix</h3>
+                    <p>By Spotify • 2013 • 22 songs • 1 hr 14 min</p>
+                    <aside class="discover-reel__actions" aria-label="Actions">
+                      <button type="button" aria-label="Play">
+                        <img src="../assets/icons/play-green.svg" alt="" />
+                      </button>
+                      <button type="button" aria-label="Save">
+                        <img src="../assets/icons/Name=Save, Filled=No.svg" alt="" />
+                      </button>
+                      <span>500K</span>
+                      <button type="button" aria-label="Add to playlist">
+                        <img src="../assets/icons/Name=Add to Playlist, Filled=No.svg" alt="" />
+                      </button>
+                      <button type="button" aria-label="Share">
+                        <img src="../assets/icons/Name=Share, Filled=No.svg" alt="" />
+                      </button>
+                      <button type="button" aria-label="More">
+                        <img src="../assets/icons/Name=More, Filled=No.svg" alt="" />
+                      </button>
+                    </aside>
+                    <div class="discover-reel__chips">
+                      <span>Rock</span>
+                      <span>Alt Rock</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <div id="player"></div>
+    </div>
+
+    <script src="../js/header-load.js"></script>
+    <script src="../js/discover-load.js"></script>
+  </body>
+</html>
