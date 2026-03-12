@@ -1,0 +1,313 @@
+@use "../abstracts" as *;
+
+.playlist-main {
+  padding-bottom: 0;
+}
+
+.playlist-page {
+  width: 100%;
+}
+
+.playlist-mobile-content {
+  display: block;
+}
+
+.playlist-desktop-content {
+  display: none;
+}
+
+.playlist-mobile-panel {
+  background:
+    radial-gradient(circle at top center, rgba(109, 94, 255, 0.16), transparent 32%),
+    linear-gradient(180deg, #293374 0%, #19203c 44%, #12151d 100%);
+  border: 0.1rem solid rgba(255, 255, 255, 0.04);
+  border-radius: 1rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  padding: 1.6rem 1.2rem 2rem;
+  display: grid;
+  gap: 1.6rem;
+}
+
+.playlist-mobile-top,
+.playlist-mobile-actions,
+.playlist-desktop-head__actions {
+  display: flex;
+  align-items: center;
+}
+
+.playlist-mobile-top {
+  justify-content: space-between;
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-family: $font-family-primary;
+  font-size: 1.1rem;
+}
+
+.playlist-mobile-top button,
+.playlist-mobile-actions button,
+.playlist-track__like,
+.playlist-desktop-head__actions button,
+.playlist-desktop-search,
+.playlist-desktop-row__like {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playlist-mobile-top img,
+.playlist-mobile-actions img,
+.playlist-track__like img,
+.playlist-desktop-head__actions img,
+.playlist-desktop-search img,
+.playlist-desktop-row__like img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.playlist-mobile-cover,
+.playlist-desktop-cover {
+  overflow: hidden;
+  border-radius: 0.8rem;
+  background: #07090f;
+}
+
+.playlist-mobile-cover img,
+.playlist-desktop-cover img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: block;
+  object-fit: cover;
+}
+
+.playlist-mobile-title,
+.playlist-desktop-head__title {
+  margin: 0;
+  color: #fff;
+  font-family: $font-family-primary;
+}
+
+.playlist-mobile-title {
+  font-size: clamp(2.4rem, 7vw, 3.2rem);
+  line-height: 1.08;
+}
+
+.playlist-mobile-meta,
+.playlist-desktop-head__meta {
+  margin: 0.6rem 0 0;
+  color: rgba(255, 255, 255, 0.48);
+  font-family: $font-family-primary;
+}
+
+.playlist-mobile-meta {
+  font-size: 1.1rem;
+}
+
+.playlist-mobile-actions,
+.playlist-desktop-head__actions {
+  gap: 1rem;
+}
+
+.playlist-mobile-play,
+.playlist-desktop-play {
+  border-radius: 50%;
+  background: #1ed760;
+  color: #0d1117;
+}
+
+.playlist-mobile-play {
+  width: 4.2rem;
+  height: 4.2rem;
+  font-size: 1.8rem;
+}
+
+.playlist-mobile-tracklist {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.playlist-track {
+  display: grid;
+  grid-template-columns: 2rem 3.8rem minmax(0, 1fr) 4rem;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.7rem 0;
+}
+
+.playlist-track__index,
+.playlist-track__duration {
+  color: rgba(255, 255, 255, 0.38);
+  font-family: $font-family-primary;
+  font-size: 0.95rem;
+}
+
+.playlist-track__cover {
+  width: 3.8rem;
+  height: 3.8rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.playlist-track__body h3,
+.playlist-track__body p,
+.playlist-desktop-row__title h3,
+.playlist-desktop-row__title p {
+  margin: 0;
+  font-family: $font-family-primary;
+}
+
+.playlist-track__body h3,
+.playlist-desktop-row__title h3 {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.2rem;
+  font-weight: $font-weight-regular;
+}
+
+.playlist-track__body p,
+.playlist-desktop-row__title p,
+.playlist-desktop-row__album,
+.playlist-desktop-row__duration {
+  margin-top: 0.2rem;
+  color: rgba(255, 255, 255, 0.38);
+  font-size: 0.8rem;
+}
+
+.playlist-mobile-tags,
+.playlist-desktop-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.playlist-mobile-tags span,
+.playlist-desktop-tags span {
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  border: 0.1rem solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.5);
+  font-family: $font-family-primary;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.playlist-mobile-artists,
+.playlist-desktop-artists {
+  display: grid;
+  gap: 1rem;
+}
+
+.playlist-artist {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.playlist-artist img {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.playlist-artist h3,
+.playlist-artist p {
+  margin: 0;
+  font-family: $font-family-primary;
+}
+
+.playlist-artist h3 {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1rem;
+  font-weight: $font-weight-regular;
+}
+
+.playlist-artist p {
+  margin-top: 0.2rem;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 0.8rem;
+}
+
+@include respond(desktop) {
+  .playlist-mobile-content {
+    display: none;
+  }
+
+  .playlist-desktop-content {
+    display: block;
+  }
+
+  .playlist-desktop-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) $page-side-panel-width;
+    gap: 2.4rem;
+    min-height: 66rem;
+  }
+
+  .playlist-desktop-left {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 1.6rem;
+  }
+
+  .playlist-desktop-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .playlist-desktop-head__title {
+    font-size: 2rem;
+    line-height: 1.14;
+  }
+
+  .playlist-desktop-head__meta {
+    font-size: 0.95rem;
+  }
+
+  .playlist-desktop-play {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.2rem;
+  }
+
+  .playlist-desktop-table {
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.06);
+    padding-top: 1.4rem;
+  }
+
+  .playlist-desktop-table__header,
+  .playlist-desktop-row {
+    display: grid;
+    grid-template-columns: 2rem 3.8rem minmax(0, 1.1fr) minmax(0, 0.9fr) 6rem 3rem;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .playlist-desktop-table__header {
+    padding: 0 0 1rem;
+    color: rgba(255, 255, 255, 0.32);
+    font-family: $font-family-primary;
+    font-size: 0.85rem;
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.04);
+  }
+
+  .playlist-desktop-row {
+    padding: 1rem 0;
+  }
+
+  .playlist-desktop-row__cover {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 0.5rem;
+    object-fit: cover;
+  }
+
+  .playlist-desktop-right {
+    display: grid;
+    align-content: start;
+    gap: 1.4rem;
+  }
+}
