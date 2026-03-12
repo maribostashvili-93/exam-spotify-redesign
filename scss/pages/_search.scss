@@ -2,6 +2,14 @@
 @use "../abstracts" as *;
 
 .search-main {
+  .search-mobile-content {
+    display: block;
+  }
+
+  .search-desktop-content {
+    display: none;
+  }
+
   .search-page {
     padding: 0.4rem 0 2rem;
     width: 100%;
@@ -23,7 +31,7 @@
   .search-input {
     flex: 1 1 auto;
     min-width: 0;
-    height: 4.0411rem;
+    height: $player-mobile-action;
     border-radius: 1.2rem;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.06);
@@ -51,8 +59,8 @@
 
   .search-input button,
   .search-camera {
-    width: 4.0411rem;
-    height: 4.0411rem;
+    width: $player-mobile-action;
+    height: $player-mobile-action;
     flex-shrink: 0;
     border: 0;
     border-radius: 1rem;
@@ -77,6 +85,10 @@
     line-height: 1.06;
     letter-spacing: 0.04rem;
     margin-bottom: 0.6rem;
+  }
+
+  .search-empty-state {
+    display: none;
   }
 
   .search-page__subtitle {
@@ -157,27 +169,27 @@
   }
 
   .search-tile--blue {
-    background: #243a79;
+    background: $search-tile-blue;
   }
 
   .search-tile--orange {
-    background: #c76b00;
+    background: $search-tile-orange;
   }
 
   .search-tile--purple {
-    background: #8f67b8;
+    background: $search-tile-purple;
   }
 
   .search-tile--pink {
-    background: #bd2aa6;
+    background: $search-tile-pink;
   }
 
   .search-tile--lilac {
-    background: #8d6cb0;
+    background: $search-tile-lilac;
   }
 
   .search-tile--gray {
-    background: #8f8f8f;
+    background: $search-tile-gray;
   }
 }
 
@@ -198,45 +210,308 @@
     .search-page {
       max-width: none;
       margin: 0;
+      padding: 0;
     }
 
-    .search-page__top {
-      margin-bottom: 2rem;
+    .search-mobile-content {
+      display: none;
     }
 
-    .search-page__title {
-      font-size: 3.8rem;
+    .search-desktop-content {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .search-desktop-section {
+      width: 100%;
+    }
+
+    .search-desktop-section__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .search-desktop-section__header--compact {
+      margin-bottom: 1rem;
+    }
+
+    .search-desktop-section__title {
+      color: $color-text-primary;
+      font-family: $font-family-primary;
+      font-size: 1.8rem;
+      font-weight: $font-weight-bold;
+      line-height: 1.1;
+      letter-spacing: 0.02rem;
+      margin: 0;
+    }
+
+    .search-desktop-section__more {
+      width: 2.8rem;
+      height: 2.8rem;
+      border: 0;
+      padding: 0;
+      background: transparent;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.85;
+    }
+
+    .search-desktop-section__more img {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+
+    .search-recent-grid {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.4rem;
+    }
+
+    .search-recent-card {
+      width: $search-recent-card-size;
+      flex: 0 0 $search-recent-card-size;
+    }
+
+    .search-recent-card__media {
+      position: relative;
+      width: $search-recent-card-size;
+      height: $search-recent-card-size;
+      border-radius: 1rem;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.06);
       margin-bottom: 0.8rem;
     }
 
-    .search-page__subtitle {
-      margin-bottom: 1.4rem;
+    .search-recent-card__media--artist {
+      border-radius: 999px;
     }
 
-    .search-grid {
-      grid-template-columns: repeat(2, 17rem);
-      justify-content: start;
-      gap: 1.2rem 1rem;
-      width: auto;
+    .search-recent-card__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
-    .search-tile {
-      width: 17rem;
-      min-height: 10rem;
-      padding: 1.6rem;
+    .search-recent-card__close {
+      position: absolute;
+      top: 0.3rem;
+      right: 0.3rem;
+      width: 2rem;
+      height: 2rem;
+      border: 0;
+      border-radius: 999px;
+      background: rgba(18, 18, 18, 0.82);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
     }
 
-    .search-tile__title {
-      max-width: 10.5rem;
-      font-size: 2rem;
+    .search-recent-card__close img {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    .search-recent-card__title,
+    .search-recent-card__meta {
+      display: block;
+      font-family: $font-family-primary;
+      line-height: 1.2;
+      letter-spacing: 0.01rem;
+    }
+
+    .search-recent-card__title {
+      color: $color-text-primary;
+      font-size: 1.2rem;
+      font-weight: $font-weight-regular;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .search-recent-card__meta {
+      color: $color-text-secondary;
+      font-size: 1rem;
+      font-weight: $font-weight-regular;
+      margin-top: 0.2rem;
+    }
+
+    .search-carousel-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .search-carousel-heading__label {
+      color: $color-text-primary;
+      font-family: $font-family-primary;
+      font-size: 1.4rem;
+      font-weight: $font-weight-regular;
+      line-height: 1.1;
+      letter-spacing: $letter-spacing-medium;
+      margin: 0;
+    }
+
+    .search-carousel-heading__actions {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    .search-carousel-heading__arrow {
+      width: 2.2rem;
+      height: 2.2rem;
+      border: 0;
+      padding: 0;
+      background: transparent;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.78;
+    }
+
+    .search-carousel-heading__arrow img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    .search-browse-row {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: $search-browse-column-width;
+      gap: 1rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding-bottom: 0.2rem;
+    }
+
+    .search-browse-row::-webkit-scrollbar {
+      display: none;
+    }
+
+    .search-browse-tile {
+      position: relative;
+      min-height: 8rem;
+      border-radius: 0.6rem;
+      overflow: hidden;
+      text-decoration: none;
+      padding: 1.1rem 1rem;
+      display: block;
+      isolation: isolate;
+    }
+
+    .search-browse-tile::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(115deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0) 60%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .search-browse-tile__title {
+      position: relative;
+      z-index: 2;
+      display: block;
+      max-width: 6.6rem;
+      color: #fff;
+      font-family: $font-family-primary;
+      font-size: 1.4rem;
+      font-weight: $font-weight-bold;
       line-height: 1.05;
+      letter-spacing: 0.03rem;
     }
 
-    .search-tile__art {
-      right: -1.6rem;
-      bottom: -2.2rem;
-      width: 9.4rem;
-      height: 9.4rem;
+    .search-browse-tile__art {
+      position: absolute;
+      right: -0.8rem;
+      bottom: -1.2rem;
+      width: 5.4rem;
+      height: 5.4rem;
+      object-fit: cover;
+      transform: rotate(28deg);
+      border-radius: 0.5rem;
+      z-index: 0;
+    }
+
+    .search-browse-tile--blue {
+      background: $search-tile-blue;
+    }
+
+    .search-browse-tile--orange {
+      background: $search-tile-orange;
+    }
+
+    .search-browse-tile--navy {
+      background: $search-tile-navy;
+    }
+
+    .search-browse-tile--purple {
+      background: $search-tile-purple;
+    }
+
+    .search-browse-tile--pink {
+      background: $search-tile-pink;
+    }
+
+    .search-browse-tile--lilac {
+      background: $search-tile-lilac;
+    }
+
+    .search-browse-tile--gray {
+      background: $search-tile-gray;
+    }
+
+    .search-browse-tile--green {
+      background: $search-tile-green;
+    }
+
+    .search-browse-tile--orange-red {
+      background: $search-tile-orange-red;
+    }
+
+    .search-browse-tile--mauve {
+      background: $search-tile-mauve;
+    }
+
+    .search-browse-tile--teal {
+      background: $search-tile-teal;
+    }
+
+    .search-browse-tile--red {
+      background: $search-tile-red;
+    }
+
+    .search-browse-tile--cobalt {
+      background: $search-tile-cobalt;
+    }
+
+    .search-browse-tile--crimson {
+      background: $search-tile-crimson;
+    }
+
+    .search-browse-tile--slate {
+      background: $search-tile-slate;
+    }
+
+    .search-empty-state {
+      display: block;
+      margin: -1rem 0 0;
+      color: $color-text-secondary;
+      font-family: $font-family-primary;
+      font-size: 1.4rem;
+      letter-spacing: $letter-spacing-small;
     }
   }
 }

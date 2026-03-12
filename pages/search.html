@@ -39,7 +39,7 @@
         <nav class="sidebar-nav" aria-label="My Library Navigation">
           <ul class="sidebar-list">
             <li class="sidebar-item">
-              <a class="sidebar-link sidebar-link--has-arrow" href="#">
+              <a class="sidebar-link sidebar-link--has-arrow" href="playlist.html">
                 <span class="icon-swap sidebar-icon">
                   <img
                     class="icon-default"
@@ -57,7 +57,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link sidebar-link--has-arrow" href="#">
+              <a class="sidebar-link sidebar-link--has-arrow" href="playlist.html">
                 <img
                   class="sidebar-icon"
                   src="../assets/icons/Name=Playlist, Filled=No.svg"
@@ -67,7 +67,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="#">
+              <a class="sidebar-link" href="song.html">
                 <span class="icon-swap sidebar-icon">
                   <img
                     class="icon-default"
@@ -85,7 +85,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="#">
+              <a class="sidebar-link" href="album.html">
                 <span class="icon-swap sidebar-icon">
                   <img
                     class="icon-default"
@@ -103,7 +103,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="#">
+              <a class="sidebar-link" href="album.html">
                 <img
                   class="sidebar-icon"
                   src="../assets/icons/Name=Album, Filled=No.svg"
@@ -113,7 +113,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="#">
+              <a class="sidebar-link" href="library.html">
                 <img
                   class="sidebar-icon"
                   src="../assets/icons/Name=Folder, Filled=No.svg"
@@ -123,7 +123,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="#">
+              <a class="sidebar-link" href="podcast.html">
                 <img
                   class="sidebar-icon"
                   src="../assets/icons/Name=Podcast, Filled=No.svg"
@@ -133,7 +133,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="#">
+              <a class="sidebar-link" href="episode.html">
                 <img
                   class="sidebar-icon"
                   src="../assets/icons/Name=Audiobook, Filled=No.svg"
@@ -143,7 +143,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="#">
+              <a class="sidebar-link" href="artist.html">
                 <img
                   class="sidebar-icon"
                   src="../assets/icons/Name=Artist, Filled=No.svg"
@@ -255,62 +255,83 @@
 
       <main class="main search-main" aria-label="Search Content">
         <section class="search-page" aria-label="Search Page">
-          <header class="search-page__top">
-            <div class="search-input" role="search">
-              <input type="text" placeholder="What do you want to play?" aria-label="Search input" />
-              <button type="button" aria-label="Search">
-                <img src="../assets/icons/Name=Search, Filled=No.svg" alt="" />
+          <div class="search-mobile-content">
+            <header class="search-page__top">
+              <div class="search-input" role="search">
+                <input
+                  id="search-input-mobile"
+                  type="text"
+                  placeholder="What do you want to play?"
+                  aria-label="Search input"
+                  data-search-input
+                />
+                <button type="button" aria-label="Search" data-search-button>
+                  <img src="../assets/icons/Name=Search, Filled=No.svg" alt="" />
+                </button>
+              </div>
+
+              <button class="search-camera" type="button" aria-label="Open camera">
+                <img src="../assets/icons/Name=Camera, Filled=No.svg" alt="" />
               </button>
+            </header>
+
+            <h1 class="search-page__title">Browse all</h1>
+            <p class="search-page__subtitle">Discover</p>
+
+            <div id="search-mobile-grid" class="search-grid" aria-label="Search categories">
             </div>
+          </div>
 
-            <button class="search-camera" type="button" aria-label="Open camera">
-              <img src="../assets/icons/Name=Camera, Filled=No.svg" alt="" />
-            </button>
-          </header>
+          <div class="search-desktop-content" aria-label="Desktop search browse">
+            <section class="search-desktop-section" aria-labelledby="search-recent-title">
+              <header class="search-desktop-section__header search-desktop-section__header--compact">
+                <h2 id="search-recent-title" class="search-desktop-section__title">Recent searches</h2>
+                <button class="search-desktop-section__more" type="button" aria-label="More options">
+                  <img src="../assets/icons/Name=More, Filled=No.svg" alt="" />
+                </button>
+              </header>
 
-          <h1 class="search-page__title">Browse all</h1>
-          <p class="search-page__subtitle">Discover</p>
+              <div id="search-recent-grid" class="search-recent-grid" aria-label="Recent search cards">
+              </div>
+            </section>
 
-          <div class="search-grid" aria-label="Search categories">
-            <a class="search-tile search-tile--blue" href="#">
-              <span class="search-tile__title">Made For You</span>
-              <img class="search-tile__art" src="../assets/img/thumbnail/image 10.png" alt="Made For You" />
-            </a>
+            <section class="search-desktop-section" aria-labelledby="search-browse-title">
+              <h2 id="search-browse-title" class="search-desktop-section__title">Browse all</h2>
 
-            <a class="search-tile search-tile--orange" href="#">
-              <span class="search-tile__title">New Releases</span>
-              <img class="search-tile__art" src="../assets/img/thumbnail/image 17-1.png" alt="New Releases" />
-            </a>
+              <div class="search-carousel-heading">
+                <p class="search-carousel-heading__label">Discover</p>
+                <div class="search-carousel-heading__actions" aria-hidden="true">
+                  <button class="search-carousel-heading__arrow" type="button" tabindex="-1">
+                    <img src="../assets/icons/Name=Arrow-Left, Filled=No.svg" alt="" />
+                  </button>
+                  <button class="search-carousel-heading__arrow" type="button" tabindex="-1">
+                    <img src="../assets/icons/Name=Arrow-Right, Filled=No.svg" alt="" />
+                  </button>
+                </div>
+              </div>
 
-            <a class="search-tile search-tile--blue" href="#">
-              <span class="search-tile__title">Spotify Classics</span>
-              <img class="search-tile__art" src="../assets/img/thumbnail/image 17.png" alt="Spotify Classics" />
-            </a>
+              <div id="search-browse-row" class="search-browse-row" aria-label="Browse all categories">
+              </div>
+            </section>
 
-            <a class="search-tile search-tile--purple" href="#">
-              <span class="search-tile__title">Charts</span>
-              <img class="search-tile__art" src="../assets/img/thumbnail/image 18.png" alt="Charts" />
-            </a>
+            <section class="search-desktop-section" aria-labelledby="search-genres-title">
+              <div class="search-carousel-heading">
+                <h2 id="search-genres-title" class="search-desktop-section__title">Genres</h2>
+                <div class="search-carousel-heading__actions" aria-hidden="true">
+                  <button class="search-carousel-heading__arrow" type="button" tabindex="-1">
+                    <img src="../assets/icons/Name=Arrow-Left, Filled=No.svg" alt="" />
+                  </button>
+                  <button class="search-carousel-heading__arrow" type="button" tabindex="-1">
+                    <img src="../assets/icons/Name=Arrow-Right, Filled=No.svg" alt="" />
+                  </button>
+                </div>
+              </div>
 
-            <a class="search-tile search-tile--pink" href="#">
-              <span class="search-tile__title">Trending</span>
-              <img class="search-tile__art" src="../assets/img/thumbnail/image 19.png" alt="Trending" />
-            </a>
+              <div id="search-genre-row" class="search-browse-row" aria-label="Genre categories">
+              </div>
+            </section>
 
-            <a class="search-tile search-tile--lilac" href="#">
-              <span class="search-tile__title">Discover</span>
-              <img class="search-tile__art" src="../assets/img/thumbnail/image 11.png" alt="Discover" />
-            </a>
-
-            <a class="search-tile search-tile--gray" href="#">
-              <span class="search-tile__title">Spotify Singles</span>
-              <img class="search-tile__art" src="../assets/img/thumbnail/image 16-1.png" alt="Spotify Singles" />
-            </a>
-
-            <a class="search-tile search-tile--orange" href="#">
-              <span class="search-tile__title">Decades</span>
-              <img class="search-tile__art" src="../assets/img/thumbnail/image 17-1.png" alt="Decades" />
-            </a>
+            <p id="search-empty-state" class="search-empty-state" hidden>No results found.</p>
           </div>
         </section>
       </main>
@@ -319,6 +340,7 @@
     </div>
 
     <script src="../js/header-load.js"></script>
+    <script src="../js/search-load.js"></script>
     <script src="../js/player-load.js"></script>
   </body>
 </html>
