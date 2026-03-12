@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify Song</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+<body class="page-song">
+  <input id="theme-toggle" type="checkbox" hidden />
+
+  <div class="app container">
+    <div id="header"></div>
+
+    <aside class="sidebar" aria-label="Sidebar">
+      <div class="sidebar-head">
+        <a class="sidebar-head-link" href="library.html">
+          <span class="icon-swap sidebar-icon">
+            <img
+              class="icon-default"
+              src="../assets/icons/Name=Library, Filled=No.svg"
+              alt="Library icon"
+            />
+            <img
+              class="icon-filled"
+              src="../assets/icons/Name=Library, Filled=Yes.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </span>
+          <span class="sidebar-text">My Library</span>
+        </a>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="My Library Navigation">
+        <ul class="sidebar-list">
+          <li class="sidebar-item">
+            <a class="sidebar-link sidebar-link--has-arrow" href="playlist.html">
+              <span class="icon-swap sidebar-icon">
+                <img
+                  class="icon-default"
+                  src="../assets/icons/Name=Pin, Filled=No.svg"
+                  alt="Pins icon"
+                />
+                <img
+                  class="icon-filled"
+                  src="../assets/icons/Name=Pin, Filled=Yes.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </span>
+              <span class="sidebar-text">Pins</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link sidebar-link--has-arrow" href="playlist.html">
+              <img
+                class="sidebar-icon"
+                src="../assets/icons/Name=Playlist, Filled=No.svg"
+                alt="Playlists icon"
+              />
+              <span class="sidebar-text">Playlists</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="song.html">
+              <span class="icon-swap sidebar-icon">
+                <img
+                  class="icon-default"
+                  src="../assets/icons/Name=Like, Filled=No.svg"
+                  alt="Liked songs icon"
+                />
+                <img
+                  class="icon-filled"
+                  src="../assets/icons/Name=Like, Filled=Yes.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </span>
+              <span class="sidebar-text">Liked songs</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="album.html">
+              <span class="icon-swap sidebar-icon">
+                <img
+                  class="icon-default"
+                  src="../assets/icons/Name=Save, Filled=No.svg"
+                  alt="Saves icon"
+                />
+                <img
+                  class="icon-filled"
+                  src="../assets/icons/Name=Save, Filled=Yes.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </span>
+              <span class="sidebar-text">Saves</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+              <a class="sidebar-link" href="album.html">
+              <img
+                class="sidebar-icon"
+                src="../assets/icons/Name=Album, Filled=No.svg"
+                alt="Albums icon"
+              />
+              <span class="sidebar-text">Albums</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="library.html">
+              <img
+                class="sidebar-icon"
+                src="../assets/icons/Name=Folder, Filled=No.svg"
+                alt="Folders icon"
+              />
+              <span class="sidebar-text">Folders</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="podcast.html">
+              <img
+                class="sidebar-icon"
+                src="../assets/icons/Name=Podcast, Filled=No.svg"
+                alt="Podcasts icon"
+              />
+              <span class="sidebar-text">Podcasts</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="episode.html">
+              <img
+                class="sidebar-icon"
+                src="../assets/icons/Name=Audiobook, Filled=No.svg"
+                alt="Audiobooks icon"
+              />
+              <span class="sidebar-text">Audiobooks</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="artist.html">
+              <img
+                class="sidebar-icon"
+                src="../assets/icons/Name=Artist, Filled=No.svg"
+                alt="Artists icon"
+              />
+              <span class="sidebar-text">Artists</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main song-main" aria-label="Song page">
+      <section class="song-page" aria-label="Song content">
+        <div class="song-mobile-content">
+          <article class="song-mobile-panel">
+            <header class="song-mobile-panel__top">
+              <button class="song-panel__chevron" type="button" aria-label="Collapse player">
+                <img src="../assets/icons/Name=Down, Filled=No.svg" alt="" />
+              </button>
+              <span class="song-panel__album">Random Access Memories</span>
+              <button class="song-panel__menu" type="button" aria-label="More options">
+                <img src="../assets/icons/Name=More, Filled=No.svg" alt="" />
+              </button>
+            </header>
+
+            <div class="song-mobile-stage">
+              <section class="song-mobile-view song-mobile-view--active" data-song-panel="cover" aria-label="Now playing">
+                <div class="song-art">
+                  <img src="../assets/img/daft.png" alt="Random Access Memories cover" />
+                </div>
+              </section>
+
+              <section class="song-mobile-view" data-song-panel="lyrics" aria-label="Lyrics" hidden>
+                <div class="song-mobile-lyrics">
+                  <p>Like the legend of the phoenix, huh</p>
+                  <p>All ends with beginnings</p>
+                  <p>What keeps the planet spinning, ah</p>
+                  <p>The force from the beginning, hm, look</p>
+                  <p>We've come too far</p>
+                  <p class="song-mobile-lyrics__muted">To give up who we are</p>
+                  <p class="song-mobile-lyrics__muted">So let's raise the bar</p>
+                  <p class="song-mobile-lyrics__muted">And our cups to the stars</p>
+                  <p class="song-mobile-lyrics__muted">She's up all night 'til the sun</p>
+                  <p class="song-mobile-lyrics__muted">I'm up all night to get some</p>
+                </div>
+              </section>
+
+              <section class="song-mobile-view" data-song-panel="queue" aria-label="Next up" hidden>
+                <div class="song-mobile-queue">
+                  <div class="song-mobile-queue__minihead">
+                    <span class="song-mobile-queue__track">Get Lucky (feat. Pharrell...)</span>
+                  </div>
+                  <h2 class="song-mobile-queue__title">Next up:</h2>
+
+                  <article class="song-mobile-queue__group">
+                    <header>
+                      <span>@ Random Access Memories</span>
+                      <div>
+                        <button type="button" aria-label="Shuffle queue">
+                          <img src="../assets/icons/Name=Shuffle, Filled=No.svg" alt="" />
+                        </button>
+                        <button type="button" aria-label="Open queue view">
+                          <img src="../assets/icons/Name=Queue, Filled=No.svg" alt="" />
+                        </button>
+                      </div>
+                    </header>
+
+                    <div class="song-mobile-queue__list">
+                      <article class="song-mobile-queue__item" data-queue-item>
+                        <img src="../assets/img/daft.png" alt="Get Lucky cover" />
+                        <div class="song-mobile-queue__item-meta">
+                          <h3>Get Lucky (feat. ...)</h3>
+                          <p>Daft Punk</p>
+                        </div>
+                        <button class="song-mobile-queue__action-trigger" type="button" aria-label="Open queue actions" data-queue-action>
+                          <img src="../assets/icons/Name=List, Filled=No.svg" alt="" />
+                        </button>
+                        <button class="song-mobile-queue__remove" type="button" aria-label="Remove track" data-queue-remove hidden>
+                          <span>&times;</span>
+                          <span>Remove</span>
+                        </button>
+                      </article>
+                      <article class="song-mobile-queue__item" data-queue-item>
+                        <img src="../assets/img/daft.png" alt="Get Lucky cover" />
+                        <div class="song-mobile-queue__item-meta">
+                          <h3>Get Lucky (feat. ...)</h3>
+                          <p>Daft Punk</p>
+                        </div>
+                        <button class="song-mobile-queue__action-trigger" type="button" aria-label="Open queue actions" data-queue-action>
+                          <img src="../assets/icons/Name=List, Filled=No.svg" alt="" />
+                        </button>
+                        <button class="song-mobile-queue__remove" type="button" aria-label="Remove track" data-queue-remove hidden>
+                          <span>&times;</span>
+                          <span>Remove</span>
+                        </button>
+                      </article>
+                      <article class="song-mobile-queue__item" data-queue-item>
+                        <img src="../assets/img/daft.png" alt="Get Lucky cover" />
+                        <div class="song-mobile-queue__item-meta">
+                          <h3>Get Lucky (feat. ...)</h3>
+                          <p>Daft Punk</p>
+                        </div>
+                        <button class="song-mobile-queue__action-trigger" type="button" aria-label="Open queue actions" data-queue-action>
+                          <img src="../assets/icons/Name=List, Filled=No.svg" alt="" />
+                        </button>
+                        <button class="song-mobile-queue__remove" type="button" aria-label="Remove track" data-queue-remove hidden>
+                          <span>&times;</span>
+                          <span>Remove</span>
+                        </button>
+                      </article>
+                      <article class="song-mobile-queue__item" data-queue-item>
+                        <img src="../assets/img/daft.png" alt="Get Lucky cover" />
+                        <div class="song-mobile-queue__item-meta">
+                          <h3>Get Lucky (feat. ...)</h3>
+                          <p>Daft Punk</p>
+                        </div>
+                        <button class="song-mobile-queue__action-trigger" type="button" aria-label="Open queue actions" data-queue-action>
+                          <img src="../assets/icons/Name=List, Filled=No.svg" alt="" />
+                        </button>
+                        <button class="song-mobile-queue__remove" type="button" aria-label="Remove track" data-queue-remove hidden>
+                          <span>&times;</span>
+                          <span>Remove</span>
+                        </button>
+                      </article>
+                    </div>
+                  </article>
+                </div>
+              </section>
+            </div>
+
+            <div class="song-details">
+              <div class="song-meta">
+                <div>
+                  <h1 class="song-meta__title">Get Lucky (feat. Pharrell Williams)</h1>
+                  <p class="song-meta__artist">Daft Punk</p>
+                </div>
+
+                <div class="song-meta__actions" aria-label="Track actions">
+                  <button class="song-action" type="button" aria-label="Like song">
+                    <img src="../assets/icons/Name=Like, Filled=No.svg" alt="" />
+                  </button>
+                  <button class="song-action" type="button" aria-label="Add to playlist">
+                    <img src="../assets/icons/Name=Add to Playlist, Filled=No.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+
+              <div class="song-progress">
+                <label class="player__sr-only" for="song-progress">Song progress</label>
+                <input id="song-progress" class="song-progress__slider" type="range" min="0" max="100" value="0" />
+                <div class="song-progress__times" aria-hidden="true">
+                  <span id="song-current-time">0:00</span>
+                  <span id="song-duration">0:00</span>
+                </div>
+              </div>
+
+              <div class="song-transport" aria-label="Playback controls">
+                <button class="song-transport__button" type="button" aria-label="Shuffle">
+                  <img src="../assets/icons/Name=Shuffle, Filled=No.svg" alt="" />
+                </button>
+                <button class="song-transport__button" type="button" aria-label="Previous song">
+                  <img src="../assets/icons/Name=Prev, Filled=No.svg" alt="" />
+                </button>
+                <button id="song-play" class="song-transport__button song-transport__button--play" type="button" aria-label="Play">
+                  <i id="song-play-icon" class="fa-solid fa-play"></i>
+                </button>
+                <button class="song-transport__button" type="button" aria-label="Next song">
+                  <img src="../assets/icons/Name=Next, Filled=No.svg" alt="" />
+                </button>
+                <button class="song-transport__button" type="button" aria-label="Queue">
+                  <img src="../assets/icons/Name=Queue, Filled=No.svg" alt="" />
+                </button>
+              </div>
+
+              <div class="song-toolbar" aria-label="More player tools">
+                <button class="song-toolbar__button" type="button" aria-label="Connect device">
+                  <img src="../assets/icons/Name=Device, Filled=No.svg" alt="" />
+                </button>
+                <button class="song-toolbar__button" type="button" aria-label="Share song">
+                  <img src="../assets/icons/Name=Share, Filled=No.svg" alt="" />
+                </button>
+                <button class="song-toolbar__button" type="button" aria-label="Open lyrics" data-song-view="lyrics">
+                  <img src="../assets/icons/Name=List, Filled=No.svg" alt="" />
+                </button>
+                <button class="song-toolbar__button song-toolbar__button--active" type="button" aria-label="Open cover" data-song-view="cover">
+                  <img src="../assets/icons/Name=Album, Filled=No.svg" alt="" />
+                </button>
+                <button class="song-toolbar__button" type="button" aria-label="Open queue" data-song-view="queue">
+                  <img src="../assets/icons/Name=Queue, Filled=No.svg" alt="" />
+                </button>
+                <button class="song-toolbar__button" type="button" aria-label="More actions">
+                  <img src="../assets/icons/Name=More, Filled=No.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="song-desktop-content">
+          <section class="song-desktop-panel" aria-label="Song details">
+            <div class="song-desktop-hero">
+              <div class="song-desktop-cover">
+                <img src="../assets/img/daft.png" alt="Random Access Memories cover" />
+              </div>
+
+              <div class="song-desktop-summary">
+                <h1 class="song-desktop-title">Get Lucky (feat. Pharrell Williams and Nile Rodgers)</h1>
+                <p class="song-desktop-meta">Daft Punk • Random Access Memories • 2013 • 6:09 • 489,601,033</p>
+
+                <div class="song-desktop-actions">
+                  <button id="song-play-desktop" class="song-desktop-play" type="button" aria-label="Play">
+                    <i id="song-play-desktop-icon" class="fa-solid fa-play"></i>
+                  </button>
+                  <button class="song-desktop-icon" type="button" aria-label="Like song">
+                    <img src="../assets/icons/Name=Like, Filled=No.svg" alt="" />
+                  </button>
+                  <button class="song-desktop-icon" type="button" aria-label="Add to playlist">
+                    <img src="../assets/icons/Name=Add to Playlist, Filled=No.svg" alt="" />
+                  </button>
+                  <button class="song-desktop-icon" type="button" aria-label="Open queue">
+                    <img src="../assets/icons/Name=Queue, Filled=No.svg" alt="" />
+                  </button>
+                  <button class="song-desktop-icon" type="button" aria-label="Share song">
+                    <img src="../assets/icons/Name=Share, Filled=No.svg" alt="" />
+                  </button>
+                  <button class="song-desktop-icon" type="button" aria-label="More actions">
+                    <img src="../assets/icons/Name=More, Filled=No.svg" alt="" />
+                  </button>
+                </div>
+
+                <div class="song-desktop-tags" aria-label="Song tags">
+                  <span>Funk</span>
+                  <span>Electronic music</span>
+                  <span>Disco</span>
+                  <span>Soft Rock</span>
+                  <span>Progressive pop</span>
+                </div>
+
+                <div class="song-desktop-credits">
+                  <article class="song-credit">
+                    <img src="../assets/img/daft.png" alt="Daft Punk" />
+                    <div>
+                      <h2>Daft Punk</h2>
+                      <p>Main artist</p>
+                    </div>
+                  </article>
+                  <article class="song-credit">
+                    <img src="../assets/img/image 8.png" alt="Pharrell Williams" />
+                    <div>
+                      <h2>Pharrell Williams</h2>
+                      <p>Main artist, Composer, Lyricist</p>
+                    </div>
+                  </article>
+                  <article class="song-credit">
+                    <img src="../assets/img/image 20.png" alt="Nile Rodgers" />
+                    <div>
+                      <h2>Nile Rodgers</h2>
+                      <p>Main artist, Composer, Lyricist</p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <nav class="song-desktop-tabs" aria-label="Song sections">
+              <button class="song-desktop-tab song-desktop-tab--active" type="button">Lyrics</button>
+              <button class="song-desktop-tab" type="button">Credits</button>
+              <button class="song-desktop-tab" type="button">More like this</button>
+            </nav>
+
+            <div class="song-desktop-body">
+              <aside class="song-desktop-toolbar" aria-label="Lyrics tools">
+                <button class="song-desktop-toolbar__button" type="button" aria-label="Translate">
+                  <img src="../assets/icons/Name=Translate, Filled=No.svg" alt="" />
+                </button>
+                <button class="song-desktop-toolbar__button" type="button" aria-label="Timer">
+                  <img src="../assets/icons/Name=Timer, Filled=Yes.svg" alt="" />
+                </button>
+                <button class="song-desktop-toolbar__button" type="button" aria-label="Notes">
+                  <img src="../assets/icons/Name=Notes, Filled=No.svg" alt="" />
+                </button>
+                <button class="song-desktop-toolbar__button" type="button" aria-label="Font">
+                  <img src="../assets/icons/Name=Font, Filled=No.svg" alt="" />
+                </button>
+              </aside>
+
+              <div class="song-desktop-lyrics">
+                <p>Like the legend of the phoenix, huh</p>
+                <p>All ends with beginnings</p>
+                <p>What keeps the planet spinning, ah</p>
+                <p>The force from the beginning, hm, look</p>
+                <p>We've come too far to give up who we are</p>
+                <p>So let's raise the bar and our cups to the stars</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="../js/header-load.js"></script>
+  <script src="../js/song-load.js"></script>
+</body>
+</html>
