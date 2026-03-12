@@ -1,33 +1,16 @@
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener("DOMContentLoaded", loadPlayer);
+
+async function loadPlayer() {
   const playerMount = document.querySelector("#player");
 
-  if (!playerMount) return;
+  if (!playerMount) {
+    return;
+  }
 
   try {
-    const isNestedPage = window.location.pathname.includes("/pages/");
-    const assetBase = isNestedPage ? "../" : "./";
-    const markupResponse = await fetch(`${assetBase}partials/player.html`);
-
-    if (!markupResponse.ok) {
-      throw new Error(`Failed to load player partial: ${markupResponse.status}`);
-    }
-
-    playerMount.innerHTML = await markupResponse.text();
-    normalizePlayerMarkup(playerMount, assetBase);
-
-    const dataResponse = await fetch(`${assetBase}data/music-cover.json`);
-
-    if (!dataResponse.ok) {
-      throw new Error(`Failed to load player data: ${dataResponse.status}`);
-    }
-
-    const data = await dataResponse.json();
-    const playlists = Array.isArray(data.playlists) ? data.playlists : [];
-
-    if (!playlists.length) {
-      throw new Error("Player data is empty.");
-    }
-
+    const assetBase = getPlayerAssetBase();
+    await renderPlayerMarkup(playerMount, assetBase);
+    const playlists = await loadPlayerData(assetBase);
     const state = createPlayerState(playlists);
 
     if (!state.currentTrack) {
@@ -38,7 +21,43 @@ document.addEventListener("DOMContentLoaded", async () => {
   } catch (error) {
     console.error(error);
   }
-});
+}
+
+function getPlayerAssetBase() {
+  if (window.location.pathname.includes("/pages/")) {
+    return "../";
+  }
+
+  return "./";
+}
+
+async function renderPlayerMarkup(playerMount, assetBase) {
+  const response = await fetch(`${assetBase}partials/player.html`);
+
+  if (!response.ok) {
+    throw new Error(`Failed to load player partial: ${response.status}`);
+  }
+
+  playerMount.innerHTML = await response.text();
+  normalizePlayerMarkup(playerMount, assetBase);
+}
+
+async function loadPlayerData(assetBase) {
+  const response = await fetch(`${assetBase}data/music-cover.json`);
+
+  if (!response.ok) {
+    throw new Error(`Failed to load player data: ${response.status}`);
+  }
+
+  const data = await response.json();
+  const playlists = Array.isArray(data.playlists) ? data.playlists : [];
+
+  if (!playlists.length) {
+    throw new Error("Player data is empty.");
+  }
+
+  return playlists;
+}
 
 function createPlayerState(playlists) {
   const audio = new Audio();
@@ -58,21 +77,7 @@ function createPlayerState(playlists) {
 }
 
 function wirePlayer(root, state, assetBase) {
-  const elements = {
-    cover: root.querySelector("#player-cover"),
-    title: root.querySelector("#player-title"),
-    artist: root.querySelector("#player-artist"),
-    album: root.querySelector("#player-album"),
-    currentTime: root.querySelector("#player-current-time"),
-    duration: root.querySelector("#player-duration"),
-    track: root.querySelector("#player-track"),
-    play: root.querySelector("#player-play"),
-    playMobile: root.querySelector("#player-play-mobile"),
-    playIcon: root.querySelector("#player-play-icon"),
-    playMobileIcon: root.querySelector("#player-play-mobile-icon"),
-    prev: root.querySelector("#player-prev"),
-    next: root.querySelector("#player-next"),
-  };
+  const elements = getPlayerElements(root);
 
   const syncTrack = () => {
     state.currentPlaylist = state.playlists[state.playlistIndex] ?? null;
@@ -196,6 +201,24 @@ function wirePlayer(root, state, assetBase) {
   });
 
   syncTrack();
+}
+
+function getPlayerElements(root) {
+  return {
+    cover: root.querySelector("#player-cover"),
+    title: root.querySelector("#player-title"),
+    artist: root.querySelector("#player-artist"),
+    album: root.querySelector("#player-album"),
+    currentTime: root.querySelector("#player-current-time"),
+    duration: root.querySelector("#player-duration"),
+    track: root.querySelector("#player-track"),
+    play: root.querySelector("#player-play"),
+    playMobile: root.querySelector("#player-play-mobile"),
+    playIcon: root.querySelector("#player-play-icon"),
+    playMobileIcon: root.querySelector("#player-play-mobile-icon"),
+    prev: root.querySelector("#player-prev"),
+    next: root.querySelector("#player-next"),
+  };
 }
 
 function updatePlayButtons(elements, isPlaying, assetBase) {

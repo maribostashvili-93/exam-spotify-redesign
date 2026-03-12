@@ -62,20 +62,36 @@
     </ul>
   </nav>
 
+  <div class="top-header-search" role="search" aria-label="Desktop search">
+    <input
+      id="header-search-input"
+      type="text"
+      placeholder="What do you want to play?"
+      aria-label="Desktop header search input"
+      data-search-input
+    />
+    <button type="button" aria-label="Search" data-search-button>
+      <img
+        src="./assets/icons/Name=Search, Filled=No.svg"
+        alt=""
+      />
+    </button>
+  </div>
+
   <div class="top-header-actions" aria-label="Header Actions">
     <label class="top-header-action top-header-theme" for="theme-toggle" aria-label="Toggle theme">
       <i class="fa-solid fa-moon icon-moon"></i>
       <i class="fa-solid fa-sun icon-sun"></i>
     </label>
 
-    <a class="top-header-action" href="#" aria-label="Notifications" aria-disabled="true">
+    <a class="top-header-action" href="notifications.html" aria-label="Notifications">
       <img
         src="./assets/icons/Name=News, Filled=No.svg"
         alt="Notifications icon"
       />
     </a>
 
-    <a class="top-header-action" href="#" aria-label="Friends" aria-disabled="true">
+    <a class="top-header-action" href="friends.html" aria-label="Friends">
       <span class="icon-swap">
         <img
           class="icon-default"
@@ -91,14 +107,14 @@
       </span>
     </a>
 
-    <a class="top-header-action" href="#" aria-label="Settings" aria-disabled="true">
+    <a class="top-header-action" href="settings.html" aria-label="Settings">
       <img
         src="./assets/icons/Name=Settings, Filled=No.svg"
         alt="Settings icon"
       />
     </a>
 
-    <a class="top-header-action" href="#" aria-label="Profile" aria-disabled="true">
+    <a class="top-header-action" href="profile.html" aria-label="Profile">
       <span class="icon-swap">
         <img
           class="icon-default"
@@ -218,7 +234,7 @@
             <a href="notifications.html" aria-label="Notifications">
               <img src="./assets/icons/Name=News, Filled=No.svg" alt="" />
             </a>
-            <a href="#" aria-label="Camera">
+            <a href="camera.html" aria-label="Camera">
               <img src="./assets/icons/Name=Camera, Filled=No.svg" alt="" />
             </a>
             <a href="friends.html" aria-label="Friends">
@@ -277,7 +293,7 @@
             </li>
 
             <li>
-              <a class="mobile-burger-link" href="#">
+              <a class="mobile-burger-link" href="playlist.html">
                 <img src="./assets/icons/Name=Playlist, Filled=No.svg" alt="" />
                 <span>Playlists</span>
               </a>
@@ -291,7 +307,7 @@
               />
 
               <div class="mobile-burger-parent-row">
-                <a class="mobile-burger-link" href="#">
+                <a class="mobile-burger-link" href="song.html">
                   <span class="icon-swap">
                     <img class="icon-default" src="./assets/icons/Name=Like, Filled=No.svg" alt="" />
                     <img class="icon-filled" src="./assets/icons/Name=Like, Filled=Yes.svg" alt="" aria-hidden="true" />
@@ -310,7 +326,7 @@
 
               <ul class="mobile-burger-submenu">
                 <li>
-                  <a class="mobile-burger-sublink" href="#"
+                  <a class="mobile-burger-sublink" href="album.html"
                     ><img
                       src="./assets/icons/Name=Album, Filled=No.svg"
                       alt=""
@@ -318,7 +334,7 @@
                   >
                 </li>
                 <li>
-                  <a class="mobile-burger-sublink" href="#"
+                  <a class="mobile-burger-sublink" href="library.html"
                     ><img
                       src="./assets/icons/Name=Folder, Filled=No.svg"
                       alt=""
@@ -326,7 +342,7 @@
                   >
                 </li>
                 <li>
-                  <a class="mobile-burger-sublink" href="#"
+                  <a class="mobile-burger-sublink" href="podcast.html"
                     ><img
                       src="./assets/icons/Name=Podcast, Filled=No.svg"
                       alt=""
@@ -334,7 +350,7 @@
                   >
                 </li>
                 <li>
-                  <a class="mobile-burger-sublink" href="#"
+                  <a class="mobile-burger-sublink" href="album.html"
                     ><img
                       src="./assets/icons/Name=Audiobook, Filled=No.svg"
                       alt=""
@@ -342,7 +358,7 @@
                   >
                 </li>
                 <li>
-                  <a class="mobile-burger-sublink" href="#"
+                  <a class="mobile-burger-sublink" href="artist.html"
                     ><img
                       src="./assets/icons/Name=Artist, Filled=No.svg"
                       alt=""
@@ -353,7 +369,7 @@
             </li>
 
             <li>
-              <a class="mobile-burger-link" href="#">
+              <a class="mobile-burger-link" href="album.html">
                 <span class="icon-swap">
                   <img class="icon-default" src="./assets/icons/Name=Save, Filled=No.svg" alt="" />
                   <img class="icon-filled" src="./assets/icons/Name=Save, Filled=Yes.svg" alt="" aria-hidden="true" />
