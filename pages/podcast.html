@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify Podcast</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+<body class="page-podcast">
+  <input id="theme-toggle" type="checkbox" hidden />
+  <div class="app container">
+    <div id="header"></div>
+    <aside class="sidebar" aria-label="Sidebar">
+      <div class="sidebar-head"><a class="sidebar-head-link" href="library.html"><span class="icon-swap sidebar-icon"><img class="icon-default" src="../assets/icons/Name=Library, Filled=No.svg" alt="Library icon" /><img class="icon-filled" src="../assets/icons/Name=Library, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="sidebar-text">My Library</span></a></div>
+      <nav class="sidebar-nav" aria-label="My Library Navigation"><ul class="sidebar-list"><li class="sidebar-item"><a class="sidebar-link sidebar-link--has-arrow" href="playlist.html"><span class="icon-swap sidebar-icon"><img class="icon-default" src="../assets/icons/Name=Pin, Filled=No.svg" alt="Pins icon" /><img class="icon-filled" src="../assets/icons/Name=Pin, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="sidebar-text">Pins</span></a></li><li class="sidebar-item"><a class="sidebar-link sidebar-link--has-arrow" href="playlist.html"><img class="sidebar-icon" src="../assets/icons/Name=Playlist, Filled=No.svg" alt="Playlists icon" /><span class="sidebar-text">Playlists</span></a></li><li class="sidebar-item"><a class="sidebar-link" href="song.html"><span class="icon-swap sidebar-icon"><img class="icon-default" src="../assets/icons/Name=Like, Filled=No.svg" alt="Liked songs icon" /><img class="icon-filled" src="../assets/icons/Name=Like, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="sidebar-text">Liked songs</span></a></li><li class="sidebar-item"><a class="sidebar-link" href="album.html"><span class="icon-swap sidebar-icon"><img class="icon-default" src="../assets/icons/Name=Save, Filled=No.svg" alt="Saves icon" /><img class="icon-filled" src="../assets/icons/Name=Save, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="sidebar-text">Saves</span></a></li><li class="sidebar-item"><a class="sidebar-link" href="album.html"><img class="sidebar-icon" src="../assets/icons/Name=Album, Filled=No.svg" alt="Albums icon" /><span class="sidebar-text">Albums</span></a></li><li class="sidebar-item"><a class="sidebar-link" href="library.html"><img class="sidebar-icon" src="../assets/icons/Name=Folder, Filled=No.svg" alt="Folders icon" /><span class="sidebar-text">Folders</span></a></li><li class="sidebar-item"><a class="sidebar-link" href="podcast.html"><img class="sidebar-icon" src="../assets/icons/Name=Podcast, Filled=No.svg" alt="Podcasts icon" /><span class="sidebar-text">Podcasts</span></a></li><li class="sidebar-item"><a class="sidebar-link" href="episode.html"><img class="sidebar-icon" src="../assets/icons/Name=Audiobook, Filled=No.svg" alt="Audiobooks icon" /><span class="sidebar-text">Audiobooks</span></a></li><li class="sidebar-item"><a class="sidebar-link" href="artist.html"><img class="sidebar-icon" src="../assets/icons/Name=Artist, Filled=No.svg" alt="Artists icon" /><span class="sidebar-text">Artists</span></a></li></ul></nav>
+    </aside>
+    <aside class="mobile-sidebar" aria-label="Mobile menu">
+      <nav class="mobile-nav" aria-label="Primary Mobile Navigation">
+        <ul class="mobile-nav-list">
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="../index.html"><span class="icon-swap mobile-nav-icon"><img class="icon-default" src="../assets/icons/Name=Home, Filled=No.svg" alt="Home icon" /><img class="icon-filled" src="../assets/icons/Name=Home, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="mobile-nav-text">Home</span></a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="discover.html"><span class="icon-swap mobile-nav-icon"><img class="icon-default" src="../assets/icons/Name=Discover, Filled=No.svg" alt="Discover icon" /><img class="icon-filled" src="../assets/icons/Name=Discover, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="mobile-nav-text">Discover</span></a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="search.html"><span class="icon-swap mobile-nav-icon"><img class="icon-default" src="../assets/icons/Name=Search, Filled=No.svg" alt="Search icon" /><img class="icon-filled" src="../assets/icons/Name=Search, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="mobile-nav-text">Search</span></a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="library.html"><span class="icon-swap mobile-nav-icon"><img class="icon-default" src="../assets/icons/Name=Library, Filled=No.svg" alt="Library icon" /><img class="icon-filled" src="../assets/icons/Name=Library, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="mobile-nav-text">Library</span></a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="profile.html"><span class="icon-swap mobile-nav-icon"><img class="icon-default" src="../assets/icons/Name=User, Filled=No.svg" alt="Profile icon" /><img class="icon-filled" src="../assets/icons/Name=User, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="mobile-nav-text">Me</span></a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main podcast-main" aria-label="Podcast page">
+      <section class="podcast-page">
+        <section class="podcast-hero">
+          <div class="podcast-hero__meta">
+            <p class="podcast-hero__eyebrow">Podcast</p>
+            <h1>The Joe Rogan Experience</h1>
+            <p class="podcast-hero__author">Joe Rogan</p>
+            <div class="podcast-hero__actions">
+              <button class="podcast-button podcast-button--ghost" type="button">Follow</button>
+              <button class="podcast-button podcast-button--ghost" type="button">4.8</button>
+              <button class="podcast-button podcast-button--ghost" type="button">98K</button>
+              <button class="podcast-button" type="button" aria-label="More"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
+            </div>
+          </div>
+          <aside class="podcast-hero__cover"><img src="../assets/img/source/image.png" alt="The Joe Rogan Experience" /></aside>
+        </section>
+
+        <div class="podcast-content">
+          <section class="podcast-list">
+            <div class="podcast-list__head">
+              <h2>All Episodes</h2>
+              <div class="podcast-list__controls">
+                <button type="button">New</button>
+                <button type="button">All Episodes</button>
+                <button type="button" aria-label="Search"><img src="../assets/icons/Name=Search, Filled=No.svg" alt="" /></button>
+              </div>
+            </div>
+            <article class="podcast-episode-card">
+              <img src="../assets/img/source/image.png" alt="Episode 2149 thumbnail" />
+              <div class="podcast-episode-card__body">
+                <a class="podcast-episode-card__title" href="episode.html">#2149 - Sebastian Maniscalco</a>
+                <p class="podcast-episode-card__meta">May 10 • 2 hr 15 min</p>
+                <p class="podcast-episode-card__desc">Sebastian Maniscalco is a comedian, actor, and host of the podcast "The Pete and Sebastian Show" alongside Pete Correale.</p>
+                <div class="podcast-episode-card__actions">
+                  <button class="podcast-button podcast-button--play" type="button" aria-label="Play episode"><i class="fa-solid fa-play"></i></button>
+                  <button class="podcast-button" type="button" aria-label="Save"><img src="../assets/icons/Name=Save, Filled=No.svg" alt="" /></button>
+                  <button class="podcast-button" type="button" aria-label="Add"><img src="../assets/icons/Name=Add to Library, Filled=No.svg" alt="" /></button>
+                  <button class="podcast-button" type="button" aria-label="Share"><img src="../assets/icons/Name=Share, Filled=No.svg" alt="" /></button>
+                  <button class="podcast-button" type="button" aria-label="More"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
+                </div>
+              </div>
+            </article>
+            <article class="podcast-episode-card">
+              <img src="../assets/img/thumbnail/image 18.png" alt="Episode 2148 thumbnail" />
+              <div class="podcast-episode-card__body">
+                <a class="podcast-episode-card__title" href="episode.html">#2148 - Gad Saad</a>
+                <p class="podcast-episode-card__meta">May 9 • 3 hr 39 min</p>
+                <p class="podcast-episode-card__desc">Professor of Marketing at Concordia University and an expert in the application of evolutionary psychology in marketing.</p>
+                <div class="podcast-episode-card__actions">
+                  <button class="podcast-button podcast-button--play" type="button" aria-label="Play episode"><i class="fa-solid fa-play"></i></button>
+                  <button class="podcast-button" type="button" aria-label="Save"><img src="../assets/icons/Name=Save, Filled=No.svg" alt="" /></button>
+                  <button class="podcast-button" type="button" aria-label="Add"><img src="../assets/icons/Name=Add to Library, Filled=No.svg" alt="" /></button>
+                  <button class="podcast-button" type="button" aria-label="Share"><img src="../assets/icons/Name=Share, Filled=No.svg" alt="" /></button>
+                  <button class="podcast-button" type="button" aria-label="More"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
+                </div>
+              </div>
+            </article>
+            <article class="podcast-episode-card">
+              <img src="../assets/img/thumbnail/image 19.png" alt="Episode 2147 thumbnail" />
+              <div class="podcast-episode-card__body">
+                <a class="podcast-episode-card__title" href="episode.html">#2147 - Mike Baker</a>
+                <p class="podcast-episode-card__meta">May 8 • 2 hr 56 min</p>
+                <p class="podcast-episode-card__desc">Mike Baker is a former CIA covert operations officer and host of the President's Daily Brief podcast.</p>
+                <div class="podcast-episode-card__actions">
+                  <button class="podcast-button podcast-button--play" type="button" aria-label="Play episode"><i class="fa-solid fa-play"></i></button>
+                  <button class="podcast-button" type="button" aria-label="Save"><img src="../assets/icons/Name=Save, Filled=No.svg" alt="" /></button>
+                  <button class="podcast-button" type="button" aria-label="Add"><img src="../assets/icons/Name=Add to Library, Filled=No.svg" alt="" /></button>
+                  <button class="podcast-button" type="button" aria-label="Share"><img src="../assets/icons/Name=Share, Filled=No.svg" alt="" /></button>
+                  <button class="podcast-button" type="button" aria-label="More"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
+                </div>
+              </div>
+            </article>
+          </section>
+          <aside class="podcast-sidebar">
+            <div class="podcast-sidebar__cover"><img src="../assets/img/source/image.png" alt="The Joe Rogan Experience cover" /></div>
+            <section class="podcast-sidebar__about"><h2>About</h2><p>The official podcast of comedian Joe Rogan.</p><div class="podcast-tags"><span>Comedy</span><span>Culture</span><span>Society</span></div></section>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <div id="player"></div>
+  </div>
+  <script src="../js/header-load.js"></script>
+  <script src="../js/player-load.js"></script>
+</body>
+</html>
