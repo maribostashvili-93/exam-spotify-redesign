@@ -104,44 +104,208 @@
     "activeFilter": "Music",
     "reels": [
       {
-        "playlistId": "pl-01",
-        "title": "Linkin Park Mix",
-        "artist": "Spotify",
-        "year": "2013",
-        "duration": "1 hr 14 min",
-        "songs": "22 songs",
-        "likes": "500K",
-        "chips": ["Rock", "Alt Rock"],
-        "tintColor": "#1E4E49",
-        "reelImage": "./assets/img/reel-image.png",
-        "surfaceImage": "./assets/img/source/image.png",
-        "cover": "./assets/img/thumbnail/image 10.png"
+        "playlistId": "pl-03",
+        "title": "The Strokes",
+        "artist": "Poster Pick",
+        "year": "2000s",
+        "duration": "3 min",
+        "songs": "Indie rock",
+        "likes": "540K",
+        "chips": ["Indie", "Rock"],
+        "tintColor": "#7E2519",
+        "reelImage": "./assets/img/strok.jpg",
+        "surfaceImage": "./assets/img/strok.jpg",
+        "cover": "./assets/img/strok.jpg"
       },
       {
-        "playlistId": "pl-16",
-        "title": "Get Lucky",
-        "artist": "Daft Punk",
-        "year": "2023",
-        "duration": "6:05",
-        "likes": "500K",
-        "chips": ["Funk", "Disco"],
-        "tintColor": "#5A220D",
-        "reelImage": "./assets/img/reel-image2.png",
-        "surfaceImage": "./assets/img/image 8.png",
-        "cover": "./assets/img/thumbnail/image 7.png"
+        "playlistId": "pl-12",
+        "title": "TED Talk",
+        "artist": "Ideas Worth Sharing",
+        "year": "Talks",
+        "duration": "18 min",
+        "songs": "Podcast",
+        "likes": "720K",
+        "chips": ["Podcast", "Talks"],
+        "tintColor": "#5B0B0B",
+        "reelImage": "./assets/img/Ted Talk.jpg",
+        "surfaceImage": "./assets/img/Ted Talk.jpg",
+        "cover": "./assets/img/Ted Talk.jpg"
+      },
+      {
+        "playlistId": "pl-13",
+        "title": "The Beatles Poster",
+        "artist": "Classic Collection",
+        "year": "1960s",
+        "duration": "2 min",
+        "likes": "680K",
+        "chips": ["Classic", "Rock"],
+        "tintColor": "#1F364E",
+        "reelImage": "./assets/img/The Beatles Poster.jpg",
+        "surfaceImage": "./assets/img/The Beatles Poster.jpg",
+        "cover": "./assets/img/The Beatles Poster.jpg"
+      },
+      {
+        "playlistId": "pl-14",
+        "title": "ABBA",
+        "artist": "Poster Pick",
+        "year": "70s Pop",
+        "duration": "3 min",
+        "songs": "Pop classic",
+        "likes": "610K",
+        "chips": ["Pop", "Classic"],
+        "tintColor": "#8D5F44",
+        "reelImage": "./assets/img/Без названия (90).jpg",
+        "surfaceImage": "./assets/img/Без названия (90).jpg",
+        "cover": "./assets/img/Без названия (90).jpg"
       },
       {
         "playlistId": "pl-04",
-        "title": "Rock Mix",
-        "artist": "Spotify",
-        "year": "2024",
-        "duration": "42 min",
-        "likes": "500K",
-        "chips": ["Rock", "Classic"],
-        "tintColor": "#243B4D",
-        "reelImage": "./assets/img/reel-image3.png",
-        "surfaceImage": "./assets/img/image 18.png",
-        "cover": "./assets/img/thumbnail/image 13.png"
+        "title": "Abbey Road",
+        "artist": "The Beatles",
+        "year": "1969",
+        "duration": "2 min",
+        "songs": "Rock classic",
+        "likes": "650K",
+        "chips": ["Classic", "Rock"],
+        "tintColor": "#314B3E",
+        "reelImage": "./assets/img/Без названия (91).jpg",
+        "surfaceImage": "./assets/img/Без названия (91).jpg",
+        "cover": "./assets/img/Без названия (91).jpg"
+      },
+      {
+        "playlistId": "pl-17b",
+        "title": "Billie Eilish",
+        "artist": "Poster Pick",
+        "year": "Alt Pop",
+        "duration": "3 min",
+        "songs": "Modern pop",
+        "likes": "770K",
+        "chips": ["Pop", "Alt"],
+        "tintColor": "#6A6B30",
+        "reelImage": "./assets/img/Billie Eilish poster.jpg",
+        "surfaceImage": "./assets/img/Billie Eilish poster.jpg",
+        "cover": "./assets/img/Billie Eilish poster.jpg"
+      }
+    ]
+  },
+  "search": {
+    "placeholder": "What do you want to play?",
+    "recentSearches": [
+      {
+        "title": "Daft Punk",
+        "type": "artist",
+        "image": "./assets/img/daft.png"
+      },
+      {
+        "title": "David Bowie",
+        "type": "artist",
+        "image": "./assets/img/image 20.png"
+      },
+      {
+        "title": "Black Holes...",
+        "subtitle": "Muse",
+        "type": "album",
+        "image": "./assets/img/Frame 8.png"
+      }
+    ],
+    "browseCategories": [
+      {
+        "title": "Made For You",
+        "image": "./assets/img/image-13.png",
+        "accentClass": "search-browse-tile--blue",
+        "tags": ["mix", "playlist", "daily"]
+      },
+      {
+        "title": "New Releases",
+        "image": "./assets/img/image-13-1.png",
+        "accentClass": "search-browse-tile--orange",
+        "tags": ["albums", "fresh", "latest"]
+      },
+      {
+        "title": "Spotify Classics",
+        "image": "./assets/img/image-13-2.png",
+        "accentClass": "search-browse-tile--navy",
+        "tags": ["classic", "vintage", "hits"]
+      },
+      {
+        "title": "Charts",
+        "image": "./assets/img/image-13-3.png",
+        "accentClass": "search-browse-tile--purple",
+        "tags": ["top", "viral", "popular"]
+      },
+      {
+        "title": "Trending",
+        "image": "./assets/img/image-13-4.png",
+        "accentClass": "search-browse-tile--pink",
+        "tags": ["viral", "hot", "top"]
+      },
+      {
+        "title": "Discover",
+        "image": "./assets/img/image-13-5.png",
+        "accentClass": "search-browse-tile--lilac",
+        "tags": ["discover", "explore", "new"]
+      },
+      {
+        "title": "Spotify Singles",
+        "image": "./assets/img/image-13-6.png",
+        "accentClass": "search-browse-tile--gray",
+        "tags": ["single", "spotify", "exclusive"]
+      },
+      {
+        "title": "Decades",
+        "image": "./assets/img/image-13-7.png",
+        "accentClass": "search-browse-tile--orange",
+        "tags": ["80s", "90s", "2000s"]
+      }
+    ],
+    "genreCategories": [
+      {
+        "title": "Pop",
+        "image": "./assets/img/image-13-8.png",
+        "accentClass": "search-browse-tile--green",
+        "tags": ["genre", "mainstream"]
+      },
+      {
+        "title": "Country",
+        "image": "./assets/img/image-13-9.png",
+        "accentClass": "search-browse-tile--orange-red",
+        "tags": ["genre", "americana"]
+      },
+      {
+        "title": "Hip-Hop",
+        "image": "./assets/img/image-13-10.png",
+        "accentClass": "search-browse-tile--mauve",
+        "tags": ["genre", "rap"]
+      },
+      {
+        "title": "Rock",
+        "image": "./assets/img/image-13-11.png",
+        "accentClass": "search-browse-tile--teal",
+        "tags": ["genre", "band"]
+      },
+      {
+        "title": "Indie",
+        "image": "./assets/img/image-13-12.png",
+        "accentClass": "search-browse-tile--red",
+        "tags": ["genre", "alternative"]
+      },
+      {
+        "title": "Punk",
+        "image": "./assets/img/image-13-13.png",
+        "accentClass": "search-browse-tile--cobalt",
+        "tags": ["genre", "fast"]
+      },
+      {
+        "title": "Metal",
+        "image": "./assets/img/image-13-14.png",
+        "accentClass": "search-browse-tile--crimson",
+        "tags": ["genre", "heavy"]
+      },
+      {
+        "title": "Instrumental",
+        "image": "./assets/img/image-2.png",
+        "accentClass": "search-browse-tile--slate",
+        "tags": ["genre", "ambient", "score"]
       }
     ]
   },
