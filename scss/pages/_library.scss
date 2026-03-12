@@ -1,0 +1,145 @@
+
+@use "../abstracts" as *;
+
+.library-main {
+  .library-page {
+    padding: 0.4rem 0 2rem;
+  }
+
+  .library-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .library-search {
+    width: 100%;
+    height: 4.1rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.8rem 0 1rem;
+  }
+
+  .library-search input {
+    border: 0;
+    outline: 0;
+    width: 100%;
+    background: transparent;
+    color: var(--Fg-Primary, #E0E0E0);
+    font-family: $font-family-primary;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: $font-weight-bold;
+    line-height: normal;
+    letter-spacing: $letter-spacing-heading;
+  }
+
+  .library-search input::placeholder {
+    color: rgba(224, 224, 224, 0.5);
+    font-size: 2rem;
+    font-weight: $font-weight-bold;
+    letter-spacing: $letter-spacing-heading;
+  }
+
+  .library-search button,
+  .library-add {
+    width: 4rem;
+    height: 4rem;
+    border: 0;
+    background: transparent;
+    border-radius: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-text-secondary;
+    flex-shrink: 0;
+  }
+
+  .library-search button img,
+  .library-add img {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+
+  .library-filter-row {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .library-filter-btn {
+    height: 3.6rem;
+    border: 0;
+    background: transparent;
+    color: var(--Fg-Secondary, #898989);
+    font-family: $font-family-primary;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: $font-weight-regular;
+    line-height: normal;
+    letter-spacing: $letter-spacing-medium;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.2rem;
+  }
+
+  .library-filter-btn--icon {
+    width: 3.6rem;
+    padding: 0;
+  }
+
+  .library-filter-btn--icon img {
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+
+  .library-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .library-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .library-item__link {
+    min-height: 8.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: var(--Fg-Primary, #E0E0E0);
+  }
+
+  .library-item__title {
+    color: var(--Fg-Primary, #E0E0E0);
+    font-family: $font-family-primary;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: $font-weight-bold;
+    line-height: normal;
+    letter-spacing: $letter-spacing-heading;
+  }
+
+  .library-item__arrow {
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.8;
+    flex-shrink: 0;
+  }
+}
+
+@include respond(desktop) {
+  .library-main .library-page {
+    max-width: 58rem;
+    margin: 0 auto;
+  }
+}
