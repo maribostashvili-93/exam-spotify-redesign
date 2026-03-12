@@ -1,5 +1,5 @@
 @use "../abstracts/variables" as *;
-@use "../abstracts/breakpoints" as bq;
+@use "../abstracts/mixins" as *;
 
 .player {
   position: fixed;
@@ -193,19 +193,23 @@
   cursor: pointer;
 }
 
-@include bq.respond(desktop) {
+@include respond(desktop) {
   .player {
-    left: $container-padding-desktop;
-    right: $container-padding-desktop;
+    left: calc(#{$sidebar-desktop-width} + #{$layout-desktop-gap});
+    right: auto;
     bottom: 1rem;
     transform: none;
-    width: auto;
-    max-width: none;
+    width: min(
+      $player-desktop-target-width,
+      calc(100vw - #{$sidebar-desktop-width} - (2 * #{$layout-desktop-gap}))
+    );
+    max-width: calc(100vw - #{$sidebar-desktop-width} - (2 * #{$layout-desktop-gap}));
     min-height: $player-desktop-height;
     border-radius: $player-desktop-radius;
     padding: 1rem $player-desktop-padding-x;
     gap: $player-desktop-gap;
     justify-content: initial;
+    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.28);
   }
 
   .player::before,
@@ -228,7 +232,7 @@
     order: 2;
     flex: 0 0 auto;
     min-width: 0;
-    max-width: $player-desktop-left-max;
+    max-width: 32rem;
   }
 
   .player__right {
@@ -363,23 +367,5 @@
 
   .player__icon-desktop {
     display: inline-flex;
-  }
-}
-
-@include bq.respond(desktop) {
-  .player {
-    left: calc(#{$sidebar-desktop-width} + #{$layout-desktop-gap});
-    right: auto;
-    width: min(
-      $player-desktop-target-width,
-      calc(100vw - #{$sidebar-desktop-width} - (2 * #{$layout-desktop-gap}))
-    );
-    max-width: calc(100vw - #{$sidebar-desktop-width} - (2 * #{$layout-desktop-gap}));
-    min-height: $player-desktop-height;
-    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.28);
-  }
-
-  .player__left {
-    max-width: 32rem;
   }
 }

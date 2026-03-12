@@ -1,5 +1,6 @@
-
+@use "sass:map";
 @use "../abstracts/variables" as *;
+@use "../abstracts/breakpoints" as bp;
 
 @mixin container ($max: $container-max-width) {
 width: 100%;
@@ -7,6 +8,58 @@ max-width: $max;
 margin-inline: auto;
 
 padding-inline: clamp($container-padding-mobile, 0.8rem + 1vw,  $container-padding-desktop);
+}
+
+@mixin flex-center($direction: row, $gap: 0, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin fluid-size($property, $min, $preferred, $max) {
+  #{$property}: clamp($min, $preferred, $max);
+}
+
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin hide-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin respond($device) {
+  @if $device == tablet {
+    @media (min-width: bp.$bp-tablet) { @content; }
+  }
+  @else if $device == desktop {
+    @media (min-width: bp.$bp-desktop) { @content; }
+  }
+  @else if $device == wide {
+    @media (min-width: bp.$bp-wide) { @content; }
+  }
+}
+
+@mixin theme-tokens($tokens) {
+  --bg-primary: #{map.get($tokens, bg-primary)};
+  --bg-secondary: #{map.get($tokens, bg-secondary)};
+  --bg-header: #{map.get($tokens, bg-header)};
+  --bg-panel: #{map.get($tokens, bg-panel)};
+  --bg-sidebar: #{map.get($tokens, bg-sidebar)};
+  --fg-primary: #{map.get($tokens, fg-primary)};
+  --fg-secondary: #{map.get($tokens, fg-secondary)};
+  --border-soft: #{map.get($tokens, border-soft)};
+  --border-strong: #{map.get($tokens, border-strong)};
+  --hover-bg: #{map.get($tokens, hover-bg)};
+  --overlay-scrim: #{map.get($tokens, scrim)};
+  --search-bg: #{map.get($tokens, search-bg)};
+  --sidebar-gradient: #{map.get($tokens, sidebar-gradient)};
 }
 
 @mixin checkbox-toggle($checkbox, $target) {

@@ -1,15 +1,12 @@
 @use "../abstracts/variables" as *;
-@use "../abstracts/breakpoints" as *;
+@use "../abstracts/mixins" as *;
 
 .section-wrapper {
   margin-top: 3rem;
 }
 
 .section-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  @include flex-center(row, 1rem, space-between, center);
   margin-bottom: 1.2rem;
 }
 
@@ -48,15 +45,10 @@
 }
 
 .artists-row {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
+  @include flex-center(row, 1rem, flex-start, stretch);
   overflow-x: auto;
   padding: 0.6rem 0;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  @include hide-scrollbar;
 }
 
 .artist-card {
@@ -78,7 +70,7 @@
 
 @include respond(desktop) {
   .section-title {
-    font-size: clamp(2.4rem, 2.2vw, $home-section-title-size);
+    @include fluid-size(font-size, 2.4rem, 2.2vw, $home-section-title-size);
   }
 
   .section-controls {
@@ -102,9 +94,7 @@
     padding: 0;
     justify-content: flex-start;
 
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    @include hide-scrollbar;
   }
 
   .artist-card {

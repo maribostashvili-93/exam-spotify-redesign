@@ -1,16 +1,11 @@
 @use "../abstracts/variables" as *;
-@use "../abstracts/breakpoints" as *;
+@use "../abstracts/mixins" as *;
 
 .cards-row {
-  display: flex;
-  flex-direction: row;
-  gap: $container-padding-mobile;
+  @include flex-center(row, $container-padding-mobile, flex-start, stretch);
   overflow-x: auto;
   padding: 1.8rem 0 0.8rem;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  @include hide-scrollbar;
 }
 
 .card {
@@ -18,9 +13,7 @@
   flex: 0 0 clamp(10.2rem, calc((100vw - 4.8rem) / 3), 12.4rem);
   text-decoration: none;
   color: inherit;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
+  @include flex-center(column, 0.8rem, flex-start, stretch);
 }
 
 .card-cover-wrap {
@@ -77,9 +70,7 @@
   font-weight: $font-weight-medium;
   letter-spacing: $letter-spacing-medium;
   line-height: normal;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  @include text-truncate;
 }
 
 .card-sub {
@@ -132,9 +123,7 @@
     justify-content: flex-start;
     padding: 2rem 0 0.4rem;
 
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    @include hide-scrollbar;
   }
 
   .card {

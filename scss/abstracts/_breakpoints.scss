@@ -1,15 +1,3 @@
 $bp-tablet: 48rem;      // 768px (media-query rem uses 16px base)
 $bp-desktop: 64rem;     // 1024px
 $bp-wide: 73.1875rem;   // 1171px
-
-@mixin respond($device) {
-  @if $device == tablet {
-    @media (min-width: $bp-tablet) { @content; }
-  } 
-  @else if $device == desktop {
-    @media (min-width: $bp-desktop) { @content; }
-  } 
-  @else if $device == wide {
-    @media (min-width: $bp-wide) { @content; }
-  }
-}

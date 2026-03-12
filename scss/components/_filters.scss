@@ -1,5 +1,5 @@
 @use "../abstracts/variables" as *;
-@use "../abstracts/breakpoints" as *;
+@use "../abstracts/mixins" as *;
 
 .filters {
   display: flex;
@@ -40,7 +40,6 @@
 .chip--active {
   background: rgba(255, 255, 255, 0.16);
   color: $color-text-primary;
-  display: none;
 }
 
 .filters-icon-btn {
@@ -65,10 +64,6 @@
     font-size: $font-size-body-small;
     letter-spacing: $letter-spacing-medium;
     padding: 1rem 1.6rem;
-  }
-
-  .chip--active {
-    display: inline-flex;
   }
 
   .filters-icon-btn {

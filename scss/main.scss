@@ -1,7 +1,6 @@
 
 @use "abstracts/variables";
 @use "abstracts/mixins";
-@use "abstracts/breakpoints";
 
 @use "base/reset";
 @use "base/fonts";
@@ -19,9 +18,14 @@
 @use "components/sections";
 
 @use "pages/discover";
+@use "pages/album";
+@use "pages/artist";
 @use "pages/library";
+@use "pages/playlist";
+@use "pages/podcast";
 @use "pages/profile";
 @use "pages/search";
+@use "pages/song";
 
 @use "themes/theme-switcher";
 

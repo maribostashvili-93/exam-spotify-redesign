@@ -1,4 +1,4 @@
-@use "sass:map";
+@use "../abstracts/mixins" as *;
 
 $dark: (
   bg-primary: #111111,
@@ -32,34 +32,12 @@ $light: (
   sidebar-gradient: linear-gradient(180deg, rgba(240, 240, 240, 0.85) 0%, #f0f0f0 42.62%)
 );
 
-@mixin theme($mode: dark) {
-  $tokens: $dark;
-
-  @if $mode == light {
-    $tokens: $light;
-  }
-
-  --bg-primary: #{map.get($tokens, bg-primary)};
-  --bg-secondary: #{map.get($tokens, bg-secondary)};
-  --bg-header: #{map.get($tokens, bg-header)};
-  --bg-panel: #{map.get($tokens, bg-panel)};
-  --bg-sidebar: #{map.get($tokens, bg-sidebar)};
-  --fg-primary: #{map.get($tokens, fg-primary)};
-  --fg-secondary: #{map.get($tokens, fg-secondary)};
-  --border-soft: #{map.get($tokens, border-soft)};
-  --border-strong: #{map.get($tokens, border-strong)};
-  --hover-bg: #{map.get($tokens, hover-bg)};
-  --overlay-scrim: #{map.get($tokens, scrim)};
-  --search-bg: #{map.get($tokens, search-bg)};
-  --sidebar-gradient: #{map.get($tokens, sidebar-gradient)};
-}
-
 .app {
-  @include theme(dark);
+  @include theme-tokens($dark);
 }
 
 #theme-toggle:checked ~ .app {
-  @include theme(light);
+  @include theme-tokens($light);
 }
 
 body {
