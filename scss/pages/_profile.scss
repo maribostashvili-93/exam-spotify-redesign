@@ -1,0 +1,376 @@
+
+@use "../abstracts" as *;
+
+.profile-main {
+  .profile-page {
+    padding: 0.4rem 0 2rem;
+    display: grid;
+    gap: 1.2rem;
+  }
+
+  .profile-card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: linear-gradient(
+      135deg,
+      rgba(120, 29, 53, 0.62) 0%,
+      rgba(34, 38, 54, 0.78) 58%,
+      rgba(10, 12, 18, 0.92) 100%
+    );
+    padding: 1.4rem 1.2rem;
+  }
+
+  .profile-card__left {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    min-width: 0;
+  }
+
+  .profile-card__avatar {
+    width: 7.2rem;
+    height: 7.2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    flex-shrink: 0;
+  }
+
+  .profile-card__meta {
+    min-width: 0;
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .profile-card__name {
+    color: #e0e0e0;
+    font-family: $font-family-primary;
+    font-size: clamp(2.6rem, 7vw, 3.2rem);
+    font-weight: $font-weight-bold;
+    line-height: 1;
+    letter-spacing: 0.02rem;
+    margin: 0;
+  }
+
+  .profile-card__stats {
+    color: rgba(224, 224, 224, 0.82);
+    font-family: $font-family-primary;
+    font-size: 1.4rem;
+    font-weight: $font-weight-regular;
+    letter-spacing: $letter-spacing-medium;
+    margin: 0;
+  }
+
+  .profile-card__stats span {
+    margin-inline: 0.35rem;
+  }
+
+  .profile-card__id {
+    color: rgba(224, 224, 224, 0.45);
+    font-family: $font-family-primary;
+    font-size: 1.2rem;
+    font-weight: $font-weight-regular;
+    letter-spacing: $letter-spacing-small;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+  }
+
+  .profile-card__actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-shrink: 0;
+  }
+
+  .profile-card__actions button {
+    width: 3rem;
+    height: 3rem;
+    border: 0;
+    background: transparent;
+    border-radius: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile-card__actions img {
+    width: 1.9rem;
+    height: 1.9rem;
+    opacity: 0.8;
+  }
+
+  .profile-friends {
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(10, 12, 16, 0.85);
+    padding: 1.2rem;
+    display: grid;
+    gap: 1rem;
+    min-height: 15rem;
+  }
+
+  .profile-friends__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .profile-friends__title {
+    color: #e0e0e0;
+    font-family: $font-family-primary;
+    font-size: 1.4rem;
+    font-weight: $font-weight-regular;
+    letter-spacing: $letter-spacing-medium;
+    margin: 0;
+  }
+
+  .profile-friends__head button {
+    width: 2.8rem;
+    height: 2.8rem;
+    border: 0;
+    border-radius: 0.8rem;
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile-friends__head img {
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.8;
+  }
+
+  .profile-friends__empty {
+    min-height: $profile-friends-empty-height;
+    border-radius: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 1.2rem;
+  }
+
+  .profile-friends__empty p {
+    margin: 0;
+    color: rgba(224, 224, 224, 0.38);
+    font-family: $font-family-primary;
+    font-size: 1.2rem;
+  }
+
+  .profile-friends__list {
+    display: none;
+    gap: 1rem;
+  }
+
+  .profile-friend-row {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    min-width: 0;
+  }
+
+  .profile-friend-row__avatar {
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .profile-friend-row__meta {
+    min-width: 0;
+    display: grid;
+    gap: 0.3rem;
+  }
+
+  .profile-friend-row__name {
+    color: rgba(224, 224, 224, 0.72);
+    font-family: $font-family-primary;
+    font-size: 1.2rem;
+    font-weight: $font-weight-regular;
+    letter-spacing: $letter-spacing-small;
+    margin: 0;
+  }
+
+  .profile-friend-row__track {
+    color: #e0e0e0;
+    font-family: $font-family-primary;
+    font-size: 1.25rem;
+    font-weight: $font-weight-regular;
+    letter-spacing: 0.02rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .profile-friend-row__track img {
+    width: 1.4rem;
+    height: 1.4rem;
+    flex-shrink: 0;
+  }
+
+  .profile-friend-row__track span {
+    color: rgba(224, 224, 224, 0.44);
+    margin: 0 0.2rem;
+  }
+
+  .profile-plan {
+    border-radius: 1rem;
+    border: 1px solid rgba(133, 197, 133, 0.22);
+    background: linear-gradient(
+      105deg,
+      rgba(11, 20, 19, 0.96) 0%,
+      rgba(0, 54, 37, 0.92) 100%
+    );
+    padding: 1.6rem 1.4rem;
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .profile-plan__label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: rgba(224, 224, 224, 0.82);
+    font-family: $font-family-primary;
+    font-size: 1.4rem;
+    font-weight: $font-weight-regular;
+    letter-spacing: $letter-spacing-medium;
+    margin: 0;
+  }
+
+  .profile-plan__label img {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .profile-plan__name {
+    color: #16dd63;
+    font-family: $font-family-primary;
+    font-size: 2rem;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.06rem;
+    margin: 0;
+  }
+
+  .profile-plan__price {
+    color: #e0e0e0;
+    font-family: $font-family-primary;
+    font-size: 1.6rem;
+    font-weight: $font-weight-regular;
+    letter-spacing: 0.03rem;
+    margin: 0;
+  }
+
+  .profile-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .profile-menu li {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .profile-menu li:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .profile-menu__link {
+    min-height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: var(--Fg-Primary, #E0E0E0);
+  }
+
+  .profile-menu__left {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.1rem;
+    color: #e0e0e0;
+    font-family: $font-family-primary;
+    font-size: 1.7rem;
+    font-weight: $font-weight-medium;
+    letter-spacing: 0.03rem;
+  }
+
+  .profile-menu__left img {
+    width: 2.2rem;
+    height: 2.2rem;
+    opacity: 0.85;
+  }
+
+  .profile-menu__arrow {
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.8;
+  }
+}
+
+@include respond(desktop) {
+  .profile-main {
+    .profile-page {
+      max-width: none;
+      margin: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(30rem, 0.8fr);
+      gap: 1.6rem;
+      align-items: start;
+    }
+
+    .profile-card {
+      grid-column: 1 / -1;
+      padding: 1.8rem;
+    }
+
+    .profile-card__avatar {
+      width: 9rem;
+      height: 9rem;
+    }
+
+    .profile-card__name {
+      font-size: 3.2rem;
+    }
+
+    .profile-card__stats {
+      font-size: 1.5rem;
+    }
+
+    .profile-card__id {
+      font-size: 1.4rem;
+    }
+
+    .profile-friends {
+      min-height: 22rem;
+    }
+
+    .profile-friends__empty {
+      display: none;
+    }
+
+    .profile-friends__list {
+      display: grid;
+    }
+
+    .profile-plan {
+      min-height: 19rem;
+      align-content: start;
+    }
+
+    .profile-menu {
+      grid-column: 1 / -1;
+    }
+  }
+}
