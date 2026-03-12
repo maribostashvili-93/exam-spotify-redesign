@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify Album</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+<body class="page-album">
+  <input id="theme-toggle" type="checkbox" hidden />
+
+  <div class="app container">
+    <div id="header"></div>
+
+    <aside class="sidebar" aria-label="Sidebar">
+      <div class="sidebar-head">
+        <a class="sidebar-head-link" href="library.html">
+          <span class="icon-swap sidebar-icon">
+            <img class="icon-default" src="../assets/icons/Name=Library, Filled=No.svg" alt="Library icon" />
+            <img class="icon-filled" src="../assets/icons/Name=Library, Filled=Yes.svg" alt="" aria-hidden="true" />
+          </span>
+          <span class="sidebar-text">My Library</span>
+        </a>
+      </div>
+      <nav class="sidebar-nav" aria-label="My Library Navigation">
+        <ul class="sidebar-list">
+          <li class="sidebar-item">
+            <a class="sidebar-link sidebar-link--has-arrow" href="playlist.html">
+              <span class="icon-swap sidebar-icon">
+                <img class="icon-default" src="../assets/icons/Name=Pin, Filled=No.svg" alt="Pins icon" />
+                <img class="icon-filled" src="../assets/icons/Name=Pin, Filled=Yes.svg" alt="" aria-hidden="true" />
+              </span>
+              <span class="sidebar-text">Pins</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link sidebar-link--has-arrow" href="playlist.html">
+              <img class="sidebar-icon" src="../assets/icons/Name=Playlist, Filled=No.svg" alt="Playlists icon" />
+              <span class="sidebar-text">Playlists</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="song.html">
+              <span class="icon-swap sidebar-icon">
+                <img class="icon-default" src="../assets/icons/Name=Like, Filled=No.svg" alt="Liked songs icon" />
+                <img class="icon-filled" src="../assets/icons/Name=Like, Filled=Yes.svg" alt="" aria-hidden="true" />
+              </span>
+              <span class="sidebar-text">Liked songs</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="album.html">
+              <span class="icon-swap sidebar-icon">
+                <img class="icon-default" src="../assets/icons/Name=Save, Filled=No.svg" alt="Saves icon" />
+                <img class="icon-filled" src="../assets/icons/Name=Save, Filled=Yes.svg" alt="" aria-hidden="true" />
+              </span>
+              <span class="sidebar-text">Saves</span>
+            </a>
+          </li>
+          <li class="sidebar-item"><a class="sidebar-link" href="album.html"><img class="sidebar-icon" src="../assets/icons/Name=Album, Filled=No.svg" alt="Albums icon" /><span class="sidebar-text">Albums</span></a></li>
+          <li class="sidebar-item"><a class="sidebar-link" href="library.html"><img class="sidebar-icon" src="../assets/icons/Name=Folder, Filled=No.svg" alt="Folders icon" /><span class="sidebar-text">Folders</span></a></li>
+          <li class="sidebar-item"><a class="sidebar-link" href="podcast.html"><img class="sidebar-icon" src="../assets/icons/Name=Podcast, Filled=No.svg" alt="Podcasts icon" /><span class="sidebar-text">Podcasts</span></a></li>
+          <li class="sidebar-item"><a class="sidebar-link" href="episode.html"><img class="sidebar-icon" src="../assets/icons/Name=Audiobook, Filled=No.svg" alt="Audiobooks icon" /><span class="sidebar-text">Audiobooks</span></a></li>
+          <li class="sidebar-item"><a class="sidebar-link" href="artist.html"><img class="sidebar-icon" src="../assets/icons/Name=Artist, Filled=No.svg" alt="Artists icon" /><span class="sidebar-text">Artists</span></a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <aside class="mobile-sidebar" aria-label="Mobile menu">
+      <nav class="mobile-nav" aria-label="Primary Mobile Navigation">
+        <ul class="mobile-nav-list">
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="../index.html"><span class="icon-swap mobile-nav-icon"><img class="icon-default" src="../assets/icons/Name=Home, Filled=No.svg" alt="Home icon" /><img class="icon-filled" src="../assets/icons/Name=Home, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="mobile-nav-text">Home</span></a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="discover.html"><span class="icon-swap mobile-nav-icon"><img class="icon-default" src="../assets/icons/Name=Discover, Filled=No.svg" alt="Discover icon" /><img class="icon-filled" src="../assets/icons/Name=Discover, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="mobile-nav-text">Discover</span></a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="search.html"><span class="icon-swap mobile-nav-icon"><img class="icon-default" src="../assets/icons/Name=Search, Filled=No.svg" alt="Search icon" /><img class="icon-filled" src="../assets/icons/Name=Search, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="mobile-nav-text">Search</span></a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="library.html"><span class="icon-swap mobile-nav-icon"><img class="icon-default" src="../assets/icons/Name=Library, Filled=No.svg" alt="Library icon" /><img class="icon-filled" src="../assets/icons/Name=Library, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="mobile-nav-text">Library</span></a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="profile.html"><span class="icon-swap mobile-nav-icon"><img class="icon-default" src="../assets/icons/Name=User, Filled=No.svg" alt="Profile icon" /><img class="icon-filled" src="../assets/icons/Name=User, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="mobile-nav-text">Me</span></a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main album-main" aria-label="Album page">
+      <section class="album-page" aria-label="Album content">
+        <div class="album-mobile-content">
+          <article class="album-mobile-panel">
+            <header class="album-mobile-panel__top">
+              <button type="button" aria-label="Go back">
+                <img src="../assets/icons/Name=Arrow-Left, Filled=No.svg" alt="" />
+              </button>
+              <span>Album</span>
+              <button type="button" aria-label="More options">
+                <img src="../assets/icons/Name=More, Filled=No.svg" alt="" />
+              </button>
+            </header>
+
+            <div class="album-mobile-cover">
+              <img src="../assets/img/daft.png" alt="Random Access Memories cover" />
+            </div>
+
+            <div>
+              <h1 class="album-mobile-title">Random Access Memories</h1>
+              <p class="album-mobile-meta">Daft Punk • 2013 • 13 songs • 1 hr 14 min</p>
+            </div>
+
+            <div class="album-mobile-actions">
+              <button class="album-mobile-actions__play" type="button" aria-label="Play album">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <button type="button" aria-label="Shuffle"><img src="../assets/icons/Name=Shuffle, Filled=No.svg" alt="" /></button>
+              <button type="button" aria-label="Add to library"><img src="../assets/icons/Name=Add to Library, Filled=No.svg" alt="" /></button>
+              <button type="button" aria-label="Share"><img src="../assets/icons/Name=Share, Filled=No.svg" alt="" /></button>
+              <button type="button" aria-label="More"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
+            </div>
+
+            <div class="album-mobile-tracklist" aria-label="Track list">
+              <article class="album-track"><span class="album-track__index">1</span><div class="album-track__body"><h3>Give Life Back to Music</h3><p>Daft Punk</p></div><div class="album-track__tools"><span class="album-track__duration">4:35</span><button class="album-track__like" type="button" aria-label="Like track"><img src="../assets/icons/Name=Like, Filled=No.svg" alt="" /></button></div></article>
+              <article class="album-track"><span class="album-track__index">2</span><div class="album-track__body"><h3>The Game of Love</h3><p>Daft Punk</p></div><div class="album-track__tools"><span class="album-track__duration">5:22</span><button class="album-track__like" type="button" aria-label="Like track"><img src="../assets/icons/Name=Like, Filled=No.svg" alt="" /></button></div></article>
+              <article class="album-track"><span class="album-track__index">3</span><div class="album-track__body"><h3>Giorgio by Moroder</h3><p>Daft Punk</p></div><div class="album-track__tools"><span class="album-track__duration">9:04</span><button class="album-track__like" type="button" aria-label="Like track"><img src="../assets/icons/Name=Like, Filled=No.svg" alt="" /></button></div></article>
+              <article class="album-track"><span class="album-track__index">4</span><div class="album-track__body"><h3>Within</h3><p>Daft Punk</p></div><div class="album-track__tools"><span class="album-track__duration">3:48</span><button class="album-track__like" type="button" aria-label="Like track"><img src="../assets/icons/Name=Like, Filled=No.svg" alt="" /></button></div></article>
+              <article class="album-track"><span class="album-track__index">8</span><div class="album-track__body"><h3>Get Lucky (feat. Pharrell Williams and Nile Rodgers)</h3><p>Daft Punk, Pharrell Williams, Nile Rodgers</p></div><div class="album-track__tools"><span class="album-track__duration">6:09</span><button class="album-track__like" type="button" aria-label="Like track"><img src="../assets/icons/Name=Like, Filled=No.svg" alt="" /></button></div></article>
+            </div>
+
+            <div class="album-mobile-tags" aria-label="Album tags">
+              <span>Funk</span>
+              <span>Electronic music</span>
+              <span>Disco</span>
+              <span>Soft Rock</span>
+              <span>Progressive pop</span>
+            </div>
+
+            <div class="album-mobile-artists" aria-label="Album artists">
+              <article class="album-artist"><img src="../assets/img/daft.png" alt="Daft Punk" /><div><h3>Daft Punk</h3><p>Main artist</p></div></article>
+              <article class="album-artist"><img src="../assets/img/image 8.png" alt="Pharrell Williams" /><div><h3>Pharrell Williams</h3><p>Main artist, Composer, Lyricist</p></div></article>
+              <article class="album-artist"><img src="../assets/img/image 20.png" alt="Nile Rodgers" /><div><h3>Nile Rodgers</h3><p>Main artist, Composer, Lyricist</p></div></article>
+            </div>
+          </article>
+        </div>
+
+        <div class="album-desktop-content">
+          <section class="album-desktop-panel" aria-label="Album details">
+            <div class="album-desktop-left">
+              <header class="album-desktop-head">
+                <div>
+                  <h1 class="album-desktop-head__title">Random Access Memories</h1>
+                  <p class="album-desktop-head__meta">Daft Punk • 2013 • 13 songs • 1 hr 14 min</p>
+                </div>
+                <button class="album-desktop-search" type="button" aria-label="Search tracks">
+                  <img src="../assets/icons/Name=Search, Filled=No.svg" alt="" />
+                </button>
+              </header>
+
+              <div class="album-desktop-head__actions" aria-label="Album actions">
+                <button class="album-desktop-play" type="button" aria-label="Play album"><i class="fa-solid fa-play"></i></button>
+                <button type="button" aria-label="Shuffle"><img src="../assets/icons/Name=Shuffle, Filled=No.svg" alt="" /></button>
+                <button type="button" aria-label="Add to library"><img src="../assets/icons/Name=Add to Library, Filled=No.svg" alt="" /></button>
+                <button type="button" aria-label="Queue"><img src="../assets/icons/Name=Queue, Filled=No.svg" alt="" /></button>
+                <button type="button" aria-label="Share"><img src="../assets/icons/Name=Share, Filled=No.svg" alt="" /></button>
+                <button type="button" aria-label="More"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
+              </div>
+
+              <div class="album-desktop-table" aria-label="Album tracks">
+                <div class="album-desktop-table__header">
+                  <span>#</span>
+                  <span>Title</span>
+                  <span>Duration</span>
+                  <span></span>
+                </div>
+                <article class="album-desktop-row"><span>1</span><div class="album-desktop-row__title"><h3>Give Life Back to Music</h3><p>Daft Punk</p></div><span class="album-desktop-row__duration">4:35</span><button class="album-desktop-row__like" type="button" aria-label="Like track"><img src="../assets/icons/Name=Like, Filled=No.svg" alt="" /></button></article>
+                <article class="album-desktop-row"><span>2</span><div class="album-desktop-row__title"><h3>The Game of Love</h3><p>Daft Punk</p></div><span class="album-desktop-row__duration">5:22</span><button class="album-desktop-row__like" type="button" aria-label="Like track"><img src="../assets/icons/Name=Like, Filled=No.svg" alt="" /></button></article>
+                <article class="album-desktop-row"><span>3</span><div class="album-desktop-row__title"><h3>Giorgio by Moroder</h3><p>Daft Punk</p></div><span class="album-desktop-row__duration">9:04</span><button class="album-desktop-row__like" type="button" aria-label="Like track"><img src="../assets/icons/Name=Like, Filled=No.svg" alt="" /></button></article>
+                <article class="album-desktop-row"><span>4</span><div class="album-desktop-row__title"><h3>Within</h3><p>Daft Punk</p></div><span class="album-desktop-row__duration">3:48</span><button class="album-desktop-row__like" type="button" aria-label="Like track"><img src="../assets/icons/Name=Like, Filled=No.svg" alt="" /></button></article>
+                <article class="album-desktop-row"><span>5</span><div class="album-desktop-row__title"><h3>Instant Crush (feat. Julian Casablancas)</h3><p>Daft Punk, Julian Casablancas</p></div><span class="album-desktop-row__duration">5:37</span><button class="album-desktop-row__like" type="button" aria-label="Like track"><img src="../assets/icons/Name=Like, Filled=No.svg" alt="" /></button></article>
+                <article class="album-desktop-row"><span>6</span><div class="album-desktop-row__title"><h3>Lose Yourself to Dance (feat. Pharrell Williams)</h3><p>Daft Punk, Pharrell Williams</p></div><span class="album-desktop-row__duration">5:53</span><button class="album-desktop-row__like" type="button" aria-label="Like track"><img src="../assets/icons/Name=Like, Filled=No.svg" alt="" /></button></article>
+                <article class="album-desktop-row"><span>7</span><div class="album-desktop-row__title"><h3>Touch (feat. Pharrell Williams)</h3><p>Daft Punk, Pharrell Williams</p></div><span class="album-desktop-row__duration">8:18</span><button class="album-desktop-row__like" type="button" aria-label="Like track"><img src="../assets/icons/Name=Like, Filled=No.svg" alt="" /></button></article>
+                <article class="album-desktop-row"><span>8</span><div class="album-desktop-row__title"><h3>Get Lucky (feat. Pharrell Williams and Nile Rodgers)</h3><p>Daft Punk, Pharrell Williams, Nile Rodgers</p></div><span class="album-desktop-row__duration">6:09</span><button class="album-desktop-row__like" type="button" aria-label="Like track"><img src="../assets/icons/Name=Like, Filled=No.svg" alt="" /></button></article>
+                <article class="album-desktop-row"><span>9</span><div class="album-desktop-row__title"><h3>Beyond</h3><p>Daft Punk</p></div><span class="album-desktop-row__duration">4:50</span><button class="album-desktop-row__like" type="button" aria-label="Like track"><img src="../assets/icons/Name=Like, Filled=No.svg" alt="" /></button></article>
+              </div>
+            </div>
+
+            <aside class="album-desktop-right" aria-label="Album side info">
+              <div class="album-desktop-cover">
+                <img src="../assets/img/daft.png" alt="Random Access Memories cover" />
+              </div>
+              <div class="album-desktop-tags" aria-label="Album tags">
+                <span>Funk</span>
+                <span>Electronic music</span>
+                <span>Disco</span>
+                <span>Soft Rock</span>
+                <span>Progressive pop</span>
+              </div>
+              <div class="album-desktop-artists" aria-label="Album artists">
+                <article class="album-artist"><img src="../assets/img/daft.png" alt="Daft Punk" /><div><h3>Daft Punk</h3><p>Main artist</p></div></article>
+                <article class="album-artist"><img src="../assets/img/image 8.png" alt="Pharrell Williams" /><div><h3>Pharrell Williams</h3><p>Main artist</p></div></article>
+                <article class="album-artist"><img src="../assets/img/image 20.png" alt="Nile Rodgers" /><div><h3>Nile Rodgers</h3><p>Main artist</p></div></article>
+              </div>
+            </aside>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <div id="player"></div>
+  </div>
+
+  <script src="../js/header-load.js"></script>
+  <script src="../js/player-load.js"></script>
+</body>
+</html>

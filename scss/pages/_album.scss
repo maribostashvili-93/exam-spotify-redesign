@@ -1,0 +1,346 @@
+@use "../abstracts" as *;
+
+.album-main {
+  padding-bottom: 0;
+}
+
+.album-page {
+  width: 100%;
+}
+
+.album-mobile-content {
+  display: block;
+}
+
+.album-desktop-content {
+  display: none;
+}
+
+.album-mobile-panel {
+  background:
+    radial-gradient(circle at top center, rgba(140, 150, 176, 0.22), transparent 35%),
+    linear-gradient(180deg, #2f3542 0%, #232733 56%, #171a21 100%);
+  border: 0.1rem solid rgba(255, 255, 255, 0.04);
+  border-radius: 1rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  padding: 1.6rem 1.2rem 2rem;
+  display: grid;
+  gap: 1.6rem;
+}
+
+.album-mobile-panel__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-family: $font-family-primary;
+  font-size: 1.1rem;
+}
+
+.album-mobile-panel__top button,
+.album-mobile-actions button,
+.album-track__like,
+.album-track__more,
+.album-desktop-head__actions button,
+.album-desktop-search,
+.album-desktop-row__like {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.album-mobile-panel__top img,
+.album-mobile-actions img,
+.album-track__like img,
+.album-track__more img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.album-mobile-cover {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 0.8rem;
+  background: #06080b;
+}
+
+.album-mobile-cover img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.album-mobile-title {
+  margin: 0;
+  color: #fff;
+  font-family: $font-family-primary;
+  font-size: clamp(2.4rem, 7vw, 3.2rem);
+  line-height: 1.08;
+}
+
+.album-mobile-meta {
+  margin: 0.6rem 0 0;
+  color: rgba(255, 255, 255, 0.48);
+  font-family: $font-family-primary;
+  font-size: 1.1rem;
+}
+
+.album-mobile-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.album-mobile-actions__play {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  background: #1ed760;
+  color: #0c1015;
+  font-size: 1.8rem;
+}
+
+.album-mobile-tracklist {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.album-track {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr) 4rem;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 0;
+}
+
+.album-track__index {
+  color: rgba(255, 255, 255, 0.4);
+  font-family: $font-family-primary;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.album-track__body h3,
+.album-track__body p {
+  margin: 0;
+  font-family: $font-family-primary;
+}
+
+.album-track__body h3 {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.3rem;
+  font-weight: $font-weight-regular;
+  line-height: 1.2;
+}
+
+.album-track__body p {
+  margin-top: 0.2rem;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 1rem;
+}
+
+.album-track__tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.8rem;
+}
+
+.album-track__duration {
+  color: rgba(255, 255, 255, 0.38);
+  font-family: $font-family-primary;
+  font-size: 0.95rem;
+}
+
+.album-mobile-tags,
+.album-desktop-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.album-mobile-tags span,
+.album-desktop-tags span {
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  border: 0.1rem solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.5);
+  font-family: $font-family-primary;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.album-mobile-artists,
+.album-desktop-artists {
+  display: grid;
+  gap: 1rem;
+}
+
+.album-artist {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.album-artist img {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.album-artist h3,
+.album-artist p {
+  margin: 0;
+  font-family: $font-family-primary;
+}
+
+.album-artist h3 {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1rem;
+  font-weight: $font-weight-regular;
+}
+
+.album-artist p {
+  margin-top: 0.2rem;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 0.8rem;
+}
+
+@include respond(desktop) {
+  .album-main {
+    padding-bottom: 0;
+  }
+
+  .album-mobile-content {
+    display: none;
+  }
+
+  .album-desktop-content {
+    display: block;
+  }
+
+  .album-desktop-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) $page-side-panel-width;
+    gap: 2.4rem;
+    min-height: 66rem;
+  }
+
+  .album-desktop-left {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 1.6rem;
+  }
+
+  .album-desktop-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .album-desktop-head__title {
+    margin: 0;
+    color: #fff;
+    font-family: $font-family-primary;
+    font-size: 2rem;
+    line-height: 1.14;
+  }
+
+  .album-desktop-head__meta {
+    margin: 0.8rem 0 0;
+    color: rgba(255, 255, 255, 0.42);
+    font-family: $font-family-primary;
+    font-size: 0.95rem;
+  }
+
+  .album-desktop-head__actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .album-desktop-play {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: #1ed760;
+    color: #0b1016;
+    font-size: 1.2rem;
+  }
+
+  .album-desktop-head__actions img,
+  .album-desktop-search img,
+  .album-desktop-row__like img {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .album-desktop-table {
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.06);
+    padding-top: 1.4rem;
+  }
+
+  .album-desktop-table__header,
+  .album-desktop-row {
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 1fr) 6rem 3rem;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .album-desktop-table__header {
+    padding: 0 0 1rem;
+    color: rgba(255, 255, 255, 0.32);
+    font-family: $font-family-primary;
+    font-size: 0.85rem;
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.04);
+  }
+
+  .album-desktop-row {
+    padding: 1rem 0;
+  }
+
+  .album-desktop-row__title h3,
+  .album-desktop-row__title p {
+    margin: 0;
+    font-family: $font-family-primary;
+  }
+
+  .album-desktop-row__title h3 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    font-weight: $font-weight-regular;
+  }
+
+  .album-desktop-row__title p,
+  .album-desktop-row__duration {
+    color: rgba(255, 255, 255, 0.38);
+    font-size: 0.8rem;
+  }
+
+  .album-desktop-right {
+    display: grid;
+    align-content: start;
+    gap: 1.4rem;
+  }
+
+  .album-desktop-cover {
+    overflow: hidden;
+    border-radius: 0.8rem;
+    background: #05080c;
+  }
+
+  .album-desktop-cover img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: block;
+    object-fit: cover;
+  }
+}
