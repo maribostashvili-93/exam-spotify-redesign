@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify Artist About</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+<body class="page-artist page-artist-about">
+  <input id="theme-toggle" type="checkbox" hidden />
+  <div class="app container">
+    <div id="header"></div>
+    <aside class="sidebar" aria-label="Sidebar">
+      <div class="sidebar-head"><a class="sidebar-head-link" href="library.html"><span class="icon-swap sidebar-icon"><img class="icon-default" src="../assets/icons/Name=Library, Filled=No.svg" alt="Library icon" /><img class="icon-filled" src="../assets/icons/Name=Library, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="sidebar-text">My Library</span></a></div>
+      <nav class="sidebar-nav" aria-label="My Library Navigation"><ul class="sidebar-list"><li class="sidebar-item"><a class="sidebar-link sidebar-link--has-arrow" href="playlist.html"><span class="icon-swap sidebar-icon"><img class="icon-default" src="../assets/icons/Name=Pin, Filled=No.svg" alt="Pins icon" /><img class="icon-filled" src="../assets/icons/Name=Pin, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="sidebar-text">Pins</span></a></li><li class="sidebar-item"><a class="sidebar-link sidebar-link--has-arrow" href="playlist.html"><img class="sidebar-icon" src="../assets/icons/Name=Playlist, Filled=No.svg" alt="Playlists icon" /><span class="sidebar-text">Playlists</span></a></li><li class="sidebar-item"><a class="sidebar-link" href="song.html"><span class="icon-swap sidebar-icon"><img class="icon-default" src="../assets/icons/Name=Like, Filled=No.svg" alt="Liked songs icon" /><img class="icon-filled" src="../assets/icons/Name=Like, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="sidebar-text">Liked songs</span></a></li><li class="sidebar-item"><a class="sidebar-link" href="album.html"><span class="icon-swap sidebar-icon"><img class="icon-default" src="../assets/icons/Name=Save, Filled=No.svg" alt="Saves icon" /><img class="icon-filled" src="../assets/icons/Name=Save, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="sidebar-text">Saves</span></a></li><li class="sidebar-item"><a class="sidebar-link" href="album.html"><img class="sidebar-icon" src="../assets/icons/Name=Album, Filled=No.svg" alt="Albums icon" /><span class="sidebar-text">Albums</span></a></li><li class="sidebar-item"><a class="sidebar-link" href="library.html"><img class="sidebar-icon" src="../assets/icons/Name=Folder, Filled=No.svg" alt="Folders icon" /><span class="sidebar-text">Folders</span></a></li><li class="sidebar-item"><a class="sidebar-link" href="podcast.html"><img class="sidebar-icon" src="../assets/icons/Name=Podcast, Filled=No.svg" alt="Podcasts icon" /><span class="sidebar-text">Podcasts</span></a></li><li class="sidebar-item"><a class="sidebar-link" href="episode.html"><img class="sidebar-icon" src="../assets/icons/Name=Audiobook, Filled=No.svg" alt="Audiobooks icon" /><span class="sidebar-text">Audiobooks</span></a></li><li class="sidebar-item"><a class="sidebar-link" href="artist.html"><img class="sidebar-icon" src="../assets/icons/Name=Artist, Filled=No.svg" alt="Artists icon" /><span class="sidebar-text">Artists</span></a></li></ul></nav>
+    </aside>
+    <aside class="mobile-sidebar" aria-label="Mobile menu">
+      <nav class="mobile-nav" aria-label="Primary Mobile Navigation">
+        <ul class="mobile-nav-list">
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="../index.html"><span class="icon-swap mobile-nav-icon"><img class="icon-default" src="../assets/icons/Name=Home, Filled=No.svg" alt="Home icon" /><img class="icon-filled" src="../assets/icons/Name=Home, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="mobile-nav-text">Home</span></a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="discover.html"><span class="icon-swap mobile-nav-icon"><img class="icon-default" src="../assets/icons/Name=Discover, Filled=No.svg" alt="Discover icon" /><img class="icon-filled" src="../assets/icons/Name=Discover, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="mobile-nav-text">Discover</span></a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="search.html"><span class="icon-swap mobile-nav-icon"><img class="icon-default" src="../assets/icons/Name=Search, Filled=No.svg" alt="Search icon" /><img class="icon-filled" src="../assets/icons/Name=Search, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="mobile-nav-text">Search</span></a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="library.html"><span class="icon-swap mobile-nav-icon"><img class="icon-default" src="../assets/icons/Name=Library, Filled=No.svg" alt="Library icon" /><img class="icon-filled" src="../assets/icons/Name=Library, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="mobile-nav-text">Library</span></a></li>
+          <li class="mobile-nav-item"><a class="mobile-nav-link" href="profile.html"><span class="icon-swap mobile-nav-icon"><img class="icon-default" src="../assets/icons/Name=User, Filled=No.svg" alt="Profile icon" /><img class="icon-filled" src="../assets/icons/Name=User, Filled=Yes.svg" alt="" aria-hidden="true" /></span><span class="mobile-nav-text">Me</span></a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main artist-main" aria-label="Artist about page">
+      <section class="artist-page">
+        <section class="artist-hero">
+          <div class="artist-hero__backdrop"><img src="../assets/img/Rectangle 6.png" alt="Daft Punk banner" /></div>
+          <div class="artist-hero__content">
+            <div class="artist-hero__meta"><h1>Daft Punk</h1><p>20,795,080 monthly listeners</p></div>
+            <div class="artist-hero__actions"><button class="artist-action artist-action--play" type="button" aria-label="Play artist"><i class="fa-solid fa-play"></i></button><button class="artist-action artist-action--ghost" type="button">Follow</button><button class="artist-action" type="button" aria-label="Add to library"><img src="../assets/icons/Name=Add to Library, Filled=No.svg" alt="" /></button><button class="artist-action" type="button" aria-label="Queue"><img src="../assets/icons/Name=Queue, Filled=No.svg" alt="" /></button><button class="artist-action" type="button" aria-label="More"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button></div>
+          </div>
+        </section>
+        <nav class="artist-tabs" aria-label="Artist sections">
+          <a class="artist-tabs__link" href="artist.html">Home</a>
+          <a class="artist-tabs__link" href="artist-albums-list.html">Albums</a>
+          <a class="artist-tabs__link" href="artist-albums-list.html">Singles and EPs</a>
+          <a class="artist-tabs__link" href="artist-albums-grid.html">Compilations</a>
+          <a class="artist-tabs__link" href="artist-about.html">Merch</a>
+          <a class="artist-tabs__link artist-tabs__link--active" href="artist-about.html">About</a>
+          <a class="artist-tabs__link" href="artist-about.html">Features &amp; More</a>
+          <button class="artist-tabs__search" type="button" aria-label="Search"><img src="../assets/icons/Name=Search, Filled=No.svg" alt="" /></button>
+        </nav>
+        <div class="artist-content artist-content--about">
+          <article class="artist-about-card artist-about-card--badge"><strong>#292</strong><span>in the world</span></article>
+          <article class="artist-about-card artist-about-card--text">
+            <p>As they evolved from '90s French house pioneers to 2000s dance tastemakers to mainstream heroes in the 2010s, Daft Punk remained one of dance music's most iconic acts. With their early singles and 1997's influential debut album Homework, Guy-Manuel de Homem-Christo and Thomas Bangalter quickly won acclaim for their skill of blending new-school house, pop, funk, and hip-hop into nostalgic yet futuristic forms.</p>
+            <p>Not content to just widen electronic music's popularity, 2001's Discovery reinvented the form and set new international standards of spectacle, while 2013's Random Access Memories created a polished pop future with a deeply human center.</p>
+          </article>
+          <aside class="artist-about-metrics">
+            <article class="artist-about-metrics__card"><strong>9,868,787</strong><span>Followers</span></article>
+            <article class="artist-about-metrics__card"><strong>22,430,353</strong><span>Monthly listeners</span></article>
+            <article class="artist-about-metrics__card"><strong>Paris, FR</strong><span>390,130 listeners</span></article>
+            <article class="artist-about-metrics__card"><strong>Mexico City, MX</strong><span>367,818 listeners</span></article>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <div id="player"></div>
+  </div>
+  <script src="../js/header-load.js"></script>
+  <script src="../js/player-load.js"></script>
+</body>
+</html>
