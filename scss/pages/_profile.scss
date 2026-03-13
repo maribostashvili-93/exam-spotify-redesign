@@ -88,23 +88,6 @@
     flex-shrink: 0;
   }
 
-  .profile-card__actions button {
-    width: 3rem;
-    height: 3rem;
-    border: 0;
-    background: transparent;
-    border-radius: 0.8rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .profile-card__actions img {
-    width: 1.9rem;
-    height: 1.9rem;
-    opacity: 0.8;
-  }
-
   .profile-friends {
     border-radius: 1rem;
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -128,23 +111,6 @@
     font-weight: $font-weight-regular;
     letter-spacing: $letter-spacing-medium;
     margin: 0;
-  }
-
-  .profile-friends__head button {
-    width: 2.8rem;
-    height: 2.8rem;
-    border: 0;
-    border-radius: 0.8rem;
-    background: transparent;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .profile-friends__head img {
-    width: 2rem;
-    height: 2rem;
-    opacity: 0.8;
   }
 
   .profile-friends__empty {

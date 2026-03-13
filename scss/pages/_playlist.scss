@@ -43,30 +43,6 @@
   font-size: 1.1rem;
 }
 
-.playlist-mobile-top button,
-.playlist-mobile-actions button,
-.playlist-track__like,
-.playlist-desktop-head__actions button,
-.playlist-desktop-search,
-.playlist-desktop-row__like {
-  border: 0;
-  background: transparent;
-  padding: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.playlist-mobile-top img,
-.playlist-mobile-actions img,
-.playlist-track__like img,
-.playlist-desktop-head__actions img,
-.playlist-desktop-search img,
-.playlist-desktop-row__like img {
-  width: 2rem;
-  height: 2rem;
-}
-
 .playlist-mobile-cover,
 .playlist-desktop-cover {
   overflow: hidden;
@@ -108,19 +84,6 @@
 .playlist-mobile-actions,
 .playlist-desktop-head__actions {
   gap: 1rem;
-}
-
-.playlist-mobile-play,
-.playlist-desktop-play {
-  border-radius: 50%;
-  background: #1ed760;
-  color: #0d1117;
-}
-
-.playlist-mobile-play {
-  width: 4.2rem;
-  height: 4.2rem;
-  font-size: 1.8rem;
 }
 
 .playlist-mobile-tracklist {
@@ -265,12 +228,6 @@
 
   .playlist-desktop-head__meta {
     font-size: 0.95rem;
-  }
-
-  .playlist-desktop-play {
-    width: 3rem;
-    height: 3rem;
-    font-size: 1.2rem;
   }
 
   .playlist-desktop-table {

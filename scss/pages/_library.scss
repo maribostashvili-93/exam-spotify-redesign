@@ -46,26 +46,6 @@
     letter-spacing: $letter-spacing-heading;
   }
 
-  .library-search button,
-  .library-add {
-    width: 4rem;
-    height: 4rem;
-    border: 0;
-    background: transparent;
-    border-radius: 1rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: $color-text-secondary;
-    flex-shrink: 0;
-  }
-
-  .library-search button img,
-  .library-add img {
-    width: 2.3rem;
-    height: 2.3rem;
-  }
-
   .library-filter-row {
     display: flex;
     align-items: center;
@@ -73,37 +53,14 @@
     margin-bottom: 0.8rem;
   }
 
-  .library-filter-btn {
-    height: 3.6rem;
-    border: 0;
-    background: transparent;
-    color: var(--Fg-Secondary, #898989);
-    font-family: $font-family-primary;
-    font-size: 1.4rem;
-    font-style: normal;
-    font-weight: $font-weight-regular;
-    line-height: normal;
-    letter-spacing: $letter-spacing-medium;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 0.2rem;
-  }
-
-  .library-filter-btn--icon {
-    width: 3.6rem;
-    padding: 0;
-  }
-
-  .library-filter-btn--icon img {
-    width: 1.9rem;
-    height: 1.9rem;
-  }
-
   .library-list {
     margin: 0;
     padding: 0;
     list-style: none;
+  }
+
+  .library-desktop-shell {
+    display: none;
   }
 
   .library-item {
@@ -138,8 +95,236 @@
 }
 
 @include respond(desktop) {
-  .library-main .library-page {
-    max-width: 58rem;
-    margin: 0 auto;
+  .library-main {
+    .library-page {
+      max-width: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .library-toolbar,
+    .library-filter-row,
+    .library-list {
+      display: none;
+    }
+
+    .library-desktop-shell {
+      display: grid;
+      gap: 2rem;
+      min-width: 0;
+    }
+
+    .library-desktop-sections {
+      display: grid;
+      gap: 1rem;
+      min-width: 0;
+    }
+
+    .library-desktop-list[hidden] {
+      display: none;
+    }
+
+    .library-desktop-sections .section-wrapper {
+      margin-top: 0;
+    }
+
+    .library-desktop-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 2rem;
+      min-height: 7rem;
+      padding: 0 0.8rem;
+      border-bottom: 0.1rem solid rgba(255, 255, 255, 0.04);
+      min-width: 0;
+    }
+
+    .library-desktop-toolbar__group,
+    .library-desktop-toolbar__meta {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      min-width: 0;
+    }
+
+    .library-desktop-toolbar__meta {
+      margin-left: auto;
+    }
+
+    .library-desktop-icon-btn,
+    .library-desktop-meta-btn {
+      border: 0;
+      background: transparent;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(224, 224, 224, 0.62);
+      font-family: $font-family-primary;
+    }
+
+    .library-desktop-icon-btn {
+      width: 4.8rem;
+      height: 4.8rem;
+      border-radius: 1.2rem;
+      flex: 0 0 auto;
+    }
+
+    .library-desktop-icon-btn--active {
+      background: rgba(255, 255, 255, 0.07);
+      color: #e0e0e0;
+      box-shadow: inset 0 0 0 0.1rem rgba(255, 255, 255, 0.04);
+    }
+
+    .library-desktop-icon-btn img {
+      width: 2.2rem;
+      height: 2.2rem;
+      display: block;
+    }
+
+    .library-desktop-meta-btn {
+      gap: 0.8rem;
+      font-size: $library-sub-font-size;
+      letter-spacing: $library-sub-letter-spacing;
+      flex: 0 0 auto;
+    }
+
+    .library-desktop-meta-btn img {
+      width: 2rem;
+      height: 2rem;
+      display: block;
+      opacity: 0.75;
+    }
+
+    .library-desktop-grid {
+      padding-top: 0;
+      grid-template-columns: repeat(auto-fit, minmax(17rem, 17rem));
+      gap: 2rem;
+      width: 100%;
+      max-width: 100%;
+      overflow: visible;
+      justify-content: flex-start;
+    }
+
+    .library-card {
+      overflow: visible;
+    }
+
+    .library-desktop-list {
+      border-top: 0.1rem solid rgba(255, 255, 255, 0.06);
+      padding-top: 1.4rem;
+    }
+
+    .library-desktop-list__header,
+    .library-desktop-row {
+      display: grid;
+      grid-template-columns: 2rem 3.8rem minmax(0, 1.1fr) minmax(0, 0.9fr) 6rem 3rem;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .library-desktop-list__header {
+      padding: 0 0 1rem;
+      color: rgba(255, 255, 255, 0.32);
+      font-family: $font-family-primary;
+      font-size: 0.85rem;
+      border-bottom: 0.1rem solid rgba(255, 255, 255, 0.04);
+    }
+
+    .library-desktop-list__header > span {
+      min-width: 0;
+    }
+
+    .library-desktop-list__sort {
+      border: 0;
+      background: transparent;
+      min-width: 0;
+      padding: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.6rem;
+      color: rgba(255, 255, 255, 0.32);
+      font-family: $font-family-primary;
+      font-size: 0.85rem;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .library-desktop-list__sort--active {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .library-desktop-list__sort-indicator {
+      width: 1rem;
+      color: rgba(255, 255, 255, 0.72);
+      line-height: 1;
+    }
+
+    .library-desktop-list__body {
+      display: grid;
+    }
+
+    .library-desktop-row {
+      padding: 1rem 0;
+      text-decoration: none;
+      color: inherit;
+      border-bottom: 0.1rem solid rgba(255, 255, 255, 0.02);
+    }
+
+    .library-desktop-row__index,
+    .library-desktop-row__album,
+    .library-desktop-row__duration,
+    .library-desktop-row__title p {
+      color: $library-sub-color;
+      font-family: $font-family-primary;
+      font-size: $library-sub-font-size;
+      font-style: normal;
+      font-weight: $library-sub-font-weight;
+      line-height: normal;
+      letter-spacing: $library-sub-letter-spacing;
+    }
+
+    .library-desktop-row__cover {
+      width: 3.2rem;
+      height: 3.2rem;
+      border-radius: 0.5rem;
+      object-fit: cover;
+    }
+
+    .library-desktop-row__title {
+      min-width: 0;
+    }
+
+    .library-desktop-row__title h3,
+    .library-desktop-row__title p {
+      margin: 0;
+      font-family: $font-family-primary;
+    }
+
+    .library-desktop-row__title h3 {
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 1.6rem;
+      font-weight: $font-weight-regular;
+      line-height: 1.2;
+    }
+
+    .library-desktop-row__title p {
+      margin-top: 0.2rem;
+    }
+
+    .library-desktop-row__like {
+      border: 0;
+      background: transparent;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+
+    .library-desktop-row__like img {
+      width: 2rem;
+      height: 2rem;
+      display: block;
+    }
   }
 }

@@ -279,6 +279,107 @@
             </button>
           </nav>
 
+          <div class="library-desktop-shell" aria-label="Desktop library">
+            <header class="library-desktop-toolbar" aria-label="Library display controls">
+              <div class="library-desktop-toolbar__group">
+                <button class="library-desktop-icon-btn" type="button" aria-label="List view" data-library-view="list">
+                  <img src="../assets/icons/Name=List, Filled=No.svg" alt="" />
+                </button>
+                <button class="library-desktop-icon-btn library-desktop-icon-btn--active" type="button" aria-label="Grid view" data-library-view="grid">
+                  <img src="../assets/icons/Name=Grid, Filled=No.svg" alt="" />
+                </button>
+              </div>
+
+              <div class="library-desktop-toolbar__meta">
+                <button class="library-desktop-meta-btn" type="button" aria-label="Sort library items" data-library-sort>
+                  <img src="../assets/icons/Name=Sort, Filled=No.svg" alt="" />
+                  <span data-library-sort-label>Recent</span>
+                </button>
+                <button class="library-desktop-meta-btn" type="button" aria-label="Group items">
+                  <img src="../assets/icons/Name=Filter, Filled=No.svg" alt="" />
+                  <span>Group</span>
+                </button>
+                <button class="library-desktop-icon-btn" type="button" aria-label="Search library">
+                  <img src="../assets/icons/Name=Search, Filled=No.svg" alt="" />
+                </button>
+              </div>
+            </header>
+
+            <div class="library-desktop-sections" aria-label="Library sections">
+              <section class="section-wrapper" aria-label="Made For You">
+                <header class="section-head">
+                  <h2 class="section-title">Made For You</h2>
+                </header>
+                <div id="library-made-for-you" class="library-desktop-grid cards-row" aria-label="Made For You cards"></div>
+              </section>
+
+              <section class="section-wrapper" aria-label="Your top mixes">
+                <header class="section-head">
+                  <h2 class="section-title">Your top mixes</h2>
+                </header>
+                <div id="library-top-mixes" class="library-desktop-grid cards-row" aria-label="Top mixes cards"></div>
+              </section>
+
+              <section class="section-wrapper" aria-label="Podcasts For You">
+                <header class="section-head">
+                  <h2 class="section-title">Podcasts For You</h2>
+                </header>
+                <div id="library-podcasts" class="library-desktop-grid cards-row" aria-label="Podcast cards"></div>
+              </section>
+
+              <section class="section-wrapper" aria-label="Audiobooks For You">
+                <header class="section-head">
+                  <h2 class="section-title">Audiobooks For You</h2>
+                </header>
+                <div id="library-audiobooks" class="library-desktop-grid cards-row" aria-label="Audiobook cards"></div>
+              </section>
+            </div>
+
+            <section class="library-desktop-list" aria-label="Library list view" hidden>
+              <div class="library-desktop-list__header">
+                <button
+                  class="library-desktop-list__sort"
+                  type="button"
+                  aria-label="Sort by recent"
+                  data-library-column-sort="recent"
+                >
+                  <span>#</span>
+                  <span class="library-desktop-list__sort-indicator" aria-hidden="true"></span>
+                </button>
+                <span aria-hidden="true"></span>
+                <button
+                  class="library-desktop-list__sort"
+                  type="button"
+                  aria-label="Sort by title"
+                  data-library-column-sort="title"
+                >
+                  <span>Title</span>
+                  <span class="library-desktop-list__sort-indicator" aria-hidden="true"></span>
+                </button>
+                <button
+                  class="library-desktop-list__sort"
+                  type="button"
+                  aria-label="Sort by album"
+                  data-library-column-sort="album"
+                >
+                  <span>Album</span>
+                  <span class="library-desktop-list__sort-indicator" aria-hidden="true"></span>
+                </button>
+                <button
+                  class="library-desktop-list__sort"
+                  type="button"
+                  aria-label="Sort by duration"
+                  data-library-column-sort="duration"
+                >
+                  <span>Duration</span>
+                  <span class="library-desktop-list__sort-indicator" aria-hidden="true"></span>
+                </button>
+                <span></span>
+              </div>
+              <div id="library-desktop-list-body" class="library-desktop-list__body" aria-label="Library list rows"></div>
+            </section>
+          </div>
+
           <ul class="library-list" aria-label="Library categories">
             <li class="library-item">
               <a href="playlist.html" class="library-item__link">
@@ -318,6 +419,7 @@
     </div>
 
     <script src="../js/header-load.js"></script>
+    <script src="../js/library-load.js"></script>
     <script src="../js/player-load.js"></script>
   </body>
 </html>
