@@ -1,175 +1,199 @@
 # Spotify Web Player Redesign
 
-A front-end exam project focused on rebuilding key Spotify Web Player flows with a scalable, component-oriented structure. The implementation uses semantic HTML, modular SCSS, and vanilla JavaScript, with reusable partials and JSON-driven rendering to keep the UI easier to extend and maintain.
+This project is a front-end redesign of the Spotify Web Player. I built it as an exam project using HTML, SCSS, and vanilla JavaScript.
 
-## Project Goal
+My goal was not only to copy the visual style of Spotify, but also to organize the project in a clean and reusable way. I wanted the code to be easy to manage, easy to expand, and understandable during presentation.
 
-The goal of this project was not only to recreate Spotify-inspired screens visually, but to build them with a development workflow that reflects real front-end practice:
+## Project Idea
 
-- start from a clean reusable structure
-- separate layout, components, pages, and theme styles
-- work in dedicated feature branches
-- merge finished features back into `main`
-- replace static markup with shared data where possible
+The main idea of this project was to recreate a Spotify-like music platform with responsive pages, reusable UI parts, and dynamic content.
+
+Instead of building everything as static HTML, I tried to structure the project more like a real front-end application. For example:
+
+- shared sections are reused across pages
+- content is loaded from JSON where possible
+- styles are separated into logical SCSS folders
+- pages work for both mobile and desktop layouts
+
+## What I Focused On
+
+During this project I mainly focused on these things:
+
+- responsive design
+- reusable layout structure
+- cleaner SCSS architecture
+- dynamic rendering with JavaScript
+- simple but scalable project organization
 
 ## Development Process
 
-I began by setting up the base project structure:
+I started by creating the main structure of the project:
 
-- initial HTML shell
-- Sass architecture with `abstracts`, `base`, `layout`, `components`, `pages`, and `themes`
-- shared design tokens, breakpoints, and reset styles
-- asset organization for icons, images, audio, and fonts
+- main HTML shell
+- SCSS folders for abstracts, base, layout, components, pages, and themes
+- assets folder for icons, images, fonts, and audio
+- JavaScript files for loading shared parts and page content
 
-After the initial scaffold, the project evolved feature by feature instead of building everything in one branch. This made it easier to test changes, isolate UI work, and keep the codebase organized during the exam process.
+After that, I continued step by step and built the project page by page.
+
+First, I worked on the shared layout and navigation. Then I added the header, sidebar, theme switcher, and bottom player. After that, I connected more pages such as discover, search, library, artist, album, playlist, podcast, song, profile, and settings-related pages.
 
 ## Branch Workflow
 
-The project was developed through dedicated branches and then merged into `main`.
+I used separate branches during development and then merged them into `main`.
 
 ### `feature/theme-switcher`
 
-This branch covered the first major UI architecture improvements:
+In this branch I worked on:
 
-- reusable header partial
-- dynamic header injection
+- reusable header structure
+- theme switcher
 - responsive header behavior
-- mobile and desktop theme switcher support
-- theme-aware styling refinements
-
-Why this mattered:
-The header was used across multiple screens, so moving it into a partial reduced duplication and made later page expansion much easier.
+- mobile and desktop theme support
 
 ### `feature/player`
 
-This branch focused on the bottom playback experience:
+In this branch I worked on:
 
-- reusable player partial
-- JSON-driven player content
-- play, pause, next, previous, progress, and time updates
-- responsive mobile and desktop player layouts
-
-Why this mattered:
-The player introduced shared application state and made the redesign feel closer to a real product rather than a static page.
+- bottom player partial
+- player data connection
+- playback controls
+- player layout for mobile and desktop
 
 ### `main`
 
-After merging feature branches, development continued on `main` with broader page integration and content rendering:
+After merging the feature branches, I continued working in `main` and added:
 
-- data-driven home page sections
-- discover page feed loader
-- discover responsive layout fixes
-- search page integration and search filtering behavior
-- responsive tuning for cards, filters, artists, and player spacing
+- more pages
+- search functionality
+- discover page feed
+- navigation fixes
+- responsive improvements
+- shared data rendering
 
-## Features Implemented
+## Features
 
-### Application Shell
+### Shared Layout
 
-- `index.html` works as the main shell
-- shared sections are injected through reusable partials
-- layout supports both mobile and desktop navigation patterns
+- `index.html` is used as the main shell
+- reusable parts are loaded into the layout
+- the design supports both desktop and mobile views
 
-### Header System
+### Header
 
-- header markup lives in `partials/header.html`
-- loaded dynamically with `js/header-load.js`
-- separate desktop and mobile action layouts
-- theme toggle support
-- active and hover icon state handling
+- header is stored in `partials/header.html`
+- loaded dynamically with JavaScript
+- desktop and mobile versions are supported
+- theme switcher is included
+- active navigation state is handled
 
 ### Sidebar Navigation
 
-- desktop library sidebar
-- mobile bottom navigation
-- breakpoint-based visibility switching
-- hover and active states for navigation icons
+- desktop sidebar is shown on large screens
+- mobile bottom navigation is shown on small screens
+- navigation icons support hover and active states
 
 ### Home Page
 
-- quick mixes section
-- made-for-you cards
-- top mixes row
-- favorite artists row
-- sections rendered from `data/music-cover.json` via `js/home-load.js`
+- quick mixes
+- made-for-you section
+- top mixes
+- favorite artists
+- sections are rendered from JSON data
 
 ### Discover Page
 
 - filter tabs
-- reel-style content feed
-- JSON-driven cards and metadata
-- responsive discover page layout via `js/discover-load.js`
+- reel-style discover cards
+- dynamic content rendering
+- responsive layout for mobile and desktop
 
 ### Search Page
 
 - recent searches
 - browse categories
-- genre categories
-- live filtering based on search input
-- empty-state support and synchronized mobile/desktop inputs
+- genre section
+- search filtering
+- desktop header search integration
 
-### Bottom Player
+### Player
 
-- player markup stored in `partials/player.html`
-- loaded with `js/player-load.js`
-- track cover, title, artist, and playlist fallback logic
-- playback controls and progress updates
-- compact mobile and expanded desktop layout
+- reusable bottom player
+- JSON-driven content
+- play and pause controls
+- next and previous buttons
+- progress and time updates
+- responsive mobile and desktop layout
 
-## Problems Solved During Development
+### Additional Pages
 
-This project was also an exercise in solving common front-end architecture problems.
+I also created and connected these pages:
 
-### 1. Repeated markup across pages
+- album
+- song
+- playlist
+- podcast
+- episode
+- artist
+- library
+- profile
+- notifications
+- friends
+- settings
+- camera
 
-Problem:
-Shared UI such as the header and player would have been duplicated across multiple HTML files.
+## Problems I Solved
 
-Solution:
-I moved those sections into reusable partials and loaded them with JavaScript. This reduced repetition and made updates much safer.
+### Repeated Code
 
-### 2. Static content becoming hard to maintain
+At the beginning, some sections could easily become repeated across many pages, especially the header and player.
 
-Problem:
-Hardcoding every card, mix, and search tile directly in HTML would make future changes slow and error-prone.
+To solve this, I moved them into partial files and loaded them with JavaScript. This made the project cleaner and easier to update.
 
-Solution:
-I introduced JSON-driven rendering for the home, discover, search, and player content so that UI sections could be updated from structured data.
+### Static Content
 
-### 3. Mobile and desktop layouts conflicting with each other
+If every card and every section stayed hardcoded in HTML, it would become difficult to manage.
 
-Problem:
-Spotify-style layouts have very different navigation and spacing needs across breakpoints, especially with a fixed bottom player.
+To improve this, I used JSON data for several sections like home, discover, search, and player.
 
-Solution:
-I separated layout responsibilities in SCSS, added responsive visibility rules, and refined spacing so that content would not collide with the player or navigation elements.
+### Responsive Layout Issues
 
-### 4. Theme support across reusable components
+Because the project has different desktop and mobile navigation systems, spacing and layout could easily break.
 
-Problem:
-Theme changes can become inconsistent when styles are scattered across page files.
+I fixed this by organizing SCSS carefully and adjusting layouts by breakpoint.
 
-Solution:
-I centralized theme-related styling in the Sass structure and adjusted header interactions so the switcher worked consistently in both desktop and mobile contexts.
+### Project Structure
+
+As the project grew, it was important not to keep everything in one file.
+
+That is why I separated:
+
+- reusable styles
+- page styles
+- shared components
+- layout styles
+- JavaScript logic by page
+
+This made the project easier to read and easier to explain.
 
 ## Tech Stack
 
 - HTML5
 - SCSS / Sass
 - CSS3
-- Vanilla JavaScript (ES6)
+- Vanilla JavaScript
 - Git / GitHub
 
 ## Project Structure
 
 ```text
 .
-|-- assets/        # icons, images, fonts, audio
-|-- css/           # compiled CSS
-|-- data/          # shared JSON content
-|-- js/            # partial loaders and page rendering scripts
-|-- pages/         # additional page templates
-|-- partials/      # reusable HTML fragments
+|-- assets/
+|-- css/
+|-- data/
+|-- js/
+|-- pages/
+|-- partials/
 |-- scss/
 |   |-- abstracts/
 |   |-- base/
@@ -181,35 +205,19 @@ I centralized theme-related styling in the Sass structure and adjusted header in
 `-- README.md
 ```
 
-## Run Locally
 
-Compile Sass once:
 
-```powershell
-sass.cmd scss/main.scss css/main.css
-```
+## Current Result
 
-Watch Sass changes:
+At this stage, the project includes:
 
-```powershell
-sass.cmd --watch scss/main.scss css/main.css
-```
-
-Important:
-Because the project loads partials and JSON with `fetch()`, opening the files directly with `file://` may break the app. It should be served from a local development server.
-
-## Current Status
-
-The project currently includes:
-
-- reusable header and player partials
+- reusable header and player
 - responsive desktop and mobile navigation
-- theme-aware interface styling
-- data-driven home, discover, and search content
-- responsive page-specific SCSS architecture
-- bottom playback bar with working controls
-
-The next step would be expanding shared data usage further and connecting more page templates to interactive behavior.
+- theme-aware styling
+- dynamic home, discover, and search sections
+- multiple connected pages
+- organized SCSS architecture
+- working bottom player interactions
 
 ## Author
 
