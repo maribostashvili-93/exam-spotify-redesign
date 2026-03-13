@@ -119,35 +119,6 @@
   min-width: fit-content;
 }
 
-.player__icon,
-.player__play {
-  width: clamp(3.4rem, 10vw, $player-mobile-action);
-  height: clamp(3.4rem, 10vw, $player-mobile-action);
-  border: 0;
-  border-radius: 1rem;
-  background: transparent;
-  color: $color-text-secondary;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-
-  i {
-    font-size: clamp(1.6rem, 5vw, $player-mobile-icon);
-    line-height: 1;
-  }
-}
-
-.player__play {
-  background: transparent;
-  color: $color-text-secondary;
-}
-
-.player__icon-img {
-  width: clamp(1.8rem, 6vw, 2.6rem);
-  height: clamp(1.8rem, 6vw, 2.6rem);
-}
-
 .player__progress,
 .player__icon-desktop,
 .player__right-desktop,
@@ -299,29 +270,6 @@
     height: 0.9rem;
   }
 
-  .player__icon,
-  .player__play {
-    width: 2.6rem;
-    height: 2.6rem;
-  }
-
-  .player__play {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    background: $color-accent-green;
-    color: $color-bg-primary;
-  }
-
-  .player__icon-img {
-    width: 1.8rem;
-    height: 1.8rem;
-  }
-
-  .player__play i {
-    font-size: 1.4rem;
-  }
-
   .player__volume-desktop {
     display: inline-flex;
     margin-left: 0.4rem;
@@ -339,18 +287,6 @@
     height: 3.2rem;
     background: $player-desktop-divider;
     margin: 0 0.4rem;
-  }
-
-  .player__status {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    border: 0;
-    background: $player-desktop-status-blue;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
   }
 
   .player__status-dot {

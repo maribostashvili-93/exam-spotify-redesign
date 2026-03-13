@@ -1,0 +1,564 @@
+@use "../abstracts" as *;
+
+@mixin button-reset($padding: 0) {
+  border: 0;
+  background: transparent;
+  padding: $padding;
+}
+
+@mixin button-center($padding: 0) {
+  @include button-reset($padding);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin button-box($width, $height: $width, $radius: 0, $padding: 0) {
+  @include button-center($padding);
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+}
+
+@mixin button-circle($size, $background, $color) {
+  @include button-box($size, $size, 50%);
+  background: $background;
+  color: $color;
+}
+
+@mixin icon-size($size, $opacity: null) {
+  width: $size;
+  height: $size;
+
+  @if $opacity != null {
+    opacity: $opacity;
+  }
+}
+
+.mobile-header-action,
+.mobile-burger-close {
+  @include button-reset;
+}
+
+.chip {
+  @include button-box(auto, auto, 0.8rem, $container-padding-mobile);
+  flex: 0 0 auto;
+  color: $color-text-primary;
+  font-family: $font-family-primary;
+  font-size: $font-size-label-small;
+  font-weight: $font-weight-regular;
+  letter-spacing: $letter-spacing-small;
+  line-height: normal;
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.chip:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.chip--active {
+  background: rgba(255, 255, 255, 0.16);
+  color: $color-text-primary;
+}
+
+.filters-icon-btn {
+  @include button-box(5rem, 5rem, $home-chip-radius);
+  margin-left: auto;
+}
+
+.filters-icon-btn img {
+  @include icon-size(5rem);
+}
+
+.section-control-btn {
+  @include button-box(2.4rem);
+  color: $color-text-secondary;
+  opacity: 0.65;
+}
+
+.section-control-btn img {
+  @include icon-size(2.2rem);
+  display: block;
+}
+
+.player__icon,
+.player__play {
+  @include button-box(clamp(3.4rem, 10vw, $player-mobile-action), clamp(3.4rem, 10vw, $player-mobile-action), 1rem);
+  color: $color-text-secondary;
+  cursor: pointer;
+}
+
+.player__play,
+.song-panel__chevron,
+.song-panel__menu,
+.song-action,
+.song-transport__button,
+.song-toolbar__button,
+.song-mobile-queue__group button,
+.song-mobile-queue__item button,
+.album-mobile-panel__top button,
+.album-mobile-actions button,
+.album-track__like,
+.album-track__more,
+.album-desktop-head__actions button,
+.album-desktop-search,
+.album-desktop-row__like,
+.playlist-mobile-top button,
+.playlist-mobile-actions button,
+.playlist-track__like,
+.playlist-desktop-head__actions button,
+.playlist-desktop-search,
+.playlist-desktop-row__like,
+.discover-main .discover-reel__actions button,
+.top-header-action,
+.page-search .top-header-search button {
+  @include button-center;
+}
+
+.player__icon i,
+.player__play i {
+  font-size: clamp(1.6rem, 5vw, $player-mobile-icon);
+  line-height: 1;
+}
+
+.player__icon-img {
+  @include icon-size(clamp(1.8rem, 6vw, 2.6rem));
+}
+
+.artist-action,
+.artist-tabs__search,
+.artist-top-row button,
+.artist-toolbar__toggle,
+.podcast-button {
+  @include button-box(3rem, 3rem, 999px);
+}
+
+.artist-action,
+.artist-tabs__search,
+.artist-top-row button,
+.artist-toolbar__toggle {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.artist-action img,
+.artist-tabs__search img,
+.artist-top-row button img,
+.artist-toolbar__toggle img,
+.podcast-button img {
+  @include icon-size(1.6rem);
+}
+
+.artist-action--play,
+.podcast-button--play {
+  background: #1ed760;
+  color: #08100c;
+}
+
+.artist-action--ghost,
+.podcast-button--ghost {
+  width: auto;
+  font-family: $font-family-primary;
+}
+
+.artist-action--ghost {
+  padding: 0 1.4rem;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 1.1rem;
+}
+
+.podcast-button {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.78);
+  font-family: $font-family-primary;
+  font-size: 1rem;
+}
+
+.podcast-button--ghost {
+  padding: 0 1.2rem;
+}
+
+.library-main .library-search button,
+.library-main .library-add,
+.search-main .search-input button,
+.search-main .search-camera,
+.discover-main .discover-reel__actions button[aria-label="Play"] {
+  @include button-box(4rem, 4rem, 1rem);
+}
+
+.library-main .library-search button,
+.library-main .library-add,
+.search-main .search-input button,
+.search-main .search-camera {
+  color: $color-text-secondary;
+  flex-shrink: 0;
+}
+
+.library-main .library-search button img,
+.library-main .library-add img {
+  @include icon-size(2.3rem);
+}
+
+.search-main .search-input button img,
+.search-main .search-camera img,
+.discover-main .discover-reel__actions button img,
+.album-mobile-panel__top img,
+.album-mobile-actions img,
+.album-track__like img,
+.album-track__more img,
+.playlist-mobile-top img,
+.playlist-mobile-actions img,
+.playlist-track__like img,
+.playlist-desktop-head__actions img,
+.playlist-desktop-search img,
+.playlist-desktop-row__like img,
+.song-panel__chevron img,
+.song-panel__menu img,
+.song-action img,
+.song-transport__button img,
+.song-toolbar__button img,
+.song-mobile-queue__group button img,
+.song-mobile-queue__item button img {
+  @include icon-size(2rem);
+}
+
+.library-main .library-filter-btn,
+.podcast-list__controls button {
+  @include button-reset;
+  font-family: $font-family-primary;
+}
+
+.library-main .library-filter-btn {
+  @include button-center(0 0.2rem);
+  height: 3.6rem;
+  color: var(--Fg-Secondary, #898989);
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: $font-weight-regular;
+  line-height: normal;
+  letter-spacing: $letter-spacing-medium;
+}
+
+.library-main .library-filter-btn--icon {
+  width: 3.6rem;
+  padding: 0;
+}
+
+.library-main .library-filter-btn--icon img {
+  @include icon-size(1.9rem);
+}
+
+.podcast-list__controls button {
+  height: 3rem;
+  padding: 0 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.54);
+}
+
+.podcast-list__controls button img {
+  @include icon-size(1.6rem);
+}
+
+.episode-video__play,
+.song-transport__button--play,
+.album-mobile-actions__play,
+.playlist-mobile-play,
+.playlist-desktop-play,
+.player__status,
+.album-desktop-play,
+.song-desktop-play {
+  @include button-circle(5rem, rgba(255, 255, 255, 0.9), #0d1015);
+}
+
+.episode-video__play {
+  background: rgba(255, 255, 255, 0.9);
+  color: #0d1015;
+}
+
+.song-mobile-queue__remove {
+  @include button-center;
+  gap: 0.8rem;
+  font-family: $font-family-primary;
+  font-size: 1.2rem;
+}
+
+.song-transport__button,
+.song-toolbar__button {
+  width: 3rem;
+  height: 3rem;
+}
+
+.song-transport__button {
+  opacity: 0.82;
+}
+
+.song-transport__button--play {
+  background: $song-play-bg;
+  color: $song-play-color;
+  justify-self: center;
+}
+
+.song-transport__button--play i {
+  font-size: 2rem;
+}
+
+.song-toolbar__button {
+  opacity: 0.72;
+}
+
+.song-toolbar__button--active {
+  border-radius: 0.8rem;
+  background: rgba(255, 255, 255, 0.08);
+  opacity: 1;
+}
+
+.discover-main .discover-reel__actions button {
+  @include button-box($player-mobile-action, $player-mobile-action, 50%);
+}
+
+.discover-main .discover-reel__actions button img {
+  @include icon-size(2.2rem);
+}
+
+.discover-main .discover-reel__actions button[aria-label="Play"] img {
+  @include icon-size(1.8rem);
+}
+
+.profile-main .profile-card__actions button {
+  @include button-box(3rem, 3rem, 0.8rem);
+}
+
+.profile-main .profile-card__actions img {
+  @include icon-size(1.9rem, 0.8);
+}
+
+.profile-main .profile-friends__head button {
+  @include button-box(2.8rem, 2.8rem, 0.8rem);
+}
+
+.profile-main .profile-friends__head img {
+  @include icon-size(2rem, 0.8);
+}
+
+.search-main .search-desktop-section__more,
+.search-main .search-recent-card__close,
+.search-main .search-carousel-heading__arrow {
+  @include button-box(2rem, 2rem, 999px);
+}
+
+@include respond(tablet) {
+  .chip {
+    padding: 1rem 1.6rem;
+    font-size: $font-size-body-small;
+    letter-spacing: $letter-spacing-medium;
+  }
+
+  .filters-icon-btn {
+    width: auto;
+    height: auto;
+  }
+
+  .filters-icon-btn img {
+    @include icon-size(2rem);
+  }
+}
+
+@include respond(desktop) {
+  .chip {
+    height: $home-chip-height;
+    padding: 0 1.6rem;
+    border-radius: $home-chip-radius;
+    font-size: $home-chip-font-size;
+  }
+
+  .chip--active {
+    background: rgba(255, 255, 255, 0.88);
+    color: #111;
+  }
+
+  .filters-icon-btn {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 0.8rem;
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .filters-icon-btn img,
+  .album-desktop-head__actions img,
+  .album-desktop-search img,
+  .album-desktop-row__like img,
+  .song-desktop-icon img,
+  .song-desktop-toolbar__button img,
+  .page-search .top-header-search button img {
+    @include icon-size(1.8rem);
+  }
+
+  .section-control-btn {
+    opacity: 0.72;
+  }
+
+  .section-control-btn:hover {
+    opacity: 1;
+  }
+
+  .player__icon,
+  .player__play {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  .player__play,
+  .player__status,
+  .album-desktop-play,
+  .playlist-desktop-play,
+  .song-desktop-play {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+  }
+
+  .player__play {
+    background: $color-accent-green;
+    color: $color-bg-primary;
+  }
+
+  .player__icon-img {
+    @include icon-size(1.8rem);
+  }
+
+  .player__play i {
+    font-size: 1.4rem;
+  }
+
+  .player__status {
+    background: $player-desktop-status-blue;
+    padding: 0;
+  }
+
+  .album-desktop-play {
+    background: #1ed760;
+    color: #0b1016;
+    font-size: 1.2rem;
+  }
+
+  .playlist-desktop-play {
+    font-size: 1.2rem;
+  }
+
+  .search-main .search-desktop-section__more {
+    width: 2.8rem;
+    height: 2.8rem;
+    opacity: 0.85;
+  }
+
+  .search-main .search-desktop-section__more img {
+    @include icon-size(1.8rem);
+  }
+
+  .search-main .search-recent-card__close {
+    top: 0.3rem;
+    right: 0.3rem;
+    background: rgba(18, 18, 18, 0.82);
+  }
+
+  .search-main .search-recent-card__close img {
+    @include icon-size(1.2rem);
+  }
+
+  .search-main .search-carousel-heading__arrow {
+    width: 2.2rem;
+    height: 2.2rem;
+    opacity: 0.78;
+  }
+
+  .search-main .search-carousel-heading__arrow img {
+    @include icon-size(1.5rem);
+  }
+
+  .song-desktop-play,
+  .song-desktop-icon,
+  .song-desktop-tab,
+  .song-desktop-toolbar__button {
+    @include button-center;
+    color: rgba(255, 255, 255, 0.74);
+    font-family: $font-family-primary;
+  }
+
+  .song-desktop-play {
+    background: $song-accent-green;
+    color: $song-button-text-dark;
+  }
+
+  .song-desktop-play i {
+    font-size: 1.3rem;
+  }
+
+  .song-desktop-icon {
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.78;
+  }
+
+  .song-desktop-tab {
+    position: relative;
+    padding: 0 0 1rem;
+    color: rgba(255, 255, 255, 0.46);
+    font-size: 0.8rem;
+  }
+
+  .song-desktop-tab--active {
+    color: $song-text-light;
+  }
+
+  .song-desktop-tab--active::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 0.2rem;
+    border-radius: 999px;
+    background: $song-accent-green;
+  }
+
+  .song-desktop-toolbar__button {
+    width: 2.4rem;
+    height: 2.4rem;
+    opacity: 0.68;
+  }
+
+  .discover-main .discover-reel__actions button {
+    width: 3.2rem;
+    height: 3.2rem;
+    flex: 0 0 auto;
+  }
+
+  .discover-main .discover-reel__actions button img {
+    @include icon-size(1.8rem, 0.78);
+  }
+
+  .discover-main .discover-reel__actions button[aria-label="Play"] {
+    width: $player-mobile-action;
+    height: $player-mobile-action;
+  }
+
+  .discover-main .discover-reel__actions button[aria-label="Play"] img {
+    @include icon-size(1.9rem, 1);
+  }
+
+  .top-header-action {
+    @include button-reset;
+    border: 1px solid transparent;
+  }
+
+  .top-header-action:hover {
+    background: var(--hover-bg);
+    border-color: var(--border-soft);
+  }
+
+  .page-search .top-header-search button {
+    width: 3.2rem;
+    height: 3.2rem;
+    color: var(--fg-secondary);
+    flex-shrink: 0;
+  }
+}

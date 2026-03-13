@@ -150,9 +150,9 @@ $home-desktop-main-padding-y: clamp(0.8rem, 1vw, 1.2rem);
 
 // PAGE SIZES
 $page-side-panel-width: 19rem;
-$search-recent-card-size: 8.8rem;
-$search-browse-column-width: 10rem;
-$search-browse-art-size: 6rem;
+$search-recent-card-size: 17rem;
+$search-browse-column-width: 17rem;
+$search-browse-art-size: 17rem;
 $discover-reel-mobile-offset: 5.8rem;
 $discover-reel-desktop-media-width: 22rem;
 $discover-reel-desktop-media-height: 39rem;
@@ -196,3 +196,7 @@ $home-card-cover-height: 13.2rem;
 $home-card-gap: 1rem;
 $home-section-title-size: 4.2rem;
 $home-section-sub-size: 1.4rem;
+$library-sub-color: var(--Fg-Secondary, #898989);
+$library-sub-font-size: 1.4rem;
+$library-sub-font-weight: 400;
+$library-sub-letter-spacing: 0.042rem;

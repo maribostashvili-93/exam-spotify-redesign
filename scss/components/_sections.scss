@@ -25,25 +25,6 @@
   gap: 1.4rem;
 }
 
-.section-control-btn {
-  width: 2.4rem;
-  height: 2.4rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 0;
-  background: transparent;
-  color: $color-text-secondary;
-  opacity: 0.65;
-  padding: 0;
-}
-
-.section-control-btn img {
-  width: 2.2rem;
-  height: 2.2rem;
-  display: block;
-}
-
 .artists-row {
   @include flex-center(row, 1rem, flex-start, stretch);
   overflow-x: auto;
@@ -75,14 +56,6 @@
 
   .section-controls {
     display: inline-flex;
-  }
-
-  .section-control-btn {
-    opacity: 0.72;
-  }
-
-  .section-control-btn:hover {
-    opacity: 1;
   }
 
   .artists-row {
