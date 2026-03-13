@@ -74,41 +74,6 @@
     }
   }
 
-  .discover-tabs button {
-    position: relative;
-    flex: 0 0 auto;
-    min-height: 4.8rem;
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    color: $color-text-primary;
-    font-family: $font-family-primary;
-    font-size: $font-size-label-small;
-    font-weight: $font-weight-regular;
-    line-height: normal;
-    letter-spacing: $letter-spacing-small;
-    white-space: nowrap;
-    opacity: 0.7;
-  }
-
-  .discover-tabs .is-active {
-    opacity: 1;
-    color: $color-text-primary;
-  }
-
-  .discover-tabs .is-active::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0.4rem;
-    transform: translateX(-50%);
-    width: 4.4rem;
-    height: 0.24rem;
-    border-radius: 999px;
-    background: #1ed760;
-  }
-
   .discover-reel {
     position: relative;
     width: 100%;
@@ -189,32 +154,6 @@
     display: grid;
     justify-items: center;
     gap: 1.2rem;
-  }
-
-  .discover-reel__actions button {
-    width: $player-mobile-action;
-    height: $player-mobile-action;
-    border: 0;
-    border-radius: 50%;
-    background: transparent;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-  }
-
-  .discover-reel__actions button img {
-    width: 2.2rem;
-    height: 2.2rem;
-  }
-
-  .discover-reel__actions button[aria-label="Play"] {
-    background: #1ed760;
-  }
-
-  .discover-reel__actions button[aria-label="Play"] img {
-    width: 1.8rem;
-    height: 1.8rem;
   }
 
   .discover-reel__actions span {
@@ -371,21 +310,6 @@
       justify-self: stretch;
     }
 
-    .discover-tabs button {
-      min-height: 2.8rem;
-      padding: 0 1.2rem;
-      border-radius: 0.6rem;
-      background: rgba(255, 255, 255, 0.06);
-      font-size: 1.4rem;
-      font-weight: 500;
-      letter-spacing: $letter-spacing-medium;
-    }
-
-    .discover-tabs .is-active {
-      background: rgba(255, 255, 255, 0.92);
-      color: #111;
-    }
-
     .discover-reel {
       width: 100%;
       max-width: none;
@@ -524,29 +448,6 @@
       gap: 1rem;
       flex-wrap: wrap;
       align-self: flex-start;
-    }
-
-    .discover-reel__actions button {
-      width: 3.2rem;
-      height: 3.2rem;
-      flex: 0 0 auto;
-    }
-
-    .discover-reel__actions button img {
-      width: 1.8rem;
-      height: 1.8rem;
-      opacity: 0.78;
-    }
-
-    .discover-reel__actions button[aria-label="Play"] {
-      width: $player-mobile-action;
-      height: $player-mobile-action;
-    }
-
-    .discover-reel__actions button[aria-label="Play"] img {
-      width: 1.9rem;
-      height: 1.9rem;
-      opacity: 1;
     }
 
     .discover-reel__actions span {
