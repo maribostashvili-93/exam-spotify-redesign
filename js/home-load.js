@@ -34,6 +34,7 @@ async function startHomePage() {
     renderCardsRow(audiobookCardsRoot, home.audiobooks || [], playlistsById, "./pages/episode.html");
     renderFavoriteArtists(favoriteArtistsRoot, home.favoriteArtists || []);
     setupHomeFilters();
+    setupSectionControls();
   } catch (error) {
     console.error(error);
   }
@@ -126,6 +127,46 @@ function setupHomeFilters() {
       setActiveChip(chips, chip);
       openHomeFilter(filterName, sections);
     });
+  });
+}
+
+function setupSectionControls() {
+  const sections = Array.from(document.querySelectorAll(".section-wrapper"));
+
+  sections.forEach((section) => {
+    const row = section.querySelector(".cards-row, .artists-row");
+    const controls = section.querySelectorAll(".section-control-btn");
+
+    if (!row || controls.length < 2) {
+      return;
+    }
+
+    const previousButton = Array.from(controls).find((button) => button.getAttribute("aria-label") === "Previous");
+    const nextButton = Array.from(controls).find((button) => button.getAttribute("aria-label") === "Next");
+
+    if (!previousButton || !nextButton) {
+      return;
+    }
+
+    const updateButtons = () => {
+      const maxScrollLeft = Math.max(0, row.scrollWidth - row.clientWidth);
+      previousButton.disabled = row.scrollLeft <= 4;
+      nextButton.disabled = row.scrollLeft >= maxScrollLeft - 4;
+    };
+
+    const scrollAmount = () => Math.max(row.clientWidth * 0.82, 220);
+
+    previousButton.addEventListener("click", () => {
+      row.scrollBy({ left: -scrollAmount(), behavior: "smooth" });
+    });
+
+    nextButton.addEventListener("click", () => {
+      row.scrollBy({ left: scrollAmount(), behavior: "smooth" });
+    });
+
+    row.addEventListener("scroll", updateButtons, { passive: true });
+    window.addEventListener("resize", updateButtons);
+    updateButtons();
   });
 }
 

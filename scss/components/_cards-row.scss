@@ -13,17 +13,18 @@ $shared-cards-row-desktop-gap: 2.6rem;
 
 @include respond(tablet) {
   .cards-row {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: nowrap;
     gap: $shared-cards-row-tablet-gap;
-    overflow: visible;
+    overflow-x: auto;
     padding: 1.8rem 0 0;
   }
 }
 
 @include respond(desktop) {
   .cards-row {
-    grid-template-columns: repeat(8, 17rem);
+    display: flex;
+    flex-wrap: nowrap;
     gap: $shared-cards-row-desktop-gap;
     overflow-x: auto;
     justify-content: flex-start;

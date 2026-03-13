@@ -1633,12 +1633,18 @@ body {
   border-radius: 0;
   color: #898989;
   opacity: 0.65;
+  cursor: pointer;
 }
 
 .section-control-btn img {
   width: 2.2rem;
   height: 2.2rem;
   display: block;
+}
+
+.section-control-btn:disabled {
+  opacity: 0.25;
+  cursor: default;
 }
 
 .player__icon,
@@ -2310,15 +2316,18 @@ body {
 @media (min-width: 48rem) {
   .card {
     min-width: 0;
-    flex: initial;
+    width: 17rem;
+    flex: 0 0 17rem;
   }
   .card-cover-wrap {
+    width: 17rem;
     height: 17rem;
   }
 }
 @media (min-width: 64rem) {
   .card {
     width: 17rem;
+    flex: 0 0 17rem;
   }
   .card-cover-wrap {
     width: 17rem;
@@ -2343,16 +2352,17 @@ body {
 
 @media (min-width: 48rem) {
   .cards-row {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: nowrap;
     gap: 2.2rem;
-    overflow: visible;
+    overflow-x: auto;
     padding: 1.8rem 0 0;
   }
 }
 @media (min-width: 64rem) {
   .cards-row {
-    grid-template-columns: repeat(8, 17rem);
+    display: flex;
+    flex-wrap: nowrap;
     gap: 2.6rem;
     overflow-x: auto;
     justify-content: flex-start;

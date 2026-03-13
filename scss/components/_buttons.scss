@@ -75,11 +75,17 @@
   @include button-box(2.4rem);
   color: $color-text-secondary;
   opacity: 0.65;
+  cursor: pointer;
 }
 
 .section-control-btn img {
   @include icon-size(2.2rem);
   display: block;
+}
+
+.section-control-btn:disabled {
+  opacity: 0.25;
+  cursor: default;
 }
 
 .player__icon,

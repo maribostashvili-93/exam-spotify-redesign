@@ -116,10 +116,12 @@ $shared-card-body-gap-desktop: 0.6rem;
 @include respond(tablet) {
   .card {
     min-width: 0;
-    flex: initial;
+    width: $shared-card-tablet-size;
+    flex: 0 0 $shared-card-tablet-size;
   }
 
   .card-cover-wrap {
+    width: $shared-card-tablet-size;
     height: $shared-card-tablet-size;
   }
 }
@@ -127,6 +129,7 @@ $shared-card-body-gap-desktop: 0.6rem;
 @include respond(desktop) {
   .card {
     width: $shared-card-desktop-size;
+    flex: 0 0 $shared-card-desktop-size;
   }
 
   .card-cover-wrap {
