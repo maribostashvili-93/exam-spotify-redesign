@@ -4,66 +4,66 @@ const DEFAULT_SEARCH_DATA = {
     {
       title: "Daft Punk",
       type: "artist",
-      image: "../assets/img/daft.png",
+      image: "/assets/img/daft punkkk11.jpg",
     },
     {
       title: "David Bowie",
       type: "artist",
-      image: "../assets/img/image 20.png",
+      image: "/assets/img/image 20.png",
     },
     {
       title: "Black Holes...",
       subtitle: "Muse",
       type: "album",
-      image: "../assets/img/Frame 8.png",
+      image: "/assets/img/Frame 8.png",
     },
   ],
   browseCategories: [
     {
       title: "Made For You",
-      image: "../assets/img/image-13.png",
+      image: "/assets/img/image-13.png",
       accentClass: "search-browse-tile--blue",
       tags: ["mix", "playlist", "daily"],
     },
     {
       title: "New Releases",
-      image: "../assets/img/image-13-1.png",
+      image: "/assets/img/image-13-1.png",
       accentClass: "search-browse-tile--orange",
       tags: ["albums", "fresh", "latest"],
     },
     {
       title: "Spotify Classics",
-      image: "../assets/img/image-13-2.png",
+      image: "/assets/img/image-13-2.png",
       accentClass: "search-browse-tile--navy",
       tags: ["classic", "vintage", "hits"],
     },
     {
       title: "Charts",
-      image: "../assets/img/image-13-3.png",
+      image: "/assets/img/image-13-3.png",
       accentClass: "search-browse-tile--purple",
       tags: ["top", "viral", "popular"],
     },
     {
       title: "Trending",
-      image: "../assets/img/image-13-4.png",
+      image: "/assets/img/image-13-4.png",
       accentClass: "search-browse-tile--pink",
       tags: ["viral", "top", "hot"],
     },
     {
       title: "Discover",
-      image: "../assets/img/image-13-5.png",
+      image: "/assets/img/image-13-5.png",
       accentClass: "search-browse-tile--lilac",
       tags: ["new", "explore", "find"],
     },
     {
       title: "Spotify Singles",
-      image: "../assets/img/image-13-6.png",
+      image: "/assets/img/image-13-6.png",
       accentClass: "search-browse-tile--gray",
       tags: ["single", "exclusive", "spotify"],
     },
     {
       title: "Decades",
-      image: "../assets/img/image-13-7.png",
+      image: "/assets/img/image-13-7.png",
       accentClass: "search-browse-tile--orange",
       tags: ["80s", "90s", "2000s"],
     },
@@ -71,49 +71,49 @@ const DEFAULT_SEARCH_DATA = {
   genreCategories: [
     {
       title: "Pop",
-      image: "../assets/img/image-13-8.png",
+      image: "/assets/img/image-13-8.png",
       accentClass: "search-browse-tile--green",
       tags: ["genre", "mainstream"],
     },
     {
       title: "Country",
-      image: "../assets/img/image-13-9.png",
+      image: "/assets/img/image-13-9.png",
       accentClass: "search-browse-tile--orange-red",
       tags: ["genre", "americana"],
     },
     {
       title: "Hip-Hop",
-      image: "../assets/img/image-13-10.png",
+      image: "/assets/img/image-13-10.png",
       accentClass: "search-browse-tile--mauve",
       tags: ["genre", "rap"],
     },
     {
       title: "Rock",
-      image: "../assets/img/image-13-11.png",
+      image: "/assets/img/image-13-11.png",
       accentClass: "search-browse-tile--teal",
       tags: ["genre", "band"],
     },
     {
       title: "Indie",
-      image: "../assets/img/image-13-12.png",
+      image: "/assets/img/image-13-12.png",
       accentClass: "search-browse-tile--red",
       tags: ["genre", "alternative"],
     },
     {
       title: "Punk",
-      image: "../assets/img/image-13-13.png",
+      image: "/assets/img/image-13-13.png",
       accentClass: "search-browse-tile--cobalt",
       tags: ["genre", "fast"],
     },
     {
       title: "Metal",
-      image: "../assets/img/image-13-14.png",
+      image: "/assets/img/image-13-14.png",
       accentClass: "search-browse-tile--crimson",
       tags: ["genre", "heavy"],
     },
     {
       title: "Instrumental",
-      image: "../assets/img/image-2.png",
+      image: "/assets/img/image-2.png",
       accentClass: "search-browse-tile--slate",
       tags: ["genre", "ambient", "score"],
     },
@@ -163,28 +163,28 @@ const CATEGORY_ROUTE_MAP = {
 };
 
 const CATEGORY_IMAGE_MAP = {
-  "made for you": "../assets/img/search-thumbnails/image-13.png",
-  "new releases": "../assets/img/search-thumbnails/image-13-1.png",
-  "spotify classics": "../assets/img/search-thumbnails/image-13-2.png",
-  charts: "../assets/img/search-thumbnails/image-13-3.png",
-  trending: "../assets/img/search-thumbnails/image-13-4.png",
-  discover: "../assets/img/search-thumbnails/image-13-5.png",
-  "spotify singles": "../assets/img/search-thumbnails/image-13-6.png",
-  decades: "../assets/img/search-thumbnails/image-13-7.png",
-  pop: "../assets/img/search-thumbnails/image-13-8.png",
-  country: "../assets/img/search-thumbnails/image-13-9.png",
-  "hip-hop": "../assets/img/search-thumbnails/image-13-10.png",
-  rock: "../assets/img/search-thumbnails/image-13-11.png",
-  indie: "../assets/img/search-thumbnails/image-13-12.png",
-  punk: "../assets/img/search-thumbnails/image-13-13.png",
-  metal: "../assets/img/search-thumbnails/image-13-14.png",
-  instrumental: "../assets/img/search-thumbnails/image-2.png",
+  "made for you": "/assets/img/image-13.png",
+  "new releases": "/assets/img/image-13-1.png",
+  "spotify classics": "/assets/img/image-13-2.png",
+  charts: "/assets/img/image-13-3.png",
+  trending: "/assets/img/image-13-4.png",
+  discover: "/assets/img/image-13-5.png",
+  "spotify singles": "/assets/img/image-13-6.png",
+  decades: "/assets/img/image-13-7.png",
+  pop: "/assets/img/image-13-8.png",
+  country: "/assets/img/image-13-9.png",
+  "hip-hop": "/assets/img/image-13-10.png",
+  rock: "/assets/img/image-13-11.png",
+  indie: "/assets/img/image-13-12.png",
+  punk: "/assets/img/image-13-13.png",
+  metal: "/assets/img/image-13-14.png",
+  instrumental: "/assets/img/image-2.png",
 };
 
 const RECENT_IMAGE_MAP = {
-  "daft punk": "../assets/img/daft.png",
-  "david bowie": "../assets/img/image 20.png",
-  "black holes...": "../assets/img/Frame 8.png",
+  "daft punk": "/assets/img/daft punkkk11.jpg",
+  "david bowie": "/assets/img/image 20.png",
+  "black holes...": "/assets/img/Frame 8.png",
 };
 
 const searchState = {
@@ -572,7 +572,9 @@ function resolveAssetPath(value) {
   const assetsIndex = normalized.indexOf("assets/");
   let relativePath = normalized;
 
-  if (assetsIndex >= 0) {
+  if (normalized.startsWith("/assets/")) {
+    relativePath = `..${normalized}`;
+  } else if (assetsIndex >= 0) {
     relativePath = `../${normalized.slice(assetsIndex)}`;
   } else if (normalized.startsWith("./")) {
     relativePath = normalized.replace(/^\.\//, "../");

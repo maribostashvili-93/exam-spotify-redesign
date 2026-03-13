@@ -2,18 +2,17 @@ document.addEventListener("DOMContentLoaded", startHomePage);
 
 const HOME_ROUTES = {
   all: "",
-  music: "./pages/song.html",
-  podcasts: "./pages/podcast.html",
-  audiobooks: "./pages/podcast.html",
 };
 
 async function startHomePage() {
   const quickMixesRoot = document.querySelector("#quick-mixes");
   const madeForYouRoot = document.querySelector("#made-for-you-cards");
   const topMixesRoot = document.querySelector("#top-mixes-cards");
+  const podcastCardsRoot = document.querySelector("#podcast-cards");
+  const audiobookCardsRoot = document.querySelector("#audiobook-cards");
   const favoriteArtistsRoot = document.querySelector("#favorite-artists-row");
 
-  if (!quickMixesRoot || !madeForYouRoot || !topMixesRoot || !favoriteArtistsRoot) {
+  if (!quickMixesRoot || !madeForYouRoot || !topMixesRoot || !podcastCardsRoot || !audiobookCardsRoot || !favoriteArtistsRoot) {
     return;
   }
 
@@ -31,6 +30,8 @@ async function startHomePage() {
     renderQuickMixes(quickMixesRoot, home.quickMixes || [], playlistsById);
     renderCardsRow(madeForYouRoot, home.madeForYou || [], playlistsById);
     renderCardsRow(topMixesRoot, home.topMixes || [], playlistsById);
+    renderCardsRow(podcastCardsRoot, home.podcasts || [], playlistsById, "./pages/podcast.html");
+    renderCardsRow(audiobookCardsRoot, home.audiobooks || [], playlistsById, "./pages/episode.html");
     renderFavoriteArtists(favoriteArtistsRoot, home.favoriteArtists || []);
     setupHomeFilters();
   } catch (error) {
@@ -78,7 +79,7 @@ function renderQuickMixes(root, items, playlistsById) {
     .join("");
 }
 
-function renderCardsRow(root, ids, playlistsById) {
+function renderCardsRow(root, ids, playlistsById, href = "./pages/playlist.html") {
   root.innerHTML = ids
     .map((id) => playlistsById.get(id))
     .filter(Boolean)
@@ -86,7 +87,7 @@ function renderCardsRow(root, ids, playlistsById) {
       const stackRgb = hexToRgb(playlist.stackColor);
 
       return `
-        <a class="card" href="./pages/playlist.html" aria-label="${escapeAttribute(playlist.title)}">
+        <a class="card" href="${escapeAttribute(href)}" aria-label="${escapeAttribute(playlist.title)}">
           <div class="card-cover-wrap" style="--stack-rgb: ${stackRgb};">
             <img class="card-cover" src="${escapeAttribute(playlist.cover)}" alt="${escapeAttribute(playlist.title)} cover" />
           </div>
@@ -130,13 +131,15 @@ function setupHomeFilters() {
 
 function getHomeSections() {
   const sections = [
-    document.querySelector("#quick-mixes"),
-    document.querySelector("#made-for-you-cards")?.closest(".section-wrapper"),
-    document.querySelector("#top-mixes-cards")?.closest(".section-wrapper"),
-    document.querySelector("#favorite-artists-row")?.closest(".section-wrapper"),
+    { element: document.querySelector("#quick-mixes"), category: "music" },
+    { element: document.querySelector("#made-for-you-cards")?.closest(".section-wrapper"), category: "music" },
+    { element: document.querySelector("#top-mixes-cards")?.closest(".section-wrapper"), category: "music" },
+    { element: document.querySelector("#podcast-cards")?.closest(".section-wrapper"), category: "podcasts" },
+    { element: document.querySelector("#audiobook-cards")?.closest(".section-wrapper"), category: "audiobooks" },
+    { element: document.querySelector("#favorite-artists-row")?.closest(".section-wrapper"), category: "music" },
   ];
 
-  return sections.filter(Boolean);
+  return sections.filter((section) => section.element);
 }
 
 function setActiveChip(chips, activeChip) {
@@ -155,12 +158,32 @@ function openHomeFilter(filterName, sections) {
     return;
   }
 
-  showHomeSections(sections);
+  if (filterName === "podcasts") {
+    showHomeSections(sections, "podcasts");
+    return;
+  }
+
+  if (filterName === "music") {
+    showHomeSections(sections, "music");
+    return;
+  }
+
+  if (filterName === "audiobooks") {
+    showHomeSections(sections, "audiobooks");
+    return;
+  }
+
+  showHomeSections(sections, "all");
 }
 
-function showHomeSections(sections) {
+function showHomeSections(sections, filterName) {
   sections.forEach((section) => {
-    section.hidden = false;
+    if (filterName === "all") {
+      section.element.hidden = false;
+      return;
+    }
+
+    section.element.hidden = section.category !== filterName;
   });
 }
 

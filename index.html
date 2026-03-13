@@ -291,7 +291,7 @@
         <section id="quick-mixes" class="mix-grid" aria-label="Quick mixes"></section>
 
         <!-- SECTION: Made For You -->
-        <section class="section-wrapper" aria-label="Made For You">
+        <section class="section-wrapper" data-home-section="music" aria-label="Made For You">
           <header class="section-head">
             <h2 class="section-title">Made For You</h2>
             <div class="section-controls" aria-label="Section controls">
@@ -311,7 +311,7 @@
         </section>
 
            <!-- SECTION: Your top mixes -->
-        <section class="section-wrapper" aria-label="Your top mixes">
+        <section class="section-wrapper" data-home-section="music" aria-label="Your top mixes">
           <header class="section-head">
             <h2 class="section-title">Your top mixes</h2>
             <div class="section-controls" aria-label="Section controls">
@@ -330,8 +330,47 @@
           <div id="top-mixes-cards" class="cards-row" aria-label="Your top mixes cards"></div>
         </section>
 
+        <!-- SECTION: Podcasts For You -->
+        <section class="section-wrapper" data-home-section="podcasts" aria-label="Podcasts For You">
+          <header class="section-head">
+            <h2 class="section-title">Podcasts For You</h2>
+            <div class="section-controls" aria-label="Section controls">
+              <button class="section-control-btn" type="button" aria-label="Previous">
+                <img src="./assets/icons/Name=Arrow-Left, Filled=No.svg" alt="" />
+              </button>
+              <button class="section-control-btn" type="button" aria-label="Next">
+                <img src="./assets/icons/Name=Arrow-Right, Filled=No.svg" alt="" />
+              </button>
+              <button class="section-control-btn" type="button" aria-label="More options">
+                <img src="./assets/icons/Name=More, Filled=No.svg" alt="" />
+              </button>
+            </div>
+          </header>
+
+          <div id="podcast-cards" class="cards-row" aria-label="Podcast cards"></div>
+        </section>
+
+        <section class="section-wrapper" data-home-section="audiobooks" aria-label="Audiobooks For You">
+          <header class="section-head">
+            <h2 class="section-title">Audiobooks For You</h2>
+            <div class="section-controls" aria-label="Section controls">
+              <button class="section-control-btn" type="button" aria-label="Previous">
+                <img src="./assets/icons/Name=Arrow-Left, Filled=No.svg" alt="" />
+              </button>
+              <button class="section-control-btn" type="button" aria-label="Next">
+                <img src="./assets/icons/Name=Arrow-Right, Filled=No.svg" alt="" />
+              </button>
+              <button class="section-control-btn" type="button" aria-label="More options">
+                <img src="./assets/icons/Name=More, Filled=No.svg" alt="" />
+              </button>
+            </div>
+          </header>
+
+          <div id="audiobook-cards" class="cards-row" aria-label="Audiobook cards"></div>
+        </section>
+
         <!-- SECTION: Your favorite artists -->
-        <section class="section-wrapper section-wrapper--artists" aria-label="Your favorite artists">
+        <section class="section-wrapper section-wrapper--artists" data-home-section="music" aria-label="Your favorite artists">
           <header class="section-head">
             <h2 class="section-title">Your favorite artists</h2>
             <div class="section-controls" aria-label="Section controls">

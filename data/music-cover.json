@@ -52,6 +52,17 @@
       "pl-17b",
       "pl-13"
     ],
+    "podcasts": [
+      "pod-01",
+      "pod-02",
+      "pod-03",
+      "pod-04"
+    ],
+    "audiobooks": [
+      "ab-01",
+      "ab-02",
+      "ab-03"
+    ],
     "favoriteArtists": [
       {
         "name": "Frank Sinatra",
@@ -59,7 +70,7 @@
       },
       {
         "name": "Chuck Berry",
-        "image": "./assets/img/thumbnail/image 17.png"
+        "image": "./assets/img/daft punkkk11.jpg"
       },
       {
         "name": "David Bowie",
@@ -71,7 +82,7 @@
       },
       {
         "name": "Daft Punk",
-        "image": "./assets/img/thumbnail/image 7.png"
+        "image": "./assets/img/daft punkkk11.jpg"
       },
       {
         "name": "Frank Sinatra",
@@ -79,11 +90,51 @@
       },
       {
         "name": "Chuck Berry",
-        "image": "./assets/img/thumbnail/image 17.png"
+        "image": "./assets/img/daft punkkk11.jpg"
       },
       {
         "name": "David Bowie",
         "image": "./assets/img/thumbnail/image 6.png"
+      }
+    ]
+  },
+  "library": {
+    "desktopCards": [
+      {
+        "playlistId": "pl-20",
+        "href": "playlist.html",
+        "title": "Playlists",
+        "description": "Your saved and created playlists"
+      },
+      {
+        "playlistId": "pl-12",
+        "href": "playlist.html",
+        "title": "Playlists by Spotify",
+        "description": "Editorial mixes and daily picks"
+      },
+      {
+        "playlistId": "pl-01",
+        "href": "album.html",
+        "title": "Albums",
+        "description": "Records you keep coming back to"
+      },
+      {
+        "playlistId": "pl-04b",
+        "href": "library.html",
+        "title": "Folders",
+        "description": "Organized collections and shortcuts"
+      },
+      {
+        "playlistId": "pl-16",
+        "href": "artist.html",
+        "title": "Artists",
+        "description": "Followed artists and top obsessions"
+      },
+      {
+        "playlistId": "pod-02",
+        "href": "podcast.html",
+        "title": "Podcasts",
+        "description": "Shows queued for your next session"
       }
     ]
   },
@@ -194,66 +245,66 @@
       {
         "title": "Daft Punk",
         "type": "artist",
-        "image": "./assets/img/daft.png"
+        "image": "/assets/img/daft punkkk11.jpg"
       },
       {
         "title": "David Bowie",
         "type": "artist",
-        "image": "./assets/img/image 20.png"
+        "image": "/assets/img/image 20.png"
       },
       {
         "title": "Black Holes...",
         "subtitle": "Muse",
         "type": "album",
-        "image": "./assets/img/Frame 8.png"
+        "image": "/assets/img/Frame 8.png"
       }
     ],
     "browseCategories": [
       {
         "title": "Made For You",
-        "image": "./assets/img/image-13.png",
+        "image": "/assets/img/image-13.png",
         "accentClass": "search-browse-tile--blue",
         "tags": ["mix", "playlist", "daily"]
       },
       {
         "title": "New Releases",
-        "image": "./assets/img/image-13-1.png",
+        "image": "/assets/img/image-13-1.png",
         "accentClass": "search-browse-tile--orange",
         "tags": ["albums", "fresh", "latest"]
       },
       {
         "title": "Spotify Classics",
-        "image": "./assets/img/image-13-2.png",
+        "image": "/assets/img/image-13-2.png",
         "accentClass": "search-browse-tile--navy",
         "tags": ["classic", "vintage", "hits"]
       },
       {
         "title": "Charts",
-        "image": "./assets/img/image-13-3.png",
+        "image": "/assets/img/image-13-3.png",
         "accentClass": "search-browse-tile--purple",
         "tags": ["top", "viral", "popular"]
       },
       {
         "title": "Trending",
-        "image": "./assets/img/image-13-4.png",
+        "image": "/assets/img/image-13-4.png",
         "accentClass": "search-browse-tile--pink",
         "tags": ["viral", "hot", "top"]
       },
       {
         "title": "Discover",
-        "image": "./assets/img/image-13-5.png",
+        "image": "/assets/img/image-13-5.png",
         "accentClass": "search-browse-tile--lilac",
         "tags": ["discover", "explore", "new"]
       },
       {
         "title": "Spotify Singles",
-        "image": "./assets/img/image-13-6.png",
+        "image": "/assets/img/image-13-6.png",
         "accentClass": "search-browse-tile--gray",
         "tags": ["single", "spotify", "exclusive"]
       },
       {
         "title": "Decades",
-        "image": "./assets/img/image-13-7.png",
+        "image": "/assets/img/image-13-7.png",
         "accentClass": "search-browse-tile--orange",
         "tags": ["80s", "90s", "2000s"]
       }
@@ -261,49 +312,49 @@
     "genreCategories": [
       {
         "title": "Pop",
-        "image": "./assets/img/image-13-8.png",
+        "image": "/assets/img/image-13-8.png",
         "accentClass": "search-browse-tile--green",
         "tags": ["genre", "mainstream"]
       },
       {
         "title": "Country",
-        "image": "./assets/img/image-13-9.png",
+        "image": "/assets/img/image-13-9.png",
         "accentClass": "search-browse-tile--orange-red",
         "tags": ["genre", "americana"]
       },
       {
         "title": "Hip-Hop",
-        "image": "./assets/img/image-13-10.png",
+        "image": "/assets/img/image-13-10.png",
         "accentClass": "search-browse-tile--mauve",
         "tags": ["genre", "rap"]
       },
       {
         "title": "Rock",
-        "image": "./assets/img/image-13-11.png",
+        "image": "/assets/img/image-13-11.png",
         "accentClass": "search-browse-tile--teal",
         "tags": ["genre", "band"]
       },
       {
         "title": "Indie",
-        "image": "./assets/img/image-13-12.png",
+        "image": "/assets/img/image-13-12.png",
         "accentClass": "search-browse-tile--red",
         "tags": ["genre", "alternative"]
       },
       {
         "title": "Punk",
-        "image": "./assets/img/image-13-13.png",
+        "image": "/assets/img/image-13-13.png",
         "accentClass": "search-browse-tile--cobalt",
         "tags": ["genre", "fast"]
       },
       {
         "title": "Metal",
-        "image": "./assets/img/image-13-14.png",
+        "image": "/assets/img/image-13-14.png",
         "accentClass": "search-browse-tile--crimson",
         "tags": ["genre", "heavy"]
       },
       {
         "title": "Instrumental",
-        "image": "./assets/img/image-2.png",
+        "image": "/assets/img/image-2.png",
         "accentClass": "search-browse-tile--slate",
         "tags": ["genre", "ambient", "score"]
       }
@@ -389,7 +440,7 @@
       "id": "pl-04b",
       "title": "Daily Mix 4",
       "category": "Made For You",
-      "cover": "./assets/img/thumbnail/image 17.png",
+      "cover": "./assets/img/daft punkkk11.jpg",
       "description": "Chuck Berry, Elvis Presley, Roy Orbison and more",
       "mixSubtitle": "Chuck Berry",
       "stackColor": "#F37FA6",
@@ -398,14 +449,14 @@
           "title": "Johnny B. Goode",
           "artist": "Chuck Berry",
           "album": "Chuck Berry Is On Top",
-          "cover": "./assets/img/thumbnail/image 17.png",
+          "cover": "./assets/img/daft punkkk11.jpg",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
           "title": "Oh, Pretty Woman",
           "artist": "Roy Orbison",
           "album": "Orbisongs",
-          "cover": "./assets/img/thumbnail/image 17.png",
+          "cover": "./assets/img/daft punkkk11.jpg",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
       ]
@@ -514,7 +565,7 @@
       "id": "pl-16",
       "title": "Daft Punk Mix",
       "category": "Top Mixes",
-      "cover": "./assets/img/thumbnail/image 7.png",
+      "cover": "./assets/img/daft punkkk11.jpg",
       "description": "Daft Punk, MGMT, Muse and more",
       "mixSubtitle": "Daft Punk",
       "stackColor": "#5319FF",
@@ -523,14 +574,14 @@
           "title": "One More Time",
           "artist": "Daft Punk",
           "album": "Discovery",
-          "cover": "./assets/img/thumbnail/image 7.png",
+          "cover": "./assets/img/daft punkkk11.jpg",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
           "title": "Around The World",
           "artist": "Daft Punk",
           "album": "Homework",
-          "cover": "./assets/img/thumbnail/image 7.png",
+          "cover": "./assets/img/daft punkkk11.jpg",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
       ]
@@ -709,6 +760,76 @@
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
       ]
+    },
+    {
+      "id": "pod-01",
+      "title": "TED Radio Hour",
+      "category": "Podcast",
+      "cover": "./assets/img/Future You _ TED Radio Hour.jpg",
+      "description": "Big ideas, surprising stories, and curious minds in one feed.",
+      "mixSubtitle": "NPR",
+      "stackColor": "#C45B3D",
+      "tracks": []
+    },
+    {
+      "id": "pod-02",
+      "title": "Future You",
+      "category": "Podcast",
+      "cover": "./assets/img/Ted Talk.jpg",
+      "description": "Conversations about the choices shaping your next chapter.",
+      "mixSubtitle": "TED Audio Collective",
+      "stackColor": "#8A3524",
+      "tracks": []
+    },
+    {
+      "id": "pod-03",
+      "title": "Weekend Stories",
+      "category": "Podcast",
+      "cover": "./assets/img/How we'll be spending our weekends, megabytes, and pocket change this month_.jpg",
+      "description": "Culture, internet, and everyday obsessions worth queueing up.",
+      "mixSubtitle": "Editorial Picks",
+      "stackColor": "#6A4B2F",
+      "tracks": []
+    },
+    {
+      "id": "pod-04",
+      "title": "Deep Focus Talks",
+      "category": "Podcast",
+      "cover": "./assets/img/Contract at Sunset — a vow sealed in silence.jpg",
+      "description": "Slow-burn interviews and reflective episodes for long listening.",
+      "mixSubtitle": "Studio Sessions",
+      "stackColor": "#4E3C31",
+      "tracks": []
+    },
+    {
+      "id": "ab-01",
+      "title": "Atomic Habits",
+      "category": "Audiobook",
+      "cover": "./assets/img/maxresdefault (8).jpg",
+      "description": "Small habits, practical systems, and clear mindset shifts in audio form.",
+      "mixSubtitle": "James Clear",
+      "stackColor": "#5B4734",
+      "tracks": []
+    },
+    {
+      "id": "ab-02",
+      "title": "The Creative Act",
+      "category": "Audiobook",
+      "cover": "./assets/img/81OCgfbDmoL.jpg",
+      "description": "A slow, thoughtful listen about creativity, process, and making things.",
+      "mixSubtitle": "Rick Rubin",
+      "stackColor": "#6B5A49",
+      "tracks": []
+    },
+    {
+      "id": "ab-03",
+      "title": "Deep Work",
+      "category": "Audiobook",
+      "cover": "./assets/img/maxresdefault.jpg",
+      "description": "Focus, discipline, and attention management for long-form work sessions.",
+      "mixSubtitle": "Cal Newport",
+      "stackColor": "#41505E",
+      "tracks": []
     }
   ]
 }

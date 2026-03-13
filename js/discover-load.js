@@ -254,7 +254,7 @@ function renderTabs(root, filters, activeFilter) {
 }
 
 function renderTab(filter, activeFilter) {
-  const activeClass = filter === activeFilter ? "is-active" : "";
+  const activeClass = filter === activeFilter ? "chip chip--active" : "chip";
 
   return `
     <button type="button" class="${activeClass}" data-filter="${escapeAttribute(filter)}">
