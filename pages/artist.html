@@ -53,7 +53,10 @@
       <section class="artist-page">
         <section class="artist-hero">
           <div class="artist-hero__backdrop">
-            <img src="../assets/img/Rectangle 6.png" alt="Daft Punk banner" />
+            <picture>
+              <source media="(min-width: 64rem)" srcset="../assets/img/daftpunk-scaled.jpg" />
+              <img src="../assets/img/daftpunk-scaled.jpg" alt="Daft Punk banner" />
+            </picture>
           </div>
           <div class="artist-hero__content">
             <div class="artist-hero__meta">
@@ -71,21 +74,23 @@
         </section>
 
         <nav class="artist-tabs" aria-label="Artist sections">
-          <a class="artist-tabs__link artist-tabs__link--active" href="artist.html">Home</a>
-          <a class="artist-tabs__link" href="artist-albums-list.html">Albums</a>
-          <a class="artist-tabs__link" href="artist-albums-list.html">Singles and EPs</a>
-          <a class="artist-tabs__link" href="artist-albums-grid.html">Compilations</a>
-          <a class="artist-tabs__link" href="artist-about.html">Merch</a>
-          <a class="artist-tabs__link" href="artist-about.html">About</a>
-          <a class="artist-tabs__link" href="artist-about.html">Features &amp; More</a>
-          <button class="artist-tabs__search" type="button" aria-label="Search"><img src="../assets/icons/Name=Search, Filled=No.svg" alt="" /></button>
+          <button class="artist-tabs__link artist-tabs__link--active" type="button" data-artist-tab="home" aria-pressed="true">Home</button>
+          <button class="artist-tabs__link" type="button" data-artist-tab="albums" aria-pressed="false">Albums</button>
+          <button class="artist-tabs__link" type="button" data-artist-tab="singles" aria-pressed="false">Singles and EPs</button>
+          <button class="artist-tabs__link" type="button" data-artist-tab="compilations" aria-pressed="false">Compilations</button>
+          <button class="artist-tabs__link" type="button" data-artist-tab="merch" aria-pressed="false">Merch</button>
+          <button class="artist-tabs__link" type="button" data-artist-tab="about" aria-pressed="false">About</button>
+          <button class="artist-tabs__link" type="button" data-artist-tab="features" aria-pressed="false">Features &amp; More</button>
+          <button class="artist-tabs__search" type="button" aria-label="Search artist sections">
+            <img src="../assets/icons/Name=Search, Filled=No.svg" alt="" />
+          </button>
         </nav>
 
         <div class="artist-mobile-overview">
           <div class="artist-side-card">
             <h2>Artist Pick</h2>
             <article class="artist-pick-card">
-              <img src="../assets/img/thumbnail/image 17.png" alt="Best of Daft Punk" />
+              <img src="../assets/img/daft punkkk11.jpg" alt="Best of Daft Punk" />
               <div>
                 <p>Listen to the Best of</p>
                 <h3>Daft Punk</h3>
@@ -94,16 +99,65 @@
           </div>
         </div>
 
+        <div class="artist-tab-panel artist-tab-panel--active" data-artist-panel="home">
         <div class="artist-content artist-content--home">
           <section class="artist-section">
             <div class="artist-section__head">
               <h2>Your most played</h2>
             </div>
             <div class="artist-top-list" aria-label="Top songs">
-              <article class="artist-top-row"><span>1</span><div class="artist-top-row__title"><h3>One More Time</h3><p>Daft Punk</p></div><span>5:20</span><button type="button" aria-label="Like One More Time"><img src="../assets/icons/Name=Like, Filled=No.svg" alt="" /></button></article>
-              <article class="artist-top-row"><span>2</span><div class="artist-top-row__title"><h3>Get Lucky</h3><p>Daft Punk</p></div><span>4:35</span><button type="button" aria-label="Like Get Lucky"><img src="../assets/icons/Name=Like, Filled=No.svg" alt="" /></button></article>
-              <article class="artist-top-row"><span>3</span><div class="artist-top-row__title"><h3>Give Life Back to Music</h3><p>Daft Punk</p></div><span>4:35</span><button type="button" aria-label="Like Give Life Back to Music"><img src="../assets/icons/Name=Like, Filled=No.svg" alt="" /></button></article>
-              <article class="artist-top-row"><span>4</span><div class="artist-top-row__title"><h3>Instant Crush</h3><p>Daft Punk, Julian Casablancas</p></div><span>5:37</span><button type="button" aria-label="Like Instant Crush"><img src="../assets/icons/Name=Like, Filled=No.svg" alt="" /></button></article>
+              <article class="artist-top-row">
+                <span class="artist-top-row__index">1</span>
+                <img class="artist-top-row__cover" src="../assets/img/daft punkkk11.jpg" alt="One More Time cover" />
+                <div class="artist-top-row__title">
+                  <h3>One More Time</h3>
+                  <p>Daft Punk</p>
+                </div>
+                <span class="artist-top-row__duration">5:20</span>
+                <button class="artist-top-row__like" type="button" aria-label="Like One More Time" aria-pressed="false">
+                  <img class="artist-top-row__like-default" src="../assets/icons/Name=Like, Filled=No.svg" alt="" />
+                  <img class="artist-top-row__like-active" src="../assets/icons/Name=Like, Filled=Yes.svg" alt="" />
+                </button>
+              </article>
+              <article class="artist-top-row">
+                <span class="artist-top-row__index">2</span>
+                <img class="artist-top-row__cover" src="../assets/img/image 17.png" alt="Get Lucky cover" />
+                <div class="artist-top-row__title">
+                  <h3>Get Lucky</h3>
+                  <p>Daft Punk</p>
+                </div>
+                <span class="artist-top-row__duration">4:35</span>
+                <button class="artist-top-row__like" type="button" aria-label="Like Get Lucky" aria-pressed="false">
+                  <img class="artist-top-row__like-default" src="../assets/icons/Name=Like, Filled=No.svg" alt="" />
+                  <img class="artist-top-row__like-active" src="../assets/icons/Name=Like, Filled=Yes.svg" alt="" />
+                </button>
+              </article>
+              <article class="artist-top-row">
+                <span class="artist-top-row__index">3</span>
+                <img class="artist-top-row__cover" src="../assets/img/image 17.png" alt="Give Life Back to Music cover" />
+                <div class="artist-top-row__title">
+                  <h3>Give Life Back to Music</h3>
+                  <p>Daft Punk</p>
+                </div>
+                <span class="artist-top-row__duration">4:35</span>
+                <button class="artist-top-row__like" type="button" aria-label="Like Give Life Back to Music" aria-pressed="false">
+                  <img class="artist-top-row__like-default" src="../assets/icons/Name=Like, Filled=No.svg" alt="" />
+                  <img class="artist-top-row__like-active" src="../assets/icons/Name=Like, Filled=Yes.svg" alt="" />
+                </button>
+              </article>
+              <article class="artist-top-row">
+                <span class="artist-top-row__index">4</span>
+                <img class="artist-top-row__cover" src="../assets/img/image 17.png" alt="Instant Crush cover" />
+                <div class="artist-top-row__title">
+                  <h3>Instant Crush</h3>
+                  <p>Daft Punk, Julian Casablancas</p>
+                </div>
+                <span class="artist-top-row__duration">5:37</span>
+                <button class="artist-top-row__like" type="button" aria-label="Like Instant Crush" aria-pressed="false">
+                  <img class="artist-top-row__like-default" src="../assets/icons/Name=Like, Filled=No.svg" alt="" />
+                  <img class="artist-top-row__like-active" src="../assets/icons/Name=Like, Filled=Yes.svg" alt="" />
+                </button>
+              </article>
             </div>
           </section>
 
@@ -111,7 +165,7 @@
             <section class="artist-side-card">
               <h2>Artist Pick</h2>
               <article class="artist-pick-card">
-                <img src="../assets/img/thumbnail/image 17.png" alt="Best of Daft Punk" />
+                <img src="../assets/img/daft punkkk11.jpg" alt="Best of Daft Punk" />
                 <div>
                   <p>Listen to the Best of</p>
                   <h3>Daft Punk</h3>
@@ -119,10 +173,128 @@
               </article>
             </section>
             <section class="artist-side-card">
-              <img class="artist-side-card__wide" src="../assets/img/Rectangle 6-2.png" alt="Daft Punk artist image" />
+              <img class="artist-side-card__wide" src="../assets/img/daftpunk-scaled.jpg" alt="Daft Punk artist image" />
             </section>
           </aside>
         </div>
+        </div>
+
+        <section class="artist-tab-panel" data-artist-panel="albums" hidden>
+          <section class="artist-albums-list" aria-label="Albums list">
+            <article class="artist-album-row">
+              <img src="../assets/img/5911e959b5a35b2c6f9beb4b5c1f521971d3c073.png" alt="Random Access Memories artwork" />
+              <div class="artist-album-row__meta">
+                <h2>Random Access Memories</h2>
+                <p>2013 • 13 songs • 1 hr 14 min</p>
+                <div class="artist-album-row__actions">
+                  <button class="artist-action artist-action--play" type="button" aria-label="Play album"><i class="fa-solid fa-play"></i></button>
+                  <button class="artist-action" type="button" aria-label="Shuffle"><img src="../assets/icons/Name=Shuffle, Filled=No.svg" alt="" /></button>
+                  <button class="artist-action" type="button" aria-label="Add to library"><img src="../assets/icons/Name=Add to Library, Filled=No.svg" alt="" /></button>
+                  <button class="artist-action" type="button" aria-label="More"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
+                </div>
+              </div>
+              <span class="artist-album-row__arrow"><img src="../assets/icons/Name=Arrow-Right, Filled=No.svg" alt="" /></span>
+            </article>
+            <article class="artist-album-row">
+              <img src="../assets/img/thumbnail/image 17-1.png" alt="Random Access Memories 10th Anniversary Edition artwork" />
+              <div class="artist-album-row__meta">
+                <h2>Random Access Memories (10th Anniversary Edition)</h2>
+                <p>2023 • 22 songs • 1 hr 54 min</p>
+                <div class="artist-album-row__actions">
+                  <button class="artist-action artist-action--play" type="button" aria-label="Play anniversary album"><i class="fa-solid fa-play"></i></button>
+                  <button class="artist-action" type="button" aria-label="Shuffle"><img src="../assets/icons/Name=Shuffle, Filled=No.svg" alt="" /></button>
+                  <button class="artist-action" type="button" aria-label="Add to library"><img src="../assets/icons/Name=Add to Library, Filled=No.svg" alt="" /></button>
+                  <button class="artist-action" type="button" aria-label="More"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
+                </div>
+              </div>
+              <span class="artist-album-row__arrow"><img src="../assets/icons/Name=Arrow-Right, Filled=No.svg" alt="" /></span>
+            </article>
+          </section>
+        </section>
+
+        <section class="artist-tab-panel" data-artist-panel="singles" hidden>
+          <div class="artist-info-stack" aria-label="Singles and EPs info">
+            <article class="artist-about-card artist-about-card--text">
+              <strong>Singles and EPs</strong>
+              <p>Short-format releases from Daft Punk sit here, including one-off singles, alternate edits, soundtrack cuts, and special edition drops that expand the catalog without changing the main artist view.</p>
+            </article>
+            <article class="artist-about-card">
+              <strong>Featured single</strong>
+              <span>Get Lucky remains one of the duo's biggest crossover records, pairing disco warmth with a polished modern groove.</span>
+            </article>
+            <article class="artist-about-card">
+              <strong>Recent highlight</strong>
+              <span>TRON: Legacy Reconfigured adds a darker, remix-driven edge to the cinematic world surrounding the original score.</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="artist-tab-panel" data-artist-panel="compilations" hidden>
+          <div class="artist-info-stack" aria-label="Compilations info">
+            <article class="artist-about-card artist-about-card--text">
+              <strong>Compilations</strong>
+              <p>This section groups together retrospective releases, collected edits, and catalog highlights that show how Daft Punk's sound evolved across eras, scenes, and collaborations.</p>
+            </article>
+            <article class="artist-about-card">
+              <strong>Collection</strong>
+              <span>Alive 2007 captures the intensity of the duo's live reinvention, where older material was reshaped into one continuous performance.</span>
+            </article>
+            <article class="artist-about-card">
+              <strong>Archive pick</strong>
+              <span>The Human After All period pushed sharper textures, repetition, and a colder electronic tone that later became central to the live shows.</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="artist-tab-panel" data-artist-panel="merch" hidden>
+          <div class="artist-info-stack" aria-label="Merch info">
+            <article class="artist-about-card artist-about-card--text">
+              <strong>Merch</strong>
+              <p>Official merchandise updates can live here as clean editorial notes, keeping the layout consistent while spotlighting limited apparel, prints, and collectible drops.</p>
+            </article>
+            <article class="artist-about-card">
+              <strong>Drop</strong>
+              <span>The Helmet Tee focuses on the duo's instantly recognizable silhouette and works as the core piece in the current merch rotation.</span>
+            </article>
+            <article class="artist-about-card">
+              <strong>Edition</strong>
+              <span>The collectors poster uses archival-era visuals and is framed more as a display piece than a standard promo print.</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="artist-tab-panel" data-artist-panel="about" hidden>
+          <div class="artist-content artist-content--about">
+            <article class="artist-about-card artist-about-card--badge"><strong>#292</strong><span>in the world</span></article>
+            <article class="artist-about-card artist-about-card--text">
+              <p>As they evolved from '90s French house pioneers to 2000s dance tastemakers to mainstream heroes in the 2010s, Daft Punk remained one of dance music's most iconic acts. With their early singles and 1997's influential debut album Homework, Guy-Manuel de Homem-Christo and Thomas Bangalter quickly won acclaim for blending house, pop, funk, and hip-hop into futuristic forms.</p>
+              <p>Not content to just widen electronic music's popularity, 2001's Discovery reinvented the form and 2013's Random Access Memories created a polished pop future with a deeply human center.</p>
+            </article>
+            <aside class="artist-about-metrics">
+              <article class="artist-about-metrics__card"><strong>9,868,787</strong><span>Followers</span></article>
+              <article class="artist-about-metrics__card"><strong>22,430,353</strong><span>Monthly listeners</span></article>
+              <article class="artist-about-metrics__card"><strong>Paris, FR</strong><span>390,130 listeners</span></article>
+              <article class="artist-about-metrics__card"><strong>Mexico City, MX</strong><span>367,818 listeners</span></article>
+            </aside>
+          </div>
+        </section>
+
+        <section class="artist-tab-panel" data-artist-panel="features" hidden>
+          <div class="artist-info-stack" aria-label="Features and more info">
+            <article class="artist-about-card artist-about-card--text">
+              <strong>Features &amp; More</strong>
+              <p>Editorial features, playlist placements, and discovery paths can rotate here, giving extra context around where to start and what to hear next.</p>
+            </article>
+            <article class="artist-about-card">
+              <strong>Playlist</strong>
+              <span>Best of Daft Punk is positioned as the easiest entry point, moving from defining hits into deeper cuts with minimal friction.</span>
+            </article>
+            <article class="artist-about-card">
+              <strong>Station</strong>
+              <span>Alive 2007 Radio extends the live energy into adjacent electronic records, disco revival tracks, and high-momentum dance selections.</span>
+            </article>
+          </div>
+        </section>
       </section>
     </main>
 
@@ -130,6 +302,7 @@
   </div>
 
   <script src="../js/header-load.js"></script>
+  <script src="../js/artist-page.js"></script>
   <script src="../js/player-load.js"></script>
 </body>
 </html>
