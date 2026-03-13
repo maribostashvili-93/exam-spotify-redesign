@@ -8,11 +8,13 @@
 @use "layout/container";
 @use "layout/app";
 @use "layout/header";
+@use "layout/friends-panel";
 @use "layout/sidebar";
 
 @use "components/bottom-player";
-@use "components/cards-row";
+@use "components/buttons";
 @use "components/cards";
+@use "components/cards-row";
 @use "components/filters";
 @use "components/mix-grid";
 @use "components/sections";

@@ -53,6 +53,7 @@ async function loadHeader() {
   normalizePageLinks(routes);
   setActiveHeaderItem(headerRoot);
   setActiveMobileNavItem();
+  setupSidePanels(headerRoot);
 }
 
 async function renderHeader(headerRoot, isNestedPage, routes) {
@@ -127,7 +128,7 @@ function updateHeaderLinks(root, routes) {
     element.removeAttribute("aria-disabled");
   });
 
-  root.querySelectorAll(".top-header-action").forEach((link) => {
+  root.querySelectorAll("a.top-header-action").forEach((link) => {
     const label = link.getAttribute("aria-label");
     const routeKey = label ? label.toLowerCase() : "";
 
@@ -248,6 +249,51 @@ function setActiveMobileNavItem() {
     if (pageMap[text] === currentPage) {
       item.classList.add("mobile-nav-item-active");
     }
+  });
+}
+
+function setupSidePanels(root) {
+  const app = document.querySelector(".app");
+  const toggles = [
+    root?.querySelector("#friends-panel-toggle"),
+    root?.querySelector("#notifications-panel-toggle"),
+    root?.querySelector("#settings-panel-toggle"),
+  ].filter(Boolean);
+
+  if (!app || toggles.length === 0) {
+    return;
+  }
+
+  const syncState = () => {
+    const hasOpenPanel = toggles.some((toggle) => toggle.checked);
+    app.classList.toggle("app--side-panel-open", hasOpenPanel);
+  };
+
+  toggles.forEach((toggle) => {
+    toggle.addEventListener("change", () => {
+      if (toggle.checked) {
+        toggles.forEach((otherToggle) => {
+          if (otherToggle !== toggle) {
+            otherToggle.checked = false;
+          }
+        });
+      }
+
+      syncState();
+    });
+  });
+
+  syncState();
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") {
+      return;
+    }
+
+    toggles.forEach((toggle) => {
+      toggle.checked = false;
+    });
+    syncState();
   });
 }
 

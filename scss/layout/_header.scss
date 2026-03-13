@@ -485,7 +485,7 @@
       width: 100%;
       margin-left: 0;
       padding: 0 0.8rem;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0;
 
       background: var(--bg-header);
       border: 1px solid var(--border-soft);
@@ -493,6 +493,11 @@
       box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.16);
       gap: 0.8rem;
     }
+  }
+
+  #header {
+    position: relative;
+    min-width: 0;
   }
 
   .top-header-library {
@@ -601,7 +606,6 @@
     justify-content: center;
     text-decoration: none;
     color: var(--fg-secondary);
-    border: 1px solid transparent;
   }
 
   .top-header-theme {
@@ -623,11 +627,6 @@
     width: 1.9rem;
     height: 1.9rem;
     display: block;
-  }
-
-  .top-header-action:hover {
-    background: var(--hover-bg);
-    border-color: var(--border-soft);
   }
 
   .top-header-action[aria-label="Profile"] {
@@ -686,22 +685,4 @@
     color: var(--fg-secondary);
   }
 
-  .page-search .top-header-search button {
-    width: 3.2rem;
-    height: 3.2rem;
-    border: 0;
-    padding: 0;
-    background: transparent;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--fg-secondary);
-    flex-shrink: 0;
-  }
-
-  .page-search .top-header-search button img {
-    width: 1.8rem;
-    height: 1.8rem;
-    display: block;
-  }
 }

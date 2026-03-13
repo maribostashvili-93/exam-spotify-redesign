@@ -1,4 +1,22 @@
 
+<input
+  id="friends-panel-toggle"
+  class="friends-panel-toggle"
+  type="checkbox"
+  hidden
+/>
+<input
+  id="notifications-panel-toggle"
+  class="notifications-panel-toggle"
+  type="checkbox"
+  hidden
+/>
+<input
+  id="settings-panel-toggle"
+  class="settings-panel-toggle"
+  type="checkbox"
+  hidden
+/>
   <!-- DESKTOP TOP NAVIGATION -->
 <header class="top-header" aria-label="Top Header">
   <nav class="top-header-nav" aria-label="Main Navigation">
@@ -84,14 +102,14 @@
       <i class="fa-solid fa-sun icon-sun"></i>
     </label>
 
-    <a class="top-header-action" href="notifications.html" aria-label="Notifications">
+    <label class="top-header-action top-header-action--notifications" for="notifications-panel-toggle" aria-label="Notifications">
       <img
         src="./assets/icons/Name=News, Filled=No.svg"
         alt="Notifications icon"
       />
-    </a>
+    </label>
 
-    <a class="top-header-action" href="friends.html" aria-label="Friends">
+    <label class="top-header-action top-header-action--friends" for="friends-panel-toggle" aria-label="Friends">
       <span class="icon-swap">
         <img
           class="icon-default"
@@ -105,14 +123,14 @@
           aria-hidden="true"
         />
       </span>
-    </a>
+    </label>
 
-    <a class="top-header-action" href="settings.html" aria-label="Settings">
+    <label class="top-header-action top-header-action--settings" for="settings-panel-toggle" aria-label="Settings">
       <img
         src="./assets/icons/Name=Settings, Filled=No.svg"
         alt="Settings icon"
       />
-    </a>
+    </label>
 
     <a class="top-header-action" href="profile.html" aria-label="Profile">
       <span class="icon-swap">
@@ -131,6 +149,148 @@
     </a>
   </div>
 </header>
+<aside class="friends-panel" aria-label="Friends Activity">
+  <div class="friends-panel__inner">
+    <div class="friends-panel__head">
+      <h2>Friends Activity</h2>
+      <div class="friends-panel__controls">
+        <button class="friends-panel__invite" type="button" aria-label="Add friends">
+          <img src="./assets/icons/Name=Friends, Filled=No.svg" alt="" />
+          <span>+</span>
+        </button>
+        <label class="friends-panel__close" for="friends-panel-toggle" aria-label="Close friends panel">
+          <img src="./assets/icons/Name=Close, Filled=No.svg" alt="" />
+        </label>
+      </div>
+    </div>
+
+    <ul class="friends-panel__list">
+      <li class="friends-panel__item">
+        <span class="friends-panel__avatar friends-panel__avatar--red">
+          <img src="./assets/icons/Name=User, Filled=No.svg" alt="" />
+        </span>
+        <div class="friends-panel__meta">
+          <strong>FriendlyMusicListener</strong>
+          <div class="friends-panel__track">
+            <span class="friends-panel__time">1h</span>
+            <img src="./assets/icons/Name=Queue, Filled=No.svg" alt="" />
+            <span>Goosebumps</span>
+            <span class="friends-panel__dot"></span>
+            <span>Travis Scott</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="friends-panel__item">
+        <span class="friends-panel__avatar friends-panel__avatar--blue">
+          <img src="./assets/icons/Name=User, Filled=No.svg" alt="" />
+        </span>
+        <div class="friends-panel__meta">
+          <strong>AverageMusicEnjoyer</strong>
+          <div class="friends-panel__track">
+            <span class="friends-panel__time">1h</span>
+            <img src="./assets/icons/Name=Queue, Filled=No.svg" alt="" />
+            <span>Get Lucky</span>
+            <span class="friends-panel__dot"></span>
+            <span>Daft Punk</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="friends-panel__item">
+        <span class="friends-panel__avatar friends-panel__avatar--green">
+          <img src="./assets/icons/Name=User, Filled=No.svg" alt="" />
+        </span>
+        <div class="friends-panel__meta">
+          <strong>MusicEnthusiast</strong>
+          <div class="friends-panel__track">
+            <span class="friends-panel__time">1h</span>
+            <img src="./assets/icons/Name=Queue, Filled=No.svg" alt="" />
+            <span>would he</span>
+            <span class="friends-panel__dot"></span>
+            <span>joji</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="friends-panel__item">
+        <span class="friends-panel__avatar friends-panel__avatar--yellow">
+          <img src="./assets/icons/Name=User, Filled=No.svg" alt="" />
+        </span>
+        <div class="friends-panel__meta">
+          <strong>ListenToMusic56</strong>
+          <div class="friends-panel__track">
+            <span class="friends-panel__time">6h</span>
+            <img src="./assets/icons/Name=Queue, Filled=No.svg" alt="" />
+            <span>Rockstar</span>
+            <span class="friends-panel__dot"></span>
+            <span>Post Malone</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</aside>
+<aside class="notifications-panel" aria-label="Notifications">
+  <div class="notifications-panel__inner">
+    <div class="notifications-panel__head">
+      <h2>Notifications</h2>
+      <label class="notifications-panel__close" for="notifications-panel-toggle" aria-label="Close notifications panel">
+        <img src="./assets/icons/Name=Close, Filled=No.svg" alt="" />
+      </label>
+    </div>
+    <ul class="notifications-panel__list">
+      <li class="notifications-panel__item">
+        <strong>New Release</strong>
+        <p>New Daft Punk tracks were added to your recommendations.</p>
+        <span>5 min ago</span>
+      </li>
+      <li class="notifications-panel__item">
+        <strong>Podcast Update</strong>
+        <p>TED Radio Hour added a new episode about memory and language.</p>
+        <span>22 min ago</span>
+      </li>
+      <li class="notifications-panel__item">
+        <strong>Friend Activity</strong>
+        <p>FriendlyMusicListener is listening to Goosebumps again.</p>
+        <span>1 hour ago</span>
+      </li>
+      <li class="notifications-panel__item">
+        <strong>Saved For Later</strong>
+        <p>Your mix was updated with 12 new songs.</p>
+        <span>Today</span>
+      </li>
+    </ul>
+  </div>
+</aside>
+<aside class="settings-panel" aria-label="Settings">
+  <div class="settings-panel__inner">
+    <div class="settings-panel__head">
+      <h2>Settings</h2>
+      <label class="settings-panel__close" for="settings-panel-toggle" aria-label="Close settings panel">
+        <img src="./assets/icons/Name=Close, Filled=No.svg" alt="" />
+      </label>
+    </div>
+    <div class="settings-panel__list">
+      <article class="settings-panel__item">
+        <strong>Audio Quality</strong>
+        <p>Wi-Fi sound quality is set to Very High.</p>
+      </article>
+      <article class="settings-panel__item">
+        <strong>Autoplay</strong>
+        <p>Play similar songs after the queue ends.</p>
+      </article>
+      <article class="settings-panel__item">
+        <strong>Crossfade</strong>
+        <p>6 second transitions between tracks.</p>
+      </article>
+      <article class="settings-panel__item">
+        <strong>Privacy</strong>
+        <p>Only approved friends can see your listening activity.</p>
+      </article>
+    </div>
+  </div>
+</aside>
 
 <!-- MOBILE HEADER NAVIGATION -->
       <header class="mobile-header" aria-label="Mobile Header">
