@@ -29,79 +29,140 @@
     <main class="main podcast-main" aria-label="Podcast page">
       <section class="podcast-page">
         <section class="podcast-hero">
-          <div class="podcast-hero__meta">
-            <p class="podcast-hero__eyebrow">Podcast</p>
-            <h1>The Joe Rogan Experience</h1>
-            <p class="podcast-hero__author">Joe Rogan</p>
-            <div class="podcast-hero__actions">
-              <button class="podcast-button podcast-button--ghost" type="button">Follow</button>
-              <button class="podcast-button podcast-button--ghost" type="button">4.8</button>
-              <button class="podcast-button podcast-button--ghost" type="button">98K</button>
-              <button class="podcast-button" type="button" aria-label="More"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
+          <div class="podcast-hero__backdrop">
+            <picture>
+              <source media="(min-width: 64rem)" srcset="../assets/img/LeraBoroditsky_2017W-embed.jpg" />
+              <img src="../assets/img/LeraBoroditsky_2017W-embed.jpg" alt="TED Radio Hour banner" />
+            </picture>
+          </div>
+          <div class="podcast-hero__content">
+            <div class="podcast-hero__meta">
+              <p class="podcast-hero__eyebrow">A Spotify Podcast</p>
+              <h1>TED Radio Hour</h1>
+              <p class="podcast-hero__author">NPR and TED Audio Collective</p>
+              <p class="podcast-hero__summary">TED talks, stories and interesting topics in one place.</p>
+            </div>
+            <div class="podcast-hero__side">
+              <img class="podcast-hero__cover-art" src="../assets/img/Ted Talk.jpg" alt="TED Radio Hour cover art" />
+              <div class="podcast-hero__actions media-action-bar">
+                <button class="media-action media-action--play" type="button" aria-label="Play podcast"><i class="fa-solid fa-play"></i></button>
+                <button class="media-action media-action--pill" type="button">Follow</button>
+                <button class="media-action" type="button" aria-label="Add to library"><img src="../assets/icons/Name=Add to Library, Filled=No.svg" alt="" /></button>
+                <button class="media-action" type="button" aria-label="Queue"><img src="../assets/icons/Name=Queue, Filled=No.svg" alt="" /></button>
+                <button class="media-action" type="button" aria-label="More"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
+              </div>
             </div>
           </div>
-          <aside class="podcast-hero__cover"><img src="../assets/img/source/image.png" alt="The Joe Rogan Experience" /></aside>
         </section>
 
-        <div class="podcast-content">
-          <section class="podcast-list">
-            <div class="podcast-list__head">
+        <nav class="podcast-tabs" aria-label="Podcast sections">
+          <button class="podcast-tabs__link podcast-tabs__link--active" type="button">Home</button>
+          <button class="podcast-tabs__link" type="button">Episodes</button>
+          <button class="podcast-tabs__link" type="button">About</button>
+          <button class="podcast-tabs__link" type="button">More Like This</button>
+          <button class="podcast-tabs__search" type="button" aria-label="Search podcast">
+            <img src="../assets/icons/Name=Search, Filled=No.svg" alt="" />
+          </button>
+        </nav>
+
+        <div class="podcast-content podcast-content--desktop">
+          <section class="podcast-section">
+            <div class="podcast-section__head">
               <h2>All Episodes</h2>
-              <div class="podcast-list__controls">
-                <button type="button">New</button>
-                <button type="button">All Episodes</button>
-                <button type="button" aria-label="Search"><img src="../assets/icons/Name=Search, Filled=No.svg" alt="" /></button>
+              <div class="podcast-section__tools" aria-label="Episode filters">
+                <button class="podcast-section__tool" type="button">
+                  <img src="../assets/icons/Name=Sort, Filled=No.svg" alt="" />
+                  <span>New</span>
+                </button>
+                <button class="podcast-section__tool" type="button">
+                  <img src="../assets/icons/Name=Filter, Filled=No.svg" alt="" />
+                  <span>All Episodes</span>
+                </button>
+                <button class="podcast-section__tool podcast-section__tool--icon" type="button" aria-label="Search episodes">
+                  <img src="../assets/icons/Name=Search, Filled=No.svg" alt="" />
+                </button>
               </div>
             </div>
-            <article class="podcast-episode-card">
-              <img src="../assets/img/source/image.png" alt="Episode 2149 thumbnail" />
-              <div class="podcast-episode-card__body">
-                <a class="podcast-episode-card__title" href="episode.html">#2149 - Sebastian Maniscalco</a>
-                <p class="podcast-episode-card__meta">May 10 • 2 hr 15 min</p>
-                <p class="podcast-episode-card__desc">Sebastian Maniscalco is a comedian, actor, and host of the podcast "The Pete and Sebastian Show" alongside Pete Correale.</p>
-                <div class="podcast-episode-card__actions">
-                  <button class="podcast-button podcast-button--play" type="button" aria-label="Play episode"><i class="fa-solid fa-play"></i></button>
-                  <button class="podcast-button" type="button" aria-label="Save"><img src="../assets/icons/Name=Save, Filled=No.svg" alt="" /></button>
-                  <button class="podcast-button" type="button" aria-label="Add"><img src="../assets/icons/Name=Add to Library, Filled=No.svg" alt="" /></button>
-                  <button class="podcast-button" type="button" aria-label="Share"><img src="../assets/icons/Name=Share, Filled=No.svg" alt="" /></button>
-                  <button class="podcast-button" type="button" aria-label="More"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
+
+            <div class="podcast-episode-list" aria-label="TED Radio Hour episodes">
+              <article class="podcast-episode-row">
+                <img class="podcast-episode-row__cover" src="../assets/img/Future You _ TED Radio Hour.jpg" alt="Future You episode cover" />
+                <div class="podcast-episode-row__body">
+                  <h3>#2149 - Future You</h3>
+                  <p class="podcast-episode-row__meta">May 10 | 48 min</p>
+                  <p class="podcast-episode-row__excerpt">Episode about memory, identity and how people think about their future.</p>
+                  <div class="podcast-episode-row__actions media-action-bar media-action-bar--compact">
+                    <button class="media-action media-action--play media-action--compact" type="button" aria-label="Play Future You"><i class="fa-solid fa-play"></i></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Save Future You"><img src="../assets/icons/Name=Save, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Add Future You to library"><img src="../assets/icons/Name=Add to Library, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Download Future You"><img src="../assets/icons/Name=Download, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Share Future You"><img src="../assets/icons/Name=Share, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="More Future You"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
+                  </div>
                 </div>
-              </div>
-            </article>
-            <article class="podcast-episode-card">
-              <img src="../assets/img/thumbnail/image 18.png" alt="Episode 2148 thumbnail" />
-              <div class="podcast-episode-card__body">
-                <a class="podcast-episode-card__title" href="episode.html">#2148 - Gad Saad</a>
-                <p class="podcast-episode-card__meta">May 9 • 3 hr 39 min</p>
-                <p class="podcast-episode-card__desc">Professor of Marketing at Concordia University and an expert in the application of evolutionary psychology in marketing.</p>
-                <div class="podcast-episode-card__actions">
-                  <button class="podcast-button podcast-button--play" type="button" aria-label="Play episode"><i class="fa-solid fa-play"></i></button>
-                  <button class="podcast-button" type="button" aria-label="Save"><img src="../assets/icons/Name=Save, Filled=No.svg" alt="" /></button>
-                  <button class="podcast-button" type="button" aria-label="Add"><img src="../assets/icons/Name=Add to Library, Filled=No.svg" alt="" /></button>
-                  <button class="podcast-button" type="button" aria-label="Share"><img src="../assets/icons/Name=Share, Filled=No.svg" alt="" /></button>
-                  <button class="podcast-button" type="button" aria-label="More"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
+              </article>
+
+              <article class="podcast-episode-row">
+                <img class="podcast-episode-row__cover" src="../assets/img/Ted Talk.jpg" alt="The shape of tomorrow episode cover" />
+                <div class="podcast-episode-row__body">
+                  <h3>#2148 - The Shape of Tomorrow</h3>
+                  <p class="podcast-episode-row__meta">May 9 | 52 min</p>
+                  <p class="podcast-episode-row__excerpt">Conversation about the future, technology and how life may change.</p>
+                  <div class="podcast-episode-row__actions media-action-bar media-action-bar--compact">
+                    <button class="media-action media-action--play media-action--compact" type="button" aria-label="Play The Shape of Tomorrow"><i class="fa-solid fa-play"></i></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Save The Shape of Tomorrow"><img src="../assets/icons/Name=Save, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Add The Shape of Tomorrow to library"><img src="../assets/icons/Name=Add to Library, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Download The Shape of Tomorrow"><img src="../assets/icons/Name=Download, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Share The Shape of Tomorrow"><img src="../assets/icons/Name=Share, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="More The Shape of Tomorrow"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
+                  </div>
                 </div>
-              </div>
-            </article>
-            <article class="podcast-episode-card">
-              <img src="../assets/img/thumbnail/image 19.png" alt="Episode 2147 thumbnail" />
-              <div class="podcast-episode-card__body">
-                <a class="podcast-episode-card__title" href="episode.html">#2147 - Mike Baker</a>
-                <p class="podcast-episode-card__meta">May 8 • 2 hr 56 min</p>
-                <p class="podcast-episode-card__desc">Mike Baker is a former CIA covert operations officer and host of the President's Daily Brief podcast.</p>
-                <div class="podcast-episode-card__actions">
-                  <button class="podcast-button podcast-button--play" type="button" aria-label="Play episode"><i class="fa-solid fa-play"></i></button>
-                  <button class="podcast-button" type="button" aria-label="Save"><img src="../assets/icons/Name=Save, Filled=No.svg" alt="" /></button>
-                  <button class="podcast-button" type="button" aria-label="Add"><img src="../assets/icons/Name=Add to Library, Filled=No.svg" alt="" /></button>
-                  <button class="podcast-button" type="button" aria-label="Share"><img src="../assets/icons/Name=Share, Filled=No.svg" alt="" /></button>
-                  <button class="podcast-button" type="button" aria-label="More"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
+              </article>
+
+              <article class="podcast-episode-row">
+                <img class="podcast-episode-row__cover" src="../assets/img/Future You _ TED Radio Hour.jpg" alt="The languages we speak episode cover" />
+                <div class="podcast-episode-row__body">
+                  <h3>#2147 - The Languages We Speak</h3>
+                  <p class="podcast-episode-row__meta">May 8 | 50 min</p>
+                  <p class="podcast-episode-row__excerpt">Talk about language, memory and how words change the way we see things.</p>
+                  <div class="podcast-episode-row__actions media-action-bar media-action-bar--compact">
+                    <button class="media-action media-action--play media-action--compact" type="button" aria-label="Play The Languages We Speak"><i class="fa-solid fa-play"></i></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Save The Languages We Speak"><img src="../assets/icons/Name=Save, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Add The Languages We Speak to library"><img src="../assets/icons/Name=Add to Library, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Download The Languages We Speak"><img src="../assets/icons/Name=Download, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="Share The Languages We Speak"><img src="../assets/icons/Name=Share, Filled=No.svg" alt="" /></button>
+                    <button class="media-action media-action--compact" type="button" aria-label="More The Languages We Speak"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
+                  </div>
                 </div>
-              </div>
-            </article>
+              </article>
+            </div>
           </section>
-          <aside class="podcast-sidebar">
-            <div class="podcast-sidebar__cover"><img src="../assets/img/source/image.png" alt="The Joe Rogan Experience cover" /></div>
-            <section class="podcast-sidebar__about"><h2>About</h2><p>The official podcast of comedian Joe Rogan.</p><div class="podcast-tags"><span>Comedy</span><span>Culture</span><span>Society</span></div></section>
+
+          <aside class="podcast-side-panel">
+            <section class="podcast-side-card">
+              <h2>Pick</h2>
+              <article class="podcast-pick-card">
+                <img src="../assets/img/Ted Talk.jpg" alt="TED Talk cover" />
+                <div>
+                  <p>Now playing</p>
+                  <h3>Future You</h3>
+                </div>
+              </article>
+            </section>
+
+            <section class="podcast-side-card">
+              <img class="podcast-side-card__wide" src="../assets/img/Future You _ TED Radio Hour.jpg" alt="TED Radio Hour art" />
+            </section>
+
+            <section class="podcast-side-card podcast-side-card--about">
+              <h2>About</h2>
+              <p>TED Radio Hour brings together talks, stories and simple conversations about different topics.</p>
+              <div class="podcast-tags">
+                <span>Ideas</span>
+                <span>Culture</span>
+                <span>Society</span>
+              </div>
+            </section>
           </aside>
         </div>
       </section>
