@@ -66,35 +66,35 @@
     "favoriteArtists": [
       {
         "name": "Frank Sinatra",
-        "image": "./assets/img/thumbnail/image 18.png"
+        "image": "./assets/img/image 2vv.png"
       },
       {
-        "name": "Chuck Berry",
-        "image": "./assets/img/daft punkkk11.jpg"
+        "name": "Bruno Mars",
+        "image": "./assets/img/Poster Concepts Bruno Mars - APT.jpg"
       },
       {
-        "name": "David Bowie",
-        "image": "./assets/img/thumbnail/image 6.png"
+        "name": "Ariana Grande",
+        "image": "./assets/img/◍ARIANA GRANDE◍.jpg"
       },
       {
-        "name": "Rihanna",
-        "image": "./assets/img/thumbnail/image 17-1.png"
+        "name": "Kurt Cobain",
+        "image": "./assets/img/kurt cobain.jpg"
       },
       {
         "name": "Daft Punk",
-        "image": "./assets/img/daft punkkk11.jpg"
+        "image": "./assets/img/daftpunk-scaled.jpg"
       },
       {
-        "name": "Frank Sinatra",
-        "image": "./assets/img/thumbnail/image 18.png"
+        "name": "Nirvana",
+        "image": "./assets/img/10_27_93, Kalamazoo, WI.jpg"
       },
       {
-        "name": "Chuck Berry",
-        "image": "./assets/img/daft punkkk11.jpg"
+        "name": "Daft Punk",
+        "image": "./assets/img/daft-punk-goes-classic-thomas-bangalter-laat-de-synthesizers.jpg"
       },
       {
-        "name": "David Bowie",
-        "image": "./assets/img/thumbnail/image 6.png"
+        "name": "Editorial Pick",
+        "image": "./assets/img/22.jpg"
       }
     ]
   },
@@ -245,66 +245,66 @@
       {
         "title": "Daft Punk",
         "type": "artist",
-        "image": "./assets/img/daft punkkk11.jpg"
+        "image": "../assets/img/daftpunk-scaled.jpg"
       },
       {
-        "title": "David Bowie",
+        "title": "Lana Del Rey",
         "type": "artist",
-        "image": "./assets/img/image 20.png"
+        "image": "../assets/img/Без названия (98).jpg"
       },
       {
-        "title": "Black Holes...",
-        "subtitle": "Muse",
+        "title": "Nirvana",
+        "subtitle": "Nevermind",
         "type": "album",
-        "image": "./assets/img/Frame 8.png"
+        "image": "../assets/img/10_27_93, Kalamazoo, WI.jpg"
       }
     ],
     "browseCategories": [
       {
         "title": "Made For You",
-        "image": "./assets/img/image-13.png",
+        "image": "../assets/img/image-13.png",
         "accentClass": "search-browse-tile--blue",
         "tags": ["mix", "playlist", "daily"]
       },
       {
         "title": "New Releases",
-        "image": "./assets/img/image-13-1.png",
+        "image": "../assets/img/image-13-1.png",
         "accentClass": "search-browse-tile--orange",
         "tags": ["albums", "fresh", "latest"]
       },
       {
         "title": "Spotify Classics",
-        "image": "./assets/img/image-13-2.png",
+        "image": "../assets/img/image-13-2.png",
         "accentClass": "search-browse-tile--navy",
         "tags": ["classic", "vintage", "hits"]
       },
       {
         "title": "Charts",
-        "image": "./assets/img/image-13-3.png",
+        "image": "../assets/img/image-13-3.png",
         "accentClass": "search-browse-tile--purple",
         "tags": ["top", "viral", "popular"]
       },
       {
         "title": "Trending",
-        "image": "./assets/img/image-13-4.png",
+        "image": "../assets/img/image-13-4.png",
         "accentClass": "search-browse-tile--pink",
         "tags": ["viral", "hot", "top"]
       },
       {
         "title": "Discover",
-        "image": "./assets/img/image-13-5.png",
+        "image": "../assets/img/image-13-5.png",
         "accentClass": "search-browse-tile--lilac",
         "tags": ["discover", "explore", "new"]
       },
       {
         "title": "Spotify Singles",
-        "image": "./assets/img/image-13-6.png",
+        "image": "../assets/img/image-13-6.png",
         "accentClass": "search-browse-tile--gray",
         "tags": ["single", "spotify", "exclusive"]
       },
       {
         "title": "Decades",
-        "image": "./assets/img/image-13-7.png",
+        "image": "../assets/img/image-13-7.png",
         "accentClass": "search-browse-tile--orange",
         "tags": ["80s", "90s", "2000s"]
       }
@@ -312,49 +312,49 @@
     "genreCategories": [
       {
         "title": "Pop",
-        "image": "./assets/img/image-13-8.png",
+        "image": "../assets/img/image-13-8.png",
         "accentClass": "search-browse-tile--green",
         "tags": ["genre", "mainstream"]
       },
       {
         "title": "Country",
-        "image": "./assets/img/image-13-9.png",
+        "image": "../assets/img/image-13-9.png",
         "accentClass": "search-browse-tile--orange-red",
         "tags": ["genre", "americana"]
       },
       {
         "title": "Hip-Hop",
-        "image": "./assets/img/image-13-10.png",
+        "image": "../assets/img/image-13-10.png",
         "accentClass": "search-browse-tile--mauve",
         "tags": ["genre", "rap"]
       },
       {
         "title": "Rock",
-        "image": "./assets/img/image-13-11.png",
+        "image": "../assets/img/image-13-11.png",
         "accentClass": "search-browse-tile--teal",
         "tags": ["genre", "band"]
       },
       {
         "title": "Indie",
-        "image": "./assets/img/image-13-12.png",
+        "image": "../assets/img/image-13-12.png",
         "accentClass": "search-browse-tile--red",
         "tags": ["genre", "alternative"]
       },
       {
         "title": "Punk",
-        "image": "./assets/img/image-13-13.png",
+        "image": "../assets/img/image-13-13.png",
         "accentClass": "search-browse-tile--cobalt",
         "tags": ["genre", "fast"]
       },
       {
         "title": "Metal",
-        "image": "./assets/img/image-13-14.png",
+        "image": "../assets/img/image-13-14.png",
         "accentClass": "search-browse-tile--crimson",
         "tags": ["genre", "heavy"]
       },
       {
         "title": "Instrumental",
-        "image": "./assets/img/image-2.png",
+        "image": "../assets/img/image-2.png",
         "accentClass": "search-browse-tile--slate",
         "tags": ["genre", "ambient", "score"]
       }
@@ -365,7 +365,7 @@
       "id": "pl-01",
       "title": "Daily Mix 1",
       "category": "Made For You",
-      "cover": "./assets/img/thumbnail/image 10.png",
+      "cover": "./assets/img/image 2vv.png",
       "description": "Linkin Park, System Of A Down, Coal Chamber and more",
       "mixSubtitle": "Linkin Park",
       "stackColor": "#95E6D3",
@@ -374,14 +374,14 @@
           "title": "Get Lucky",
           "artist": "Daft Punk",
           "album": "Random Access Memories",
-          "cover": "./assets/img/thumbnail/image 10.png",
+          "cover": "./assets/img/image 2vv.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
           "title": "Numb",
           "artist": "Linkin Park",
           "album": "Meteora",
-          "cover": "./assets/img/thumbnail/image 10.png",
+          "cover": "./assets/img/image 2vv.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
       ]
@@ -390,7 +390,7 @@
       "id": "pl-02",
       "title": "Daily Mix 2",
       "category": "Made For You",
-      "cover": "./assets/img/thumbnail/image 18.png",
+      "cover": "./assets/img/image 2vv-1.png",
       "description": "Avril Lavigne, Lorde, Charli XCX and more",
       "mixSubtitle": "Avril Lavigne",
       "stackColor": "#F19BA1",
@@ -399,14 +399,14 @@
           "title": "Complicated",
           "artist": "Avril Lavigne",
           "album": "Let Go",
-          "cover": "./assets/img/thumbnail/image 18.png",
+          "cover": "./assets/img/image 2vv-1.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
           "title": "Royals",
           "artist": "Lorde",
           "album": "Pure Heroine",
-          "cover": "./assets/img/thumbnail/image 18.png",
+          "cover": "./assets/img/image 2vv-1.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
       ]
@@ -415,7 +415,7 @@
       "id": "pl-03",
       "title": "Daily Mix 3",
       "category": "Made For You",
-      "cover": "./assets/img/thumbnail/image 12.png",
+      "cover": "./assets/img/image 2vv-2.png",
       "description": "The Strokes, Martin Garrix, MGMT and more",
       "mixSubtitle": "The Strokes",
       "stackColor": "#A9DEC8",
@@ -424,14 +424,14 @@
           "title": "Reptilia",
           "artist": "The Strokes",
           "album": "Room on Fire",
-          "cover": "./assets/img/thumbnail/image 12.png",
+          "cover": "./assets/img/image 2vv-2.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
           "title": "Kids",
           "artist": "MGMT",
           "album": "Oracular Spectacular",
-          "cover": "./assets/img/thumbnail/image 12.png",
+          "cover": "./assets/img/image 2vv-2.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
       ]
@@ -440,7 +440,7 @@
       "id": "pl-04b",
       "title": "Daily Mix 4",
       "category": "Made For You",
-      "cover": "./assets/img/daft punkkk11.jpg",
+      "cover": "./assets/img/image 2vv-3.png",
       "description": "Chuck Berry, Elvis Presley, Roy Orbison and more",
       "mixSubtitle": "Chuck Berry",
       "stackColor": "#F37FA6",
@@ -449,14 +449,14 @@
           "title": "Johnny B. Goode",
           "artist": "Chuck Berry",
           "album": "Chuck Berry Is On Top",
-          "cover": "./assets/img/daft punkkk11.jpg",
+          "cover": "./assets/img/image 2vv-3.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
           "title": "Oh, Pretty Woman",
           "artist": "Roy Orbison",
           "album": "Orbisongs",
-          "cover": "./assets/img/daft punkkk11.jpg",
+          "cover": "./assets/img/image 2vv-3.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
       ]
@@ -465,7 +465,7 @@
       "id": "pl-06b",
       "title": "Daily Mix 6",
       "category": "Made For You",
-      "cover": "./assets/img/thumbnail/image 11.png",
+      "cover": "./assets/img/image 2vv-4.png",
       "description": "Frank Sinatra, Gerhard Trede, Dean Martin and more",
       "mixSubtitle": "Frank Sinatra",
       "stackColor": "#C4D5DD",
@@ -474,14 +474,14 @@
           "title": "Fly Me To The Moon",
           "artist": "Frank Sinatra",
           "album": "It Might as Well Be Swing",
-          "cover": "./assets/img/thumbnail/image 11.png",
+          "cover": "./assets/img/image 2vv-4.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
           "title": "Sway",
           "artist": "Dean Martin",
           "album": "Dean Martin Hits Again",
-          "cover": "./assets/img/thumbnail/image 11.png",
+          "cover": "./assets/img/image 2vv-4.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
       ]
@@ -490,7 +490,7 @@
       "id": "pl-04",
       "title": "Rock Mix",
       "category": "Top Mixes",
-      "cover": "./assets/img/thumbnail/image 13.png",
+      "cover": "./assets/img/image 2vv-5.png",
       "description": "Red Hot Chili Peppers, R.E.M., Guns N' Roses and more",
       "mixSubtitle": "Red Hot Chili Peppers",
       "stackColor": "#B7D348",
@@ -499,14 +499,14 @@
           "title": "Californication",
           "artist": "Red Hot Chili Peppers",
           "album": "Californication",
-          "cover": "./assets/img/thumbnail/image 13.png",
+          "cover": "./assets/img/image 2vv-5.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
           "title": "Losing My Religion",
           "artist": "R.E.M.",
           "album": "Out of Time",
-          "cover": "./assets/img/thumbnail/image 13.png",
+          "cover": "./assets/img/image 2vv-5.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
       ]
@@ -515,7 +515,7 @@
       "id": "pl-05",
       "title": "Chill Mix",
       "category": "Top Mixes",
-      "cover": "./assets/img/thumbnail/image 14.png",
+      "cover": "./assets/img/image 2vv-6.png",
       "description": "MF DOOM, Daft Punk, The Chainsmokers and more",
       "mixSubtitle": "MF DOOM",
       "stackColor": "#B1A437",
@@ -524,14 +524,14 @@
           "title": "Doomsday",
           "artist": "MF DOOM",
           "album": "Operation: Doomsday",
-          "cover": "./assets/img/thumbnail/image 14.png",
+          "cover": "./assets/img/image 2vv-6.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
           "title": "Sunset Lover",
           "artist": "Petit Biscuit",
           "album": "Presence",
-          "cover": "./assets/img/thumbnail/image 14.png",
+          "cover": "./assets/img/image 2vv-6.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
       ]
@@ -540,7 +540,7 @@
       "id": "pl-06",
       "title": "Pop Mix",
       "category": "Top Mixes",
-      "cover": "./assets/img/thumbnail/image 15.png",
+      "cover": "./assets/img/image 2vv-7.png",
       "description": "Red Hot Chili Peppers, R.E.M., Guns N' Roses and more",
       "mixSubtitle": "Red Hot Chili Peppers",
       "stackColor": "#5ED3D6",
@@ -549,14 +549,14 @@
           "title": "As It Was",
           "artist": "Harry Styles",
           "album": "Harry's House",
-          "cover": "./assets/img/thumbnail/image 15.png",
+          "cover": "./assets/img/image 2vv-7.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
           "title": "Levitating",
           "artist": "Dua Lipa",
           "album": "Future Nostalgia",
-          "cover": "./assets/img/thumbnail/image 15.png",
+          "cover": "./assets/img/image 2vv-7.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
       ]
@@ -565,7 +565,7 @@
       "id": "pl-16",
       "title": "Daft Punk Mix",
       "category": "Top Mixes",
-      "cover": "./assets/img/daft punkkk11.jpg",
+      "cover": "./assets/img/daftpunk-scaled.jpg",
       "description": "Daft Punk, MGMT, Muse and more",
       "mixSubtitle": "Daft Punk",
       "stackColor": "#5319FF",
@@ -574,14 +574,14 @@
           "title": "One More Time",
           "artist": "Daft Punk",
           "album": "Discovery",
-          "cover": "./assets/img/daft punkkk11.jpg",
+          "cover": "./assets/img/daftpunk-scaled.jpg",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
           "title": "Around The World",
           "artist": "Daft Punk",
           "album": "Homework",
-          "cover": "./assets/img/daft punkkk11.jpg",
+          "cover": "./assets/img/daftpunk-scaled.jpg",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
       ]
@@ -590,7 +590,7 @@
       "id": "pl-14",
       "title": "Happy Mix",
       "category": "Top Mixes",
-      "cover": "./assets/img/thumbnail/image 4.png",
+      "cover": "./assets/img/image 2vv-8.png",
       "description": "The Turtles, Van Morrison, ABBA and more",
       "mixSubtitle": "The Turtles",
       "stackColor": "#E7C3C1",
@@ -599,14 +599,14 @@
           "title": "Happy Together",
           "artist": "The Turtles",
           "album": "Happy Together",
-          "cover": "./assets/img/thumbnail/image 4.png",
+          "cover": "./assets/img/image 2vv-8.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
           "title": "Dancing Queen",
           "artist": "ABBA",
           "album": "Arrival",
-          "cover": "./assets/img/thumbnail/image 4.png",
+          "cover": "./assets/img/image 2vv-8.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
       ]
@@ -615,7 +615,7 @@
       "id": "pl-15",
       "title": "David Bowie Mix",
       "category": "Top Mixes",
-      "cover": "./assets/img/thumbnail/image 6.png",
+      "cover": "./assets/img/image 2vv-9.png",
       "description": "Soft Cell, The Who and The Clash",
       "mixSubtitle": "Soft Cell",
       "stackColor": "#E3CFC2",
@@ -624,14 +624,14 @@
           "title": "Heroes",
           "artist": "David Bowie",
           "album": "Heroes",
-          "cover": "./assets/img/thumbnail/image 6.png",
+          "cover": "./assets/img/image 2vv-9.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
           "title": "Let's Dance",
           "artist": "David Bowie",
           "album": "Let's Dance",
-          "cover": "./assets/img/thumbnail/image 6.png",
+          "cover": "./assets/img/image 2vv-9.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
       ]
@@ -640,7 +640,7 @@
       "id": "pl-17b",
       "title": "Upbeat Mix",
       "category": "Top Mixes",
-      "cover": "./assets/img/thumbnail/image 17-1.png",
+      "cover": "./assets/img/image 2vv-10.png",
       "description": "Kylie Minogue, Charli XCX, Cage The Elephant and more",
       "mixSubtitle": "Kylie Minogue",
       "stackColor": "#02C379",
@@ -649,14 +649,14 @@
           "title": "Can't Get You Out of My Head",
           "artist": "Kylie Minogue",
           "album": "Fever",
-          "cover": "./assets/img/thumbnail/image 17-1.png",
+          "cover": "./assets/img/image 2vv-10.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
           "title": "Vroom Vroom",
           "artist": "Charli XCX",
           "album": "Vroom Vroom EP",
-          "cover": "./assets/img/thumbnail/image 17-1.png",
+          "cover": "./assets/img/image 2vv-10.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
       ]
@@ -665,7 +665,7 @@
       "id": "pl-12",
       "title": "Discover Weekly",
       "category": "Made For You",
-      "cover": "./assets/img/thumbnail/image 19.png",
+      "cover": "./assets/img/image 2vv-11.png",
       "description": "Your weekly mixtape of fresh music.",
       "mixSubtitle": "Your weekly mixtape",
       "stackColor": "#FFCBD4",
@@ -674,14 +674,14 @@
           "title": "Heat Waves",
           "artist": "Glass Animals",
           "album": "Dreamland",
-          "cover": "./assets/img/thumbnail/image 19.png",
+          "cover": "./assets/img/image 2vv-11.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
           "title": "Electric Feel",
           "artist": "MGMT",
           "album": "Oracular Spectacular",
-          "cover": "./assets/img/thumbnail/image 19.png",
+          "cover": "./assets/img/image 2vv-11.png",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
       ]
@@ -690,7 +690,7 @@
       "id": "pl-13",
       "title": "60s Mix",
       "category": "Top Mixes",
-      "cover": "./assets/img/thumbnail/image 3.png",
+      "cover": "./assets/img/Poster Concepts Bruno Mars - APT.jpg",
       "description": "Chuck Berry, Skeeter Davis, Van Morrison and more",
       "mixSubtitle": "Chuck Berry",
       "stackColor": "#FFC668",
@@ -699,14 +699,14 @@
           "title": "Johnny B. Goode",
           "artist": "Chuck Berry",
           "album": "Chuck Berry Is On Top",
-          "cover": "./assets/img/thumbnail/image 3.png",
+          "cover": "./assets/img/Poster Concepts Bruno Mars - APT.jpg",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
           "title": "Brown Eyed Girl",
           "artist": "Van Morrison",
           "album": "Blowin' Your Mind!",
-          "cover": "./assets/img/thumbnail/image 3.png",
+          "cover": "./assets/img/Poster Concepts Bruno Mars - APT.jpg",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
       ]
@@ -715,7 +715,7 @@
       "id": "pl-18",
       "title": "Nirvana Radio",
       "category": "Radio",
-      "cover": "./assets/img/thumbnail/image 9.png",
+      "cover": "./assets/img/10_27_93, Kalamazoo, WI.jpg",
       "description": "The Strokes, Martin Garrix, MGMT and more",
       "mixSubtitle": "Nirvana",
       "stackColor": "#F9E72C",
@@ -724,14 +724,14 @@
           "title": "Come As You Are",
           "artist": "Nirvana",
           "album": "Nevermind",
-          "cover": "./assets/img/thumbnail/image 9.png",
+          "cover": "./assets/img/10_27_93, Kalamazoo, WI.jpg",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
           "title": "Lithium",
           "artist": "Nirvana",
           "album": "Nevermind",
-          "cover": "./assets/img/thumbnail/image 9.png",
+          "cover": "./assets/img/10_27_93, Kalamazoo, WI.jpg",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
       ]
@@ -740,7 +740,7 @@
       "id": "pl-20",
       "title": "Fall Out Boy Radio",
       "category": "Radio",
-      "cover": "./assets/img/thumbnail/playlist.png",
+      "cover": "./assets/img/22.jpg",
       "description": "With Panic! At The Disco, The All-American Rejects and more",
       "mixSubtitle": "Fall Out Boy",
       "stackColor": "#DAB28D",
@@ -749,14 +749,14 @@
           "title": "Sugar, We're Goin Down",
           "artist": "Fall Out Boy",
           "album": "From Under the Cork Tree",
-          "cover": "./assets/img/thumbnail/playlist.png",
+          "cover": "./assets/img/22.jpg",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         },
         {
           "title": "Dance, Dance",
           "artist": "Fall Out Boy",
           "album": "From Under the Cork Tree",
-          "cover": "./assets/img/thumbnail/playlist.png",
+          "cover": "./assets/img/22.jpg",
           "audio": "./assets/song/Daft_Punk_-_Get_Lucky_(TheMP3.Info).mp3"
         }
       ]
