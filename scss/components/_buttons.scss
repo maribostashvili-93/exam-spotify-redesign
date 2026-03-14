@@ -132,7 +132,6 @@
   @include icon-size(clamp(1.8rem, 6vw, 2.6rem));
 }
 
-.artist-action,
 .artist-tabs__search,
 .artist-top-row button,
 .artist-toolbar__toggle,
@@ -145,6 +144,11 @@
 .artist-top-row button,
 .artist-toolbar__toggle {
   background: rgba(255, 255, 255, 0.06);
+}
+
+.artist-action {
+  @include button-center;
+  background: transparent;
 }
 
 .artist-action img,
@@ -171,6 +175,10 @@
   padding: 0 1.4rem;
   color: rgba(255, 255, 255, 0.74);
   font-size: 1.1rem;
+}
+
+.artist-action--desktop-only {
+  display: none;
 }
 
 .podcast-button {
@@ -208,6 +216,7 @@
 .search-main .search-input button img,
 .search-main .search-camera img,
 .discover-main .discover-reel__actions button img,
+.artist-action img,
 .album-mobile-panel__top img,
 .album-mobile-actions img,
 .album-track__like img,
@@ -268,6 +277,7 @@
 
 .episode-video__play,
 .song-transport__button--play,
+.artist-action--play,
 .album-mobile-actions__play,
 .playlist-mobile-play,
 .playlist-desktop-play,

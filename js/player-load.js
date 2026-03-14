@@ -61,8 +61,12 @@ async function loadPlayerData(assetBase) {
 
 function createPlayerState(playlists) {
   const audio = new Audio();
-  const playlistIndex = 0;
-  const trackIndex = 0;
+  const playerRoot = document.querySelector("#player");
+  const playlistId = playerRoot?.dataset.playerPlaylist || "";
+  const requestedTrackIndex = Number.parseInt(playerRoot?.dataset.playerTrack || "0", 10);
+  const requestedPlaylistIndex = playlists.findIndex((playlist) => playlist.id === playlistId);
+  const playlistIndex = requestedPlaylistIndex >= 0 ? requestedPlaylistIndex : 0;
+  const trackIndex = Number.isInteger(requestedTrackIndex) && requestedTrackIndex >= 0 ? requestedTrackIndex : 0;
   const currentPlaylist = playlists[playlistIndex] ?? null;
   const currentTrack = currentPlaylist?.tracks?.[trackIndex] ?? null;
 
@@ -73,6 +77,7 @@ function createPlayerState(playlists) {
     trackIndex,
     currentPlaylist,
     currentTrack,
+    coverOverride: playerRoot?.dataset.playerCover || "",
   };
 }
 
@@ -90,7 +95,7 @@ function wirePlayer(root, state, assetBase) {
 
     if (elements.cover) {
       elements.cover.src = resolveAssetPath(
-        state.currentTrack.cover || state.currentPlaylist.cover,
+        state.coverOverride || state.currentTrack.cover || state.currentPlaylist.cover,
         assetBase
       );
       elements.cover.alt = `${state.currentTrack.title} cover`;

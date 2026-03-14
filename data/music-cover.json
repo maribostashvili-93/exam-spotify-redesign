@@ -33,7 +33,6 @@
       }
     ],
     "madeForYou": [
-      "pl-12",
       "pl-01",
       "pl-02",
       "pl-03",
@@ -65,36 +64,20 @@
     ],
     "favoriteArtists": [
       {
-        "name": "Frank Sinatra",
-        "image": "./assets/img/image 2vv.png"
-      },
-      {
-        "name": "Bruno Mars",
-        "image": "./assets/img/Poster Concepts Bruno Mars - APT.jpg"
-      },
-      {
-        "name": "Ariana Grande",
-        "image": "./assets/img/◍ARIANA GRANDE◍.jpg"
-      },
-      {
-        "name": "Kurt Cobain",
-        "image": "./assets/img/kurt cobain.jpg"
-      },
-      {
-        "name": "Daft Punk",
-        "image": "./assets/img/daftpunk-scaled.jpg"
-      },
-      {
         "name": "Nirvana",
         "image": "./assets/img/10_27_93, Kalamazoo, WI.jpg"
       },
       {
-        "name": "Daft Punk",
-        "image": "./assets/img/daft-punk-goes-classic-thomas-bangalter-laat-de-synthesizers.jpg"
+        "name": "Bruno Mars",
+        "image": "./assets/img/Bruno Mars.jpg"
       },
       {
-        "name": "Editorial Pick",
-        "image": "./assets/img/22.jpg"
+        "name": "Taylor Swift",
+        "image": "./assets/img/◍ARIANA GRANDE◍.jpg"
+      },
+      {
+        "name": "Daft Punk",
+        "image": "./assets/img/daft punck artist.png"
       }
     ]
   },
@@ -365,7 +348,7 @@
       "id": "pl-01",
       "title": "Daily Mix 1",
       "category": "Made For You",
-      "cover": "./assets/img/image 2vv.png",
+      "cover": "./assets/img/image 7.png",
       "description": "Linkin Park, System Of A Down, Coal Chamber and more",
       "mixSubtitle": "Linkin Park",
       "stackColor": "#95E6D3",
@@ -390,7 +373,7 @@
       "id": "pl-02",
       "title": "Daily Mix 2",
       "category": "Made For You",
-      "cover": "./assets/img/image 2vv-1.png",
+      "cover": "./assets/img/image 8.png",
       "description": "Avril Lavigne, Lorde, Charli XCX and more",
       "mixSubtitle": "Avril Lavigne",
       "stackColor": "#F19BA1",
@@ -415,7 +398,7 @@
       "id": "pl-03",
       "title": "Daily Mix 3",
       "category": "Made For You",
-      "cover": "./assets/img/image 2vv-2.png",
+      "cover": "./assets/img/image 9.png",
       "description": "The Strokes, Martin Garrix, MGMT and more",
       "mixSubtitle": "The Strokes",
       "stackColor": "#A9DEC8",
@@ -440,7 +423,7 @@
       "id": "pl-04b",
       "title": "Daily Mix 4",
       "category": "Made For You",
-      "cover": "./assets/img/image 2vv-3.png",
+      "cover": "./assets/img/image 10.png",
       "description": "Chuck Berry, Elvis Presley, Roy Orbison and more",
       "mixSubtitle": "Chuck Berry",
       "stackColor": "#F37FA6",
@@ -465,7 +448,7 @@
       "id": "pl-06b",
       "title": "Daily Mix 6",
       "category": "Made For You",
-      "cover": "./assets/img/image 2vv-4.png",
+      "cover": "./assets/img/image 11.png",
       "description": "Frank Sinatra, Gerhard Trede, Dean Martin and more",
       "mixSubtitle": "Frank Sinatra",
       "stackColor": "#C4D5DD",
@@ -515,7 +498,7 @@
       "id": "pl-05",
       "title": "Chill Mix",
       "category": "Top Mixes",
-      "cover": "./assets/img/image 2vv-6.png",
+      "cover": "./assets/img/image 3-3.png",
       "description": "MF DOOM, Daft Punk, The Chainsmokers and more",
       "mixSubtitle": "MF DOOM",
       "stackColor": "#B1A437",
@@ -540,7 +523,7 @@
       "id": "pl-06",
       "title": "Pop Mix",
       "category": "Top Mixes",
-      "cover": "./assets/img/image 2vv-7.png",
+      "cover": "./assets/img/image 4-1.png",
       "description": "Red Hot Chili Peppers, R.E.M., Guns N' Roses and more",
       "mixSubtitle": "Red Hot Chili Peppers",
       "stackColor": "#5ED3D6",
@@ -590,7 +573,7 @@
       "id": "pl-14",
       "title": "Happy Mix",
       "category": "Top Mixes",
-      "cover": "./assets/img/image 2vv-8.png",
+      "cover": "./assets/img/image 4.png",
       "description": "The Turtles, Van Morrison, ABBA and more",
       "mixSubtitle": "The Turtles",
       "stackColor": "#E7C3C1",
@@ -615,7 +598,7 @@
       "id": "pl-15",
       "title": "David Bowie Mix",
       "category": "Top Mixes",
-      "cover": "./assets/img/image 2vv-9.png",
+      "cover": "./assets/img/image 17.png",
       "description": "Soft Cell, The Who and The Clash",
       "mixSubtitle": "Soft Cell",
       "stackColor": "#E3CFC2",

@@ -70,7 +70,32 @@
 .album-mobile-actions {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.album-mobile-actions button {
+  width: 4.0411rem;
+  height: 4.0411rem;
+  flex: 0 0 4.0411rem;
+}
+
+.album-mobile-actions button img {
+  width: 2.4rem;
+  height: 2.4rem;
+  opacity: 0.72;
+}
+
+.album-mobile-actions__play {
+  width: 5.6rem !important;
+  height: 5.6rem !important;
+  flex-basis: 5.6rem !important;
+}
+
+.album-mobile-actions__play img {
+  width: 5.6rem;
+  height: 5.6rem;
+  opacity: 1;
 }
 
 .album-mobile-tracklist {

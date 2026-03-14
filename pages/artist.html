@@ -64,11 +64,16 @@
               <p>20,795,080 monthly listeners</p>
             </div>
             <div class="artist-hero__actions">
-              <button class="artist-action artist-action--play" type="button" aria-label="Play artist"><i class="fa-solid fa-play"></i></button>
-              <button class="artist-action artist-action--ghost" type="button">Follow</button>
-              <button class="artist-action" type="button" aria-label="Add to library"><img src="../assets/icons/Name=Add to Library, Filled=No.svg" alt="" /></button>
-              <button class="artist-action" type="button" aria-label="Queue"><img src="../assets/icons/Name=Queue, Filled=No.svg" alt="" /></button>
-              <button class="artist-action" type="button" aria-label="More"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
+              <button class="artist-action artist-action--mobile-only" type="button" aria-label="Add to library"><img src="../assets/icons/icons big-1.svg" alt="" /></button>
+              <button class="artist-action artist-action--mobile-only" type="button" aria-label="Add to playlist"><img src="../assets/icons/Name=Add to Playlist, Filled=No.svg" alt="" /></button>
+              <button class="artist-action artist-action--mobile-only" type="button" aria-label="Download"><img src="../assets/icons/Name=Download, Filled=No.svg" alt="" /></button>
+              <button class="artist-action artist-action--mobile-only" type="button" aria-label="More"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
+              <button class="artist-action artist-action--mobile-only" type="button" aria-label="Shuffle"><img src="../assets/icons/Name=Shuffle, Filled=No.svg" alt="" /></button>
+              <button class="artist-action artist-action--mobile-only artist-action--play-mobile" type="button" aria-label="Play artist"><img src="../assets/icons/play-green.svg" alt="" /></button>
+              <button class="artist-action artist-action--ghost artist-action--desktop-only" type="button">Follow</button>
+              <button class="artist-action artist-action--desktop-only" type="button" aria-label="Add to library"><img src="../assets/icons/Name=Add to Library, Filled=No.svg" alt="" /></button>
+              <button class="artist-action artist-action--desktop-only" type="button" aria-label="Queue"><img src="../assets/icons/Name=Queue, Filled=No.svg" alt="" /></button>
+              <button class="artist-action artist-action--desktop-only" type="button" aria-label="More"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
             </div>
           </div>
         </section>
@@ -298,7 +303,7 @@
       </section>
     </main>
 
-    <div id="player"></div>
+    <div id="player" data-player-playlist="pl-16" data-player-cover="../assets/img/daft punck artist.png"></div>
   </div>
 
   <script src="../js/header-load.js"></script>

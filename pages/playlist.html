@@ -53,11 +53,15 @@
       <section class="playlist-page" aria-label="Playlist content">
         <div class="playlist-mobile-content">
           <article class="playlist-mobile-panel">
-            <header class="playlist-mobile-top">
-              <button type="button" aria-label="Go back"><img src="../assets/icons/Name=Arrow-Left, Filled=No.svg" alt="" /></button>
-              <span>Playlist</span>
-              <button type="button" aria-label="More options"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
-            </header>
+            <div class="playlist-mobile-searchbar" role="search" aria-label="Search playlist">
+              <label class="playlist-mobile-searchbar__field" for="playlist-mobile-search">
+                <input id="playlist-mobile-search" type="search" placeholder="Search playlist" />
+                <img src="../assets/icons/Name=Search, Filled=No.svg" alt="" />
+              </label>
+              <button class="playlist-mobile-searchbar__sort" type="button" aria-label="Sort playlist">
+                <img src="../assets/icons/Name=Sort, Filled=No.svg" alt="" />
+              </button>
+            </div>
 
             <div class="playlist-mobile-cover">
               <img src="../assets/img/daft punkkk11.jpg" alt="Daft Punk Mix cover" />
@@ -69,33 +73,20 @@
             </div>
 
             <div class="playlist-mobile-actions">
-              <button class="playlist-mobile-play" type="button" aria-label="Play playlist"><i class="fa-solid fa-play"></i></button>
-              <button type="button" aria-label="Shuffle"><img src="../assets/icons/Name=Shuffle, Filled=No.svg" alt="" /></button>
-              <button type="button" aria-label="Add to library"><img src="../assets/icons/Name=Add to Library, Filled=No.svg" alt="" /></button>
-              <button type="button" aria-label="Queue"><img src="../assets/icons/Name=Queue, Filled=No.svg" alt="" /></button>
+              <button type="button" aria-label="Add to library"><img src="../assets/icons/icons big-1.svg" alt="" /></button>
+              <button type="button" aria-label="Add to playlist"><img src="../assets/icons/Name=Add to Playlist, Filled=No.svg" alt="" /></button>
+              <button type="button" aria-label="Download"><img src="../assets/icons/Name=Download, Filled=No.svg" alt="" /></button>
               <button type="button" aria-label="More"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button>
+              <button type="button" aria-label="Shuffle"><img src="../assets/icons/Name=Shuffle, Filled=No.svg" alt="" /></button>
+              <button class="playlist-mobile-play" type="button" aria-label="Play playlist"><img src="../assets/icons/play-green.svg" alt="" /></button>
             </div>
 
             <div class="playlist-mobile-tracklist" aria-label="Track list">
-              <article class="playlist-track"><span class="playlist-track__index">1</span><img class="playlist-track__cover" src="../assets/img/daft punkkk11.jpg" alt="Get Lucky cover" /><div class="playlist-track__body"><h3>Get Lucky</h3><p>Daft Punk</p></div><div><span class="playlist-track__duration">4:35</span></div></article>
-              <article class="playlist-track"><span class="playlist-track__index">2</span><img class="playlist-track__cover" src="../assets/img/thumbnail/image 14.png" alt="Instant Crush cover" /><div class="playlist-track__body"><h3>Instant Crush</h3><p>Daft Punk, Julian Casablancas</p></div><div><span class="playlist-track__duration">5:37</span></div></article>
-              <article class="playlist-track"><span class="playlist-track__index">3</span><img class="playlist-track__cover" src="../assets/img/thumbnail/image 15.png" alt="Melancholy Hill cover" /><div class="playlist-track__body"><h3>On Melancholy Hill</h3><p>Gorillaz</p></div><div><span class="playlist-track__duration">3:53</span></div></article>
-              <article class="playlist-track"><span class="playlist-track__index">4</span><img class="playlist-track__cover" src="../assets/img/thumbnail/image 6.png" alt="Tainted Love cover" /><div class="playlist-track__body"><h3>Tainted Love</h3><p>Soft Cell</p></div><div><span class="playlist-track__duration">2:33</span></div></article>
-              <article class="playlist-track"><span class="playlist-track__index">5</span><img class="playlist-track__cover" src="../assets/img/daft punkkk11.jpg" alt="One More Time cover" /><div class="playlist-track__body"><h3>One More Time</h3><p>Daft Punk</p></div><div><span class="playlist-track__duration">5:20</span></div></article>
-            </div>
-
-            <div class="playlist-mobile-tags">
-              <span>Funk</span>
-              <span>Electronic music</span>
-              <span>Disco</span>
-              <span>Soft Rock</span>
-              <span>Progressive pop</span>
-            </div>
-
-            <div class="playlist-mobile-artists">
-              <article class="playlist-artist"><img src="../assets/img/daft punkkk11.jpg" alt="Daft Punk" /><div><h3>Daft Punk</h3><p>Main artist</p></div></article>
-              <article class="playlist-artist"><img src="../assets/img/image 8.png" alt="Pharrell Williams" /><div><h3>Pharrell Williams</h3><p>Main artist</p></div></article>
-              <article class="playlist-artist"><img src="../assets/img/image 20.png" alt="Nile Rodgers" /><div><h3>Nile Rodgers</h3><p>Main artist</p></div></article>
+              <article class="playlist-track"><img class="playlist-track__cover" src="../assets/img/daft punkkk11.jpg" alt="Get Lucky cover" /><div class="playlist-track__body"><h3>Get Lucky</h3><p>Daft Punk</p></div><button class="playlist-track__more" type="button" aria-label="More options for Get Lucky"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button></article>
+              <article class="playlist-track"><img class="playlist-track__cover" src="../assets/img/thumbnail/image 14.png" alt="Instant Crush cover" /><div class="playlist-track__body"><h3>Instant Crush</h3><p>Daft Punk, Julian Casablancas</p></div><button class="playlist-track__more" type="button" aria-label="More options for Instant Crush"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button></article>
+              <article class="playlist-track"><img class="playlist-track__cover" src="../assets/img/thumbnail/image 15.png" alt="On Melancholy Hill cover" /><div class="playlist-track__body"><h3>On Melancholy Hill</h3><p>Gorillaz</p></div><button class="playlist-track__more" type="button" aria-label="More options for On Melancholy Hill"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button></article>
+              <article class="playlist-track"><img class="playlist-track__cover" src="../assets/img/thumbnail/image 6.png" alt="Tainted Love cover" /><div class="playlist-track__body"><h3>Tainted Love</h3><p>Soft Cell</p></div><button class="playlist-track__more" type="button" aria-label="More options for Tainted Love"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button></article>
+              <article class="playlist-track"><img class="playlist-track__cover" src="../assets/img/daft punkkk11.jpg" alt="One More Time cover" /><div class="playlist-track__body"><h3>One More Time</h3><p>Daft Punk</p></div><button class="playlist-track__more" type="button" aria-label="More options for One More Time"><img src="../assets/icons/Name=More, Filled=No.svg" alt="" /></button></article>
             </div>
           </article>
         </div>
